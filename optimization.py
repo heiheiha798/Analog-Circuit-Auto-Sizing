@@ -42,176 +42,16 @@ def parse_arguments():
                         help='Set parameters using specific param_file')
     parser.add_argument('--evaluate', action='store_true',
                         help='Simulate using specific parameters')
-    # parser.add_argument('--use_algorithm_de', action='store_true',
-    #                     help='Using the DE algorithm to optimize parameters')
-    
     parser.add_argument('--fw_scan', action='store_true',
                     help='Run a sensitivity scan on all MOS fw parameters.')
-
     parser.add_argument('--run_bo', action='store_true',
-                            help='Run Bayesian Optimization.')
-    
+                            help='Run Bayesian Optimization.')    
     parser.add_argument('--run_gd', action='store_true',
                         help='Run adaptive Gradient Descent optimization.')
-    
     parser.add_argument('--greedy_alpha', type=float, default=5.0,
                         help='Greedy jump threshold in percent (e.g., 5 for 5%%). Set to 0 for absolute greedy.')
 
     return parser.parse_args()
-
-# ====================================================================
-# =========== 核心算法: 带阈值的机会主义梯度下降 (V3) ==========
-# ====================================================================
-# def run_gradient_descent(platform: SimulatePlatform, initial_parameters: dict, 
-#                          max_iterations: int = 10, 
-#                          line_search_depth: int = 3, # This is no longer used, but kept for compatibility
-#                          perturb_ratio: float = 0.02,
-#                          greedy_threshold_pct: float = 5.0): # The new alpha
-#     """
-#     执行一个机会主义的、带阈值的最速邻居爬山算法。
-
-#     :param greedy_threshold_pct: 触发立即跳转的得分改善百分比。
-#                                  设为0则任何改善都会立即跳转。
-#     """
-
-#     print("\n=======================================================")
-#     print("=== OPPORTUNISTIC GRADIENT DESCENT MODE (V3)      ===")
-#     print(f"=== Greedy Threshold (alpha): {greedy_threshold_pct}%")
-#     print("=======================================================")
-
-#     # 目标函数 get_score (保持不变，无需修改)
-#     platform.only_set_params(initial_parameters)
-#     baseline_scores = platform.evaluate()
-#     if not baseline_scores:
-#         print("FATAL: Baseline simulation failed. Cannot start optimization.")
-#         return
-#     baseline_ugb = baseline_scores.get('UGB', 1.0)
-#     baseline_area = baseline_scores.get('Total_Area', 1.0)
-
-#     def get_score(scores: dict):
-#         # ... (此函数内部逻辑完全不变) ...
-#         if not scores: return 1e12
-#         pm = scores.get('Phase_Margin', -180.0)
-#         gain = scores.get('Gain_db', -200.0)
-#         gm = scores.get('Gain_Margin', 100.0)
-#         if pm <= -180.0 or gain <= -200.0 or gm >= 100.0: return 1e12
-#         iopa = scores.get('I_OPA', 1.0) * 1000.0
-#         pm_viol = max(0, (50.0 - pm) / 50.0)
-#         gain_viol = max(0, (80.0 - gain) / 80.0)
-#         gm_viol = max(0, (gm - (-10.0)) / abs(-10.0))
-#         iopa_viol = max(0, (iopa - 3.0) / 3.0)
-#         total_violation = pm_viol + gain_viol + gm_viol + iopa_viol
-#         if total_violation > 0:
-#             return 1e9 + total_violation * 1e6
-#         else:
-#             ugb_norm = scores['UGB'] / baseline_ugb
-#             area_norm = scores['Total_Area'] / baseline_area
-#             return 0.5 * area_norm - 0.5 * ugb_norm
-
-#     # 初始化
-#     X_current_params = copy.deepcopy(initial_parameters)
-    
-#     # --- 【核心修改 1】: 扩展优化的参数列表 ---
-#     optimizable_param_names = [
-#         name for name, param in X_current_params.items()
-#         if (name.endswith('_fw') or name.endswith('_l') or name.endswith('_m')) 
-#         and not param.is_dummy
-#     ]
-    
-#     print(f"\n--- Starting optimization for {len(optimizable_param_names)} parameters ('fw', 'l', 'm'). ---")
-
-#     # 主循环
-#     for i in range(max_iterations):
-#         print(f"\n{'='*20} Iteration {i+1}/{max_iterations} {'='*20}")
-#         platform.only_set_params(X_current_params)
-#         score_current = get_score(platform.evaluate())
-#         print(f"  - Starting point score for this iteration: {score_current:.4f}")
-
-#         # --- 【核心逻辑】: 机会主义扫描 ---
-#         found_immediate_jump = False
-#         best_neighbor_so_far = {'params': None, 'score': score_current}
-        
-#         # 打乱扫描顺序以增加随机性
-#         shuffled_param_names = random.sample(optimizable_param_names, len(optimizable_param_names))
-
-#         for name in shuffled_param_names:
-#             original_value = X_current_params[name].value
-#             param_type = X_current_params[name].type
-            
-#             delta = 1 if param_type == 'integer' else original_value * perturb_ratio
-
-#             # --- 扰动 +/- ---
-#             # (为了代码简洁，这里将两次扰动放在一个循环里)
-#             for sign in [1, -1]:
-#                 params_probe = copy.deepcopy(X_current_params)
-#                 params_probe[name].value += sign * delta
-                
-#                 platform.only_set_params(params_probe)
-#                 score_probe = get_score(platform.evaluate())
-#                 print(f"    - Probing {name} ({'+' if sign > 0 else '-'}{perturb_ratio*100}%)... Score: {score_probe:.4f}")
-                
-#                 # 1. 持续追踪本轮扫描中最好的邻居
-#                 if score_probe < best_neighbor_so_far['score']:
-#                     best_neighbor_so_far = {'params': params_probe, 'score': score_probe}
-
-#                 # 2. 检查是否满足贪心跳转阈值
-#                 improvement = score_current - score_probe
-                
-#                 # 计算阈值。我们只对惩罚部分计算百分比，对可行解的任何改进都认为是好的。
-#                 threshold = 0
-#                 if score_current >= 1e9:
-#                     penalty_part = score_current - 1e9
-#                     threshold = penalty_part * (greedy_threshold_pct / 100.0)
-
-#                 if improvement > threshold:
-#                     print(f"  >>> GREEDY JUMP! Found significant improvement ({improvement:.2f} > threshold {threshold:.2f}). Moving immediately.")
-#                     X_current_params = params_probe
-#                     found_immediate_jump = True
-#                     break # 跳出 +/- 扰动循环
-#             if found_immediate_jump:
-#                 break # 跳出参数扫描循环
-
-#         # --- 决策阶段 ---
-#         if found_immediate_jump:
-#             # 如果发生了立即跳转，我们直接开始下一次主循环
-#             continue
-
-#         # 如果扫描完所有参数都没有触发立即跳转
-#         print("  - No greedy jump triggered. Evaluating best neighbor from full scan.")
-#         if best_neighbor_so_far['score'] < score_current:
-#             print(f"  - Found a modest improvement. Moving to best neighbor (Score: {best_neighbor_so_far['score']:.4f}).")
-#             X_current_params = best_neighbor_so_far['params']
-#         else:
-#             print("\n--- CONVERGENCE: Full scan did not find any better neighbor. Stopping. ---")
-#             break
-
-#     # --- 结束 ---
-#     print("\n=======================================================")
-#     print("===      GRADIENT DESCENT OPTIMIZATION COMPLETED    ===")
-#     print("=======================================================")
-#     print("Final best parameters found:")
-#     platform.only_set_params(X_current_params)
-#     final_score = get_score(platform.evaluate())
-    
-#     # 增加文件保存功能
-#     output_dir = f"{platform.output_path}"
-#     os.makedirs(output_dir, exist_ok=True)
-#     final_result_file = f"{output_dir}/gd_final_solution.txt"
-#     with open(final_result_file, 'w') as f:
-#         f.write(f"Optimization Status: Converged/Finished in {i+1} iterations (Max={max_iterations})\n")
-#         f.write(f"Final Score: {final_score:.4f}\n\n")
-#         f.write("Optimized Parameters:\n")
-#         for name, param_obj in X_current_params.items():
-#             if name in optimizable_param_names:
-#                 formatted_value = param_obj.format_value(param_obj.value)
-#                 f.write(f"  {name}: {formatted_value}\n")
-#     print(f"Final parameters saved to: {final_result_file}")
-
-#     print(f"  - Final Score: {final_score:.4f}")
-#     for name, param_obj in X_current_params.items():
-#         if name in optimizable_param_names:
-#             formatted_value = param_obj.format_value(param_obj.value)
-#             print(f"  - {name}: {formatted_value}")
 
 # ====================================================================
 # =========== 核心算法: 两阶段层级优化 (V4) =======================
@@ -239,17 +79,39 @@ def run_gradient_descent(platform: SimulatePlatform, initial_parameters: dict,
         print("FATAL: Baseline simulation failed."); return
     baseline_ugb = baseline_scores.get('UGB', 1.0)
     baseline_area = baseline_scores.get('Total_Area', 1.0)
+
     def get_score(scores: dict):
         if not scores: return 1e12
         pm = scores.get('Phase_Margin', -180.0); gain = scores.get('Gain_db', -200.0); gm = scores.get('Gain_Margin', 100.0)
         if pm <= -180.0 or gain <= -200.0 or gm >= 100.0: return 1e12
-        iopa = scores.get('I_OPA', 1.0) * 1000.0
-        pm_viol = max(0, (50.0 - pm) / 50.0); gain_viol = max(0, (80.0 - gain) / 80.0)
-        gm_viol = max(0, (gm - (-10.0)) / abs(-10.0)); iopa_viol = max(0, (iopa - 3.0) / 3.0)
-        total_violation = pm_viol + gain_viol + gm_viol + iopa_viol
-        if total_violation > 0: return 1e9 + total_violation * 1e6
+        iopa_ma = scores.get('I_OPA', 1.0) * 1000.0
+        
+        # --- 【核心修改】: 引入对低电流的惩罚 ---
+        LOW_CURRENT_THRESHOLD = 2.0  # 定义一个低电流阈值，例如 2.0mA
+
+        pm_viol = max(0, (50.0 - pm) / 50.0)
+        gain_viol = max(0, (80.0 - gain) / 80.0)
+        gm_viol = max(0, (gm - (-10.0)) / abs(-10.0))
+        
+        # 新的 iopa_viol 计算逻辑
+        if iopa_ma < LOW_CURRENT_THRESHOLD:
+            # 如果低于阈值，惩罚与距离成正比
+            iopa_viol = (LOW_CURRENT_THRESHOLD - iopa_ma) / LOW_CURRENT_THRESHOLD
+        elif iopa_ma > 3.0: # 硬上限保持不变
+            iopa_viol = (iopa_ma - 3.0) / 3.0
         else:
-            ugb_norm = scores['UGB'] / baseline_ugb; area_norm = scores['Total_Area'] / baseline_area
+            iopa_viol = 0 # 在 [2.0mA, 3.0mA] 区间内无惩罚
+
+        # ---------------------------------------------
+        
+        total_violation = pm_viol + gain_viol + gm_viol + iopa_viol
+        
+        if total_violation > 0: 
+            return 1e9 + total_violation * 1e6
+        else:
+            # 只有当所有指标都达标时，才计算质量分
+            ugb_norm = scores.get('UGB', 0) / baseline_ugb
+            area_norm = scores.get('Total_Area', 0) / baseline_area
             return 0.5 * area_norm - 0.5 * ugb_norm
 
     # ----------------------------------------------------------------
@@ -502,52 +364,6 @@ def run_bayesian_optimization(platform: SimulatePlatform, initial_parameters: di
     platform.only_set_params(final_params)
     platform.evaluate()
 
-# test graph build 
-# if __name__ == "__main__":
-#     # 1. 解析命令行参数
-#     args = parse_arguments()
-
-#     # 2. 初始化EDA环境
-#     print("Initializing Aether environment...")
-#     ae.emyInitAether('-adv')
-
-#     # 3. 打开电路设计视图
-#     print(f"Opening design: {args.ae_lib}/{args.ae_cell}/{args.ae_view}")
-#     cv = ae.dbOpenCV(args.ae_lib, args.ae_cell, args.ae_view)
-#     if cv is None:
-#         print("Error: Failed to open design view.")
-#         exit(1)
-
-#     try:
-#         # 4. 构建基础电路图 (我们之前的步骤)
-#         circuit_graph = build_graph_from_eda(cv, args.param_file)
-
-#         # 5. ====================  分析与折叠 ====================
-#         analyze_circuit_constraints(circuit_graph)
-#         # ====================================================================
-
-#         # 6. ==================== 打印折叠结果 ====================
-#         # print("\n--- Constraint Group Verification ---")
-#         # if not circuit_graph.constraint_groups:
-#         #     print("  No constraint groups were found.")
-#         # else:
-#         #     for i, group in enumerate(circuit_graph.constraint_groups):
-#         #         print(f"\nGroup {i+1}:")
-#         #         print(f"  Type: {group.group_type}")
-#         #         device_names = [d.name for d in group.devices]
-#         #         print(f"  Devices: {device_names}")
-#         #         print(f"  Shared Parameters (to be optimized): {group.shared_parameters}")
-#         # ========================================================================
-
-#     except Exception as e:
-#         print(f"\nAn error occurred during graph construction or analysis: {e}")
-#     finally:
-#         # 7. 关闭设计视图
-#         print("\nClosing design view.")
-#         ae.dbCloseCV(cv)
-
-#     print("\nScript finished.")
-
 if __name__ == "__main__":
     args = parse_arguments()
 
@@ -734,95 +550,3 @@ if __name__ == "__main__":
 
     print("\nScript finished.")
 
-
-
-
-
-# original version
-# if __name__ == "__main__":
-#     # Parse command-line arguments
-#     args = parse_arguments()
-#     if args.verbose:
-#         print("\n[VERBOSE] Starting optimization with parameters:")
-#         print(f"  Aether Library: {args.ae_lib}")
-#         print(f"  Aether Cell: {args.ae_cell}, View: {args.ae_view}")
-#         print(f"  MDE Cell: {args.mde_cell}, View: {args.mde_view}")
-#         print(f"  Output Path: {args.output_path}")
-#         print(f"  Output File: {args.output_file}")
-#         print(f"  Parameter File: {args.param_file}")
-#         print(f"  Max Iterations: {args.max_iter}")
-#         print(f"  Population Size: {args.pop_size}")
-#         print(f"  Dummy Devices: {args.dummy_devices}\n")
-
-#     # Initialize Aether environment
-#     ae.emyInitAether('-adv')
-
-#     # Parse symmetry constraints
-#     symmetry_constraints = parse_symmetry_constraints(args.symmetry_devices)
-#     if symmetry_constraints:
-#         print(f"Symmetric groups: {symmetry_constraints.symmetric_groups}")
-
-#     # Parse dummy devices
-#     dummy_devices = [d.strip() for d in args.dummy_devices.split(',')] if args.dummy_devices else []
-#     if dummy_devices:
-#         print(f"Dummy devices: {dummy_devices}")
-
-#     # Read parameter definitions
-#     parameters = read_parameters(args.param_file, dummy_devices)
-
-#     # Filter out dummy parameters
-#     non_dummy_params = {name: param for name, param in parameters.items() if not param.is_dummy}
-#     dummy_params = {name: param for name, param in parameters.items() if param.is_dummy}
-    
-#     # print(f'==== Found {len(dummy_params)} dummy device parameters: {list(dummy_params.keys())} ====')
-#     # print(f'==== Using {len(non_dummy_params)} parameters for optimization: {list(non_dummy_params.keys())} ====\n')
-
-#     print(f'==== Found {len(dummy_params)} dummy device parameters')
-#     print(f'==== Using {len(non_dummy_params)} parameters for optimization\n')
-    
-#     # Apply symmetry constraints to reduce params
-#     if symmetry_constraints:
-#         reduced_parameters, param_mapping = apply_symmetry_constraints(non_dummy_params, symmetry_constraints)
-#     else:
-#         reduced_parameters = non_dummy_params
-#         param_mapping = None
-
-#     # Create optimization platform
-#     platform = SimulatePlatform(
-#         ae_lib=args.ae_lib,
-#         ae_cell=args.ae_cell,
-#         ae_view=args.ae_view,
-#         mde_cell=args.mde_cell,
-#         mde_view=args.mde_view,
-#         output_path=args.output_path,
-#         output_file=args.output_file,
-#         symmetry_constraints=symmetry_constraints,
-#         dummy_params=dummy_params
-#     )
-
-#     platform.param_mapping = param_mapping
-
-#     # Create reverse mapping
-#     if param_mapping:
-#         platform.reverse_mapping = {}
-#         for orig_name, reduced_name in param_mapping.items():
-#             if reduced_name not in platform.reverse_mapping:
-#                 platform.reverse_mapping[reduced_name] = []
-#             platform.reverse_mapping[reduced_name].append(orig_name)
-
-#     if args.set_params:
-#         platform.only_set_params(parameters)
-
-#     if args.evaluate:
-#         platform.evaluate()
-
-#     if args.use_algorithm_de:
-#         # Run differential evolution optimization
-#         platform.run_de_optimization(
-#             reduced_params=reduced_parameters,
-#             max_iter=args.max_iter,
-#             pop_size=args.pop_size
-#         )
-
-#     if args.verbose:
-#         print("\n[VERBOSE] Optimization completed")
