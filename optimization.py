@@ -85,24 +85,11 @@ def run_gradient_descent(platform: SimulatePlatform, initial_parameters: dict,
         pm = scores.get('Phase_Margin', -180.0); gain = scores.get('Gain_db', -200.0); gm = scores.get('Gain_Margin', 100.0)
         if pm <= -180.0 or gain <= -200.0 or gm >= 100.0: return 1e12
         iopa_ma = scores.get('I_OPA', 1.0) * 1000.0
-        
-        # --- 【核心修改】: 引入对低电流的惩罚 ---
-        LOW_CURRENT_THRESHOLD = 2.0  # 定义一个低电流阈值，例如 2.0mA
 
         pm_viol = max(0, (50.0 - pm) / 50.0)
         gain_viol = max(0, (80.0 - gain) / 80.0)
         gm_viol = max(0, (gm - (-10.0)) / abs(-10.0))
-        
-        # 新的 iopa_viol 计算逻辑
-        if iopa_ma < LOW_CURRENT_THRESHOLD:
-            # 如果低于阈值，惩罚与距离成正比
-            iopa_viol = (LOW_CURRENT_THRESHOLD - iopa_ma) / LOW_CURRENT_THRESHOLD
-        elif iopa_ma > 3.0: # 硬上限保持不变
-            iopa_viol = (iopa_ma - 3.0) / 3.0
-        else:
-            iopa_viol = 0 # 在 [2.0mA, 3.0mA] 区间内无惩罚
-
-        # ---------------------------------------------
+        iopa_viol = (iopa_ma - 3.0) / 3.0
         
         total_violation = pm_viol + gain_viol + gm_viol + iopa_viol
         
@@ -192,8 +179,8 @@ def run_gradient_descent(platform: SimulatePlatform, initial_parameters: dict,
         stage_max_iter=stage1_max_iter
     )
 
-    # --- 阶段二: 固定 'm'，优化 'fw' 和 'l' (精调) ---
-    fw_l_param_names = [name for name, param in initial_parameters.items() if (name.endswith('_fw') or name.endswith('_l')) and not param.is_dummy]
+    # --- 阶段二: 固定 'm'，优化 'fw' 和 'l' (精调) --- 加上了R和C...
+    fw_l_param_names = [name for name, param in initial_parameters.items() if (name.endswith('_fw') or name.endswith('_l') or name.endswith('_segW') or name.endswith('_segL')) and not param.is_dummy]
     stage2_max_iter = max_iterations - stage1_max_iter # 剩下的预算给fw/l
     final_params = run_optimization_stage(
         stage_name="Stage 2: Continuous Space (fw & l)",
