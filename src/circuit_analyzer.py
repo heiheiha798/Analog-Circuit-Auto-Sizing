@@ -1,9 +1,5 @@
-# src/circuit_analyzer.py
-
-from typing import Dict, List, Tuple, Any # 引入 Any 用于更通用的标签类型
+from typing import Dict, List, Tuple, Any
 from src.data_models import CircuitGraph, ConstraintGroup, DeviceNode
-
-# 移除 _get_local_signature 函数，因为WL算法不再需要它
 
 def _get_wl_signature(device: DeviceNode, current_labels: Dict[str, Any]) -> Tuple:
     """
@@ -47,7 +43,6 @@ def _get_wl_signature(device: DeviceNode, current_labels: Dict[str, Any]) -> Tup
     # 对所有端子的签名进行排序，形成最终的设备签名
     # 这样，即使端子的内部表示顺序不同，只要拓扑相同，最终签名也会相同
     return tuple(sorted(terminal_signatures))
-
 
 def find_topological_symmetries(graph: CircuitGraph, max_iterations: int = 5):
     """
@@ -173,7 +168,6 @@ def find_topological_symmetries(graph: CircuitGraph, max_iterations: int = 5):
         # 打印创建的约束组及其包含的器件名称，便于查看结果
         device_names = ', '.join([d.name for d in group_of_devices])
         # print(f"  Created constraint group '{constraint.group_type}' for devices: [{device_names}]")
-
 
 def analyze_circuit_constraints(graph: CircuitGraph):
     """

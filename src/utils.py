@@ -1,7 +1,7 @@
 import re
 from typing import Dict, List, Tuple
 
-from src.data_models import Parameter, SymmetryConstraint
+from src.data_models import Parameter
 
 def merge_files(file_list, output_file):
     """Merge multiple files into a single output file"""
@@ -91,73 +91,3 @@ def read_parameters(file_name, dummy_devices: List[str] = None) -> Dict[str, Par
                 parameters[name] = param
         print(f'==== Read {len(parameters)} parameters successfully, param file: {file_name} ====\n')
     return parameters
-
-def parse_symmetry_constraints(constraint_str: str) -> SymmetryConstraint:
-    """Parse symmetry constraints from string format"""
-    if not constraint_str or constraint_str.strip() == "":
-        return None
-        
-    groups = []
-    # Parse format like: "(PM1,PM2,PM3),(NM4,NM5),(NM6,NM7,NM8,NM9)"
-    pattern = r'\(([^)]+)\)'
-    matches = re.findall(pattern, constraint_str)
-    
-    for match in matches:
-        instances = [inst.strip() for inst in match.split(',')]
-        if len(instances) > 1:  # Only add groups with at least 2 instances
-            groups.append(tuple(instances))
-    
-    return SymmetryConstraint(groups)
-
-def apply_symmetry_constraints(parameters: Dict[str, Parameter], symmetry_constraints: SymmetryConstraint) -> Tuple[Dict[str, Parameter], Dict[str, List[str]]]:
-    """Apply symmetry constraints to parameters and reduce parameter count"""
-    # Create a mapping from original parameter names to merged parameter names
-    param_mapping = {}
-    reduced_parameters = {}
-    
-    # First process parameters in symmetry groups
-    for group in symmetry_constraints.symmetric_groups:
-        # Create a representative parameter for each parameter type
-        for param_type in ['m', 'l', 'fw', 'segW', 'segL']:
-            symmetric_params = symmetry_constraints.get_symmetric_parameters_for_group(group, param_type)
-            
-            # Check if these parameters exist in the original parameters
-            existing_params = [p for p in symmetric_params if p in parameters]
-            if not existing_params:
-                continue
-                
-            # Select the first parameter as the representative parameter
-            representative_param = existing_params[0]
-            rep_param_obj = parameters[representative_param]
-            
-            # Create merged parameter
-            # Use the name of the first instance in the group and the parameter type as the new parameter name
-            first_instance = next(iter(group))
-            merged_param_name = f"{first_instance}_{param_type}"
-            
-            # Create merged parameter object
-            merged_param = Parameter(
-                merged_param_name,
-                rep_param_obj.type,
-                rep_param_obj.value,
-                rep_param_obj.min,
-                rep_param_obj.max
-            )
-            
-            # Add to reduced parameters list
-            reduced_parameters[merged_param_name] = merged_param
-            
-            # Record mapping relationship
-            for param_name in existing_params:
-                param_mapping[param_name] = merged_param_name
-    
-    # Add non-symmetric parameters
-    for param_name, param in parameters.items():
-        if param_name not in param_mapping:
-            # This parameter does not belong to any symmetry group, add directly to the reduced parameters list
-            reduced_parameters[param_name] = param
-            param_mapping[param_name] = param_name
-    
-    print(f"Parameter count reduced from {len(parameters)} to {len(reduced_parameters)}")
-    
-    return reduced_parameters, param_mapping

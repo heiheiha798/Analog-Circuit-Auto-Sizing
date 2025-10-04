@@ -49,49 +49,6 @@ class Parameter:
         """Convert a normalized value back to the original range"""
         return self.min + norm_value * (self.max - self.min)
 
-class SymmetryConstraint:
-    """Represents a symmetry constraint between instances"""
-    def __init__(self, instance_groups: List[Union[Tuple[str, ...], List[str]]]):
-        self.instance_groups = instance_groups
-        self.symmetric_groups = self._create_symmetric_groups()
-        
-    def _create_symmetric_groups(self) -> List[Set[str]]:
-        """Create symmetric groups from instance groups"""
-        groups = []
-        for group in self.instance_groups:
-            # Convert tuple to set
-            group_set = set(group)
-            # Check if any instance already exists in existing groups
-            merged_groups = []
-            new_group = group_set.copy()
-            
-            for existing_group in groups:
-                if existing_group & group_set:
-                    # Merge with existing group
-                    new_group |= existing_group
-                else:
-                    # Keep existing group as is
-                    merged_groups.append(existing_group)
-            
-            merged_groups.append(new_group)
-            groups = merged_groups
-        
-        return groups
-
-    def get_symmetric_parameters_for_group(self, group: Set[str], param_name: str) -> List[str]:
-        """Get all symmetric parameter names for a given parameter in a specific group"""
-        symmetric_params = []
-        for inst in group:
-            symmetric_params.append(f"{inst}_{param_name}")
-        return symmetric_params
-
-    def get_symmetric_groups_for_instance(self, instance_name: str) -> Set[str]:
-        """Get the symmetric group for a specific instance"""
-        for group in self.symmetric_groups:
-            if instance_name in group:
-                return group
-        return {instance_name}  # Return singleton if not in any group
-
 class NetNode:
     """Represents a net (a wire) in the circuit schematic."""
     def __init__(self, name: str):

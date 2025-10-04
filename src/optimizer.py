@@ -6,7 +6,7 @@ import pyAether as ae
 from typing import Dict, Optional
 from scipy.optimize import differential_evolution
 
-from src.data_models import Parameter, SymmetryConstraint
+from src.data_models import Parameter
 from src.utils import merge_files, param_convert
 from src.eda_interface import extract_params
 
@@ -20,9 +20,7 @@ class SimulatePlatform:
         mde_cell: str = None,
         mde_view: str = None,
         output_path: str = None,
-        output_file: str = None,
-        symmetry_constraints: Optional[SymmetryConstraint] = None,
-        dummy_params: Dict[str, Parameter] = None
+        output_file: str = None
     ):
         self.origin_lib = ae_lib
         self.ae_lib = ae_lib
@@ -32,16 +30,7 @@ class SimulatePlatform:
         self.mde_view = mde_view
         self.output_path = output_path
         self.output_file = output_file
-        self.symmetry_constraints = symmetry_constraints
-        self.dummy_params = dummy_params or {}
-        # self.best_fitness = 1e10
-        # self.best_iter = 0
-        # self.best_path = ''
-        self.iter_count = 0  # Track iterations
-        # self.param_mapping = {}  # original param ---> reduced param
-        # self.reverse_mapping = {}  # Reverse mapping from reduced to original parameters
-        # self.base_ugb = 0.0
-        # self.base_area = 0.0
+        self.iter_count = 0
 
         if os.path.exists(self.output_path):
             shutil.rmtree(self.output_path)
@@ -228,4 +217,3 @@ class SimulatePlatform:
         print(f"====== I_OPA        : {scores['I_OPA'] * 1000.0} mA")
         print(f"====== Total_Area   : {scores['Total_Area']} um^2\n")
         return scores
-
