@@ -15,8 +15,8 @@ class Parameter:
         self.name = name
         self.type = param_type
         self.value = value
-        self.min = min_val
-        self.max = max_val
+        self.min_val = min_val
+        self.max_val = max_val
         self.is_dummy = is_dummy
 
     def format_value(self, value: float) -> str:
@@ -41,13 +41,28 @@ class Parameter:
 
     def normalize(self, value: float) -> float:
         """Normalize a value to [0, 1] range based on parameter bounds"""
-        if self.max == self.min:
+        if self.max_val == self.min_val:
             return 0.0  # Avoid division by zero
-        return (value - self.min) / (self.max - self.min)
+        return (value - self.min_val) / (self.max_val - self.min_val)
 
     def denormalize(self, norm_value: float) -> float:
         """Convert a normalized value back to the original range"""
-        return self.min + norm_value * (self.max - self.min)
+        return self.min_val + norm_value * (self.max_val - self.min_val)
+
+    def clamp(self, value: float) -> float:
+        """
+        将输入值限制在参数的 [min_val, max_val] 范围内。
+        如果参数类型是 'integer'，则对结果进行四舍五入。
+        """
+        if self.max_val is not None:
+            value = min(value, self.max_val)
+        if self.min_val is not None:
+            value = max(value, self.min_val)
+        
+        # 如果是整数类型，返回一个整数（或接近整数的浮点数）
+        if self.type == 'integer':
+            return round(value)
+        return value
 
 class NetNode:
     """Represents a net (a wire) in the circuit schematic."""

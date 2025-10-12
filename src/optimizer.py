@@ -142,7 +142,7 @@ class SimulatePlatform:
  
         # Execute simulation
         scores = {}
-        print(f"\n==== iter {self.iter_count} Begin simulate ====")
+        # print(f"\n==== iter {self.iter_count} Begin simulate ====")
         result = mde.netlistAndRun()
         if result:
             print(f"\n==== iter {self.iter_count} Simulation completed successfully ====")

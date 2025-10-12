@@ -327,7 +327,7 @@ if __name__ == "__main__":
         
         # \u5c06\u5206\u6790\u7ed3\u679c (circuit_graph) \u4f20\u9012\u7ed9\u4f18\u5316\u51fd\u6570
         run_gradient_descent(platform, initial_parameters, circuit_graph, # <--- \u65b0\u589e circuit_graph \u53c2\u6570
-                            max_iterations=20,
+                            max_iterations=500,
                             perturb_ratio=0.05,
                             greedy_threshold_pct=args.greedy_alpha)
 

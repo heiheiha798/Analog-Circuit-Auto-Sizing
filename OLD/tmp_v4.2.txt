@@ -1,0 +1,2072 @@
+[edauser19@jingying01 EDA_2025_Empyrean_demo_2]$ ./run_get_best_size_case1.sh 
+OpenAccess 2.2 is loaded from /home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/openaccess/lib/linux_rhel60_64/opt
+Load OA TCL shared library (1) successfully.
+
+Load initialize file 'emyLibInit.tcl' for library 'analog'.
+Load initialize file 'emyLibInit.tcl' for library 'amsLib'.
+/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/netlist_procedure.tbc
+Load initialize file 'emyLibInit.tcl' for library '013um_PDK'.
+LC_Check out license PY_AETHER version 1.0...
+LC_Check out license DM version 1.0...
+
+                         Empyrean AetherADV
+                Version 2025.03, Build on 04/02/2025
+                        For [linux26-x86_64]
+                      Copyright (c) 2009-2025
+                    Empyrean Technology Co.,Ltd.
+                        ALL RIGHTS RESERVED
+
+Load setting file '/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/aether.ini'.
+Load '/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/display.drf'.
+Load 'display.drf'.
+delete old dir: ./case1_results
+create new dir: ./case1_results
+
+--- SET PARAMETERS MODE ---
+==== Read 193 parameters successfully, param file: case1_extractcdfVal_0.txt ====
+
+LC_Check out license PYAE_SE_BASIC version 1.0...
+Design save result: True
+Parameters have been set on the schematic.
+
+Script finished.
+[edauser19@jingying01 EDA_2025_Empyrean_demo_2]$ ./new4_run_gd_case1.sh 
+Starting Opportunistic Gradient Descent with alpha = 5.0% ...
+OpenAccess 2.2 is loaded from /home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/openaccess/lib/linux_rhel60_64/opt
+Load OA TCL shared library (1) successfully.
+
+Load initialize file 'emyLibInit.tcl' for library 'analog'.
+Load initialize file 'emyLibInit.tcl' for library 'amsLib'.
+/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/netlist_procedure.tbc
+Load initialize file 'emyLibInit.tcl' for library '013um_PDK'.
+LC_Check out license PY_AETHER version 1.0...
+LC_Check out license DM version 1.0...
+
+                         Empyrean AetherADV
+                Version 2025.03, Build on 04/02/2025
+                        For [linux26-x86_64]
+                      Copyright (c) 2009-2025
+                    Empyrean Technology Co.,Ltd.
+                        ALL RIGHTS RESERVED
+
+Load setting file '/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/aether.ini'.
+Load '/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/display.drf'.
+Load 'display.drf'.
+create new dir: ./case1_gd_results
+
+--- Building Circuit Graph for Symmetry Analysis ---
+LC_Check out license PYAE_SE_BASIC version 1.0...
+Starting to build CircuitGraph...
+  Successfully read parameters for 71 devices from 'case1_extractcdfVal_0.txt'.
+
+--- Pass 1: Creating Device Nodes ---
+
+--- Pass 2: Creating Net Nodes and Connections ---
+
+CircuitGraph build complete!
+  Summary: <CircuitGraph: OPA (Devices: 84, Nets: 54)>
+  Power Net: <NetNode: VDDA [POWER]>
+  Ground Net: <NetNode: gnd! [GND]>
+
+--- Running Topological Symmetry Analysis (WL-based with Label Compression) ---
+
+Symmetry analysis found 22 groups for optimization.
+  - Group 1: [NM5, NM4]
+  - Group 2: [NM18, NM3]
+  - Group 3: [NM20, NM21]
+  - Group 4: [NM12, NM22]
+  - Group 5: [NM23, NM25]
+  - Group 6: [NM24, NM26]
+  - Group 7: [NM2, NM1]
+  - Group 8: [PM21, PM22]
+  - Group 9: [PM16, PM23]
+  - Group 10: [PM24, PM26]
+  - Group 11: [PM25, PM27]
+  - Group 12: [PM0, PM1]
+  - Group 13: [PM6, PM4]
+  - Group 14: [PM3, PM5]
+  - Group 15: [R0, R1]
+  - Group 16: [R2, R3]
+  - Group 17: [R4, R5]
+  - Group 18: [C3, C2]
+  - Group 19: [C6, C7]
+  - Group 20: [C4, C5]
+  - Group 21: [R8, R6]
+  - Group 22: [I6, I7, I8, I9]
+==== Read 193 parameters successfully, param file: case1_extractcdfVal_0.txt ====
+
+Traceback (most recent call last):
+  File "/home/edauser19/EDA_2025_Empyrean_demo_2/optimization.py", line 620, in <module>
+    run_optimization_with_decay(platform, initial_parameters, circuit_graph,
+TypeError: run_optimization_with_decay() got an unexpected keyword argument 'insensitivity_threshold_pct'
+[edauser19@jingying01 EDA_2025_Empyrean_demo_2]$ ./new4_run_gd_case1.sh 
+Starting Opportunistic Gradient Descent with alpha = 5.0% ...
+/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/pyaether/../platform/linux26-x86_64/python/3.9/bin/python: can't open file '/home/edauser19/EDA_2025_Empyrean_demo_2/optimization.py': [Errno 2] No such file or directory
+[edauser19@jingying01 EDA_2025_Empyrean_demo_2]$ ^C
+[edauser19@jingying01 EDA_2025_Empyrean_demo_2]$ ./new4_run_gd_case1.sh 
+Starting Opportunistic Gradient Descent with alpha = 5.0% ...
+OpenAccess 2.2 is loaded from /home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/openaccess/lib/linux_rhel60_64/opt
+Load OA TCL shared library (1) successfully.
+
+Load initialize file 'emyLibInit.tcl' for library 'analog'.
+Load initialize file 'emyLibInit.tcl' for library 'amsLib'.
+/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/netlist_procedure.tbc
+Load initialize file 'emyLibInit.tcl' for library '013um_PDK'.
+LC_Check out license PY_AETHER version 1.0...
+LC_Check out license DM version 1.0...
+
+                         Empyrean AetherADV
+                Version 2025.03, Build on 04/02/2025
+                        For [linux26-x86_64]
+                      Copyright (c) 2009-2025
+                    Empyrean Technology Co.,Ltd.
+                        ALL RIGHTS RESERVED
+
+Load setting file '/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/aether.ini'.
+Load '/home/PyAether_Packages/tools/aether_2025.03_linux-x86_64_rhel6_20250403/tools/aether/data/display.drf'.
+Load 'display.drf'.
+delete old dir: ./case1_gd_results
+create new dir: ./case1_gd_results
+
+--- Building Circuit Graph for Symmetry Analysis ---
+LC_Check out license PYAE_SE_BASIC version 1.0...
+Starting to build CircuitGraph...
+  Successfully read parameters for 71 devices from 'case1_extractcdfVal_0.txt'.
+
+--- Pass 1: Creating Device Nodes ---
+
+--- Pass 2: Creating Net Nodes and Connections ---
+
+CircuitGraph build complete!
+  Summary: <CircuitGraph: OPA (Devices: 84, Nets: 54)>
+  Power Net: <NetNode: VDDA [POWER]>
+  Ground Net: <NetNode: gnd! [GND]>
+
+--- Running Topological Symmetry Analysis (WL-based with Label Compression) ---
+
+Symmetry analysis found 22 groups for optimization.
+  - Group 1: [NM5, NM4]
+  - Group 2: [NM18, NM3]
+  - Group 3: [NM20, NM21]
+  - Group 4: [NM12, NM22]
+  - Group 5: [NM23, NM25]
+  - Group 6: [NM24, NM26]
+  - Group 7: [NM2, NM1]
+  - Group 8: [PM21, PM22]
+  - Group 9: [PM16, PM23]
+  - Group 10: [PM24, PM26]
+  - Group 11: [PM25, PM27]
+  - Group 12: [PM0, PM1]
+  - Group 13: [PM6, PM4]
+  - Group 14: [PM3, PM5]
+  - Group 15: [R0, R1]
+  - Group 16: [R2, R3]
+  - Group 17: [R4, R5]
+  - Group 18: [C3, C2]
+  - Group 19: [C6, C7]
+  - Group 20: [C4, C5]
+  - Group 21: [R8, R6]
+  - Group 22: [I6, I7, I8, I9]
+==== Read 193 parameters successfully, param file: case1_extractcdfVal_0.txt ====
+
+
+===================================================================
+===   HYBRID OPTIMIZATION (V4.2) WITH PRIORITY & INERTIA   ===
+===================================================================
+LC_Check out license PYAE_SE_BASIC version 1.0...
+Design save result: True
+LC_Check out license PYAE_SE_BASIC version 1.0...
+
+==== total area:  10764.920250000003
+LC_Check out license MDE_L2 version 1.0...
+
+==== iter 1 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 1 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 1 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 1 Begin simulate ====
+Simulation run started.
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2095 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 1 Simulation completed successfully ====
+==== iter 1 Succeeds in closing MDE ====
+
+==== iter 1 Result name: Results2095
+LC_Check out license PYAE_SE_BASIC version 1.0...
+
+========== Evaluation result of iter 1 ==========
+====== UGB          : 274876000.0 Hz
+====== Phase_Margin : 49.7703 deg
+====== Gain_db      : 68.0506 db
+====== Gain_Margin  : -22.0936 db
+====== I_OPA        : 4.87135 mA
+====== Total_Area   : 10764.920250000003 um^2
+
+
+######################### Starting Main Optimization Loop #########################
+
+--- Iteration 1/20 (Phase: coarse_tune_m, Active Params: 43) ---
+LC_Check out license PYAE_SE_BASIC version 1.0...
+Design save result: True
+LC_Check out license PYAE_SE_BASIC version 1.0...
+
+==== total area:  10764.920250000003
+
+==== iter 2 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 2 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 2 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 2 Begin simulate ====
+Simulation run started.
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2097 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 2 Simulation completed successfully ====
+==== iter 2 Succeeds in closing MDE ====
+
+==== iter 2 Result name: Results2097
+LC_Check out license PYAE_SE_BASIC version 1.0...
+
+========== Evaluation result of iter 2 ==========
+====== UGB          : 274876000.0 Hz
+====== Phase_Margin : 49.7703 deg
+====== Gain_db      : 68.0506 db
+====== Gain_Margin  : -22.0936 db
+====== I_OPA        : 4.87135 mA
+====== Total_Area   : 10764.920250000003 um^2
+
+  - Current score: 1000777744.8333
+LC_Check out license PYAE_SE_BASIC version 1.0...
+Design save result: True
+LC_Check out license PYAE_SE_BASIC version 1.0...
+
+==== total area:  10778.20275
+
+==== iter 3 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 3 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 3 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 3 Begin simulate ====
+Simulation run started.
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2099 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 3 Simulation completed successfully ====
+==== iter 3 Succeeds in closing MDE ====
+
+==== iter 3 Result name: Results2099
+LC_Check out license PYAE_SE_BASIC version 1.0...
+
+========== Evaluation result of iter 3 ==========
+====== UGB          : 150698000.0 Hz
+====== Phase_Margin : 47.913 deg
+====== Gain_db      : 79.5996 db
+====== Gain_Margin  : -24.0821 db
+====== I_OPA        : 2.7515199999999997 mA
+====== Total_Area   : 10778.20275 um^2
+
+      - Probing NM19_m (+1)... Score: 1000046745.0000
+  *** New overall best found! Score: 1000046745.0000, Iter: 1 ***
+  >>> GREEDY JUMP! Found significant improvement. Moving immediately.
+
+--- Iteration 2/20 (Phase: coarse_tune_m, Active Params: 43) ---
+Design save result: True
+
+==== total area:  10778.20275
+
+==== iter 4 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 4 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 4 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 4 Begin simulate ====
+Simulation run started.
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2101 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 4 Simulation completed successfully ====
+==== iter 4 Succeeds in closing MDE ====
+
+==== iter 4 Result name: Results2101
+
+========== Evaluation result of iter 4 ==========
+====== UGB          : 150698000.0 Hz
+====== Phase_Margin : 47.913 deg
+====== Gain_db      : 79.5996 db
+====== Gain_Margin  : -24.0821 db
+====== I_OPA        : 2.7515199999999997 mA
+====== Total_Area   : 10778.20275 um^2
+
+  - Current score: 1000046745.0000
+  - Attempting inertia move: NM19_m (+)
+Design save result: True
+
+==== total area:  10791.485250000002
+
+==== iter 5 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 5 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 5 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 5 Begin simulate ====
+Simulation run started.
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2103 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 5 Simulation completed successfully ====
+==== iter 5 Succeeds in closing MDE ====
+
+==== iter 5 Result name: Results2103
+
+========== Evaluation result of iter 5 ==========
+====== UGB          : 113245000.0 Hz
+====== Phase_Margin : 44.103 deg
+====== Gain_db      : 76.8384 db
+====== Gain_Margin  : -25.5327 db
+====== I_OPA        : 2.00155 mA
+====== Total_Area   : 10791.485250000002 um^2
+
+  - Inertia move failed. Score: 1000157460.0000. Resetting momentum.
+Design save result: True
+
+==== total area:  10779.13275
+
+==== iter 6 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 6 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 6 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 6 Begin simulate ====
+Simulation run started.
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2105 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 6 Simulation completed successfully ====
+==== iter 6 Succeeds in closing MDE ====
+
+==== iter 6 Result name: Results2105
+
+========== Evaluation result of iter 6 ==========
+====== UGB          : 151601000.0 Hz
+====== Phase_Margin : 47.8131 deg
+====== Gain_db      : 79.6437 db
+====== Gain_Margin  : -24.0573 db
+====== I_OPA        : 2.7515899999999998 mA
+====== Total_Area   : 10779.13275 um^2
+
+      - Probing PM21_m (+1)... Score: 1000048191.7500
+Design save result: True
+
+==== total area:  10777.27275
+
+==== iter 7 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 7 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 7 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 7 Begin simulate ====
+Simulation run started.
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2107 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 7 Simulation completed successfully ====
+==== iter 7 Succeeds in closing MDE ====
+
+==== iter 7 Result name: Results2107
+
+========== Evaluation result of iter 7 ==========
+====== UGB          : 149927000.0 Hz
+====== Phase_Margin : 48.8166 deg
+====== Gain_db      : 79.3663 db
+====== Gain_Margin  : -24.0957 db
+====== I_OPA        : 2.7512499999999998 mA
+====== Total_Area   : 10777.27275 um^2
+
+      - Probing PM21_m (-1)... Score: 1000031589.2500
+  *** New overall best found! Score: 1000031589.2500, Iter: 2 ***
+  >>> GREEDY JUMP! Found significant improvement. Moving immediately.
+
+--- Iteration 3/20 (Phase: coarse_tune_m, Active Params: 43) ---
+Design save result: True
+
+==== total area:  10777.27275
+
+==== iter 8 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 8 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 8 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 8 Begin simulate ====
+Simulation run started.
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2109 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 8 Simulation completed successfully ====
+==== iter 8 Succeeds in closing MDE ====
+
+==== iter 8 Result name: Results2109
+
+========== Evaluation result of iter 8 ==========
+====== UGB          : 149927000.0 Hz
+====== Phase_Margin : 48.8166 deg
+====== Gain_db      : 79.3663 db
+====== Gain_Margin  : -24.0957 db
+====== I_OPA        : 2.7512499999999998 mA
+====== Total_Area   : 10777.27275 um^2
+
+  - Current score: 1000031589.2500
+  - Attempting inertia move: PM21_m (-)
+Design save result: True
+
+==== total area:  10777.27275
+
+==== iter 9 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 9 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 9 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 9 Begin simulate ====
+Simulation run started.
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2111 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 9 Simulation completed successfully ====
+==== iter 9 Succeeds in closing MDE ====
+
+==== iter 9 Result name: Results2111
+
+========== Evaluation result of iter 9 ==========
+====== UGB          : 149927000.0 Hz
+====== Phase_Margin : 48.8166 deg
+====== Gain_db      : 79.3663 db
+====== Gain_Margin  : -24.0957 db
+====== I_OPA        : 2.7512499999999998 mA
+====== Total_Area   : 10777.27275 um^2
+
+  - Inertia move failed. Score: 1000031589.2500. Resetting momentum.
+Design save result: True
+
+==== total area:  10778.20275
+
+==== iter 10 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 10 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 10 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 10 Begin simulate ====
+Simulation run started.
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2113 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 10 Simulation completed successfully ====
+==== iter 10 Succeeds in closing MDE ====
+
+==== iter 10 Result name: Results2113
+
+========== Evaluation result of iter 10 ==========
+====== UGB          : 149538000.0 Hz
+====== Phase_Margin : 44.2111 deg
+====== Gain_db      : 78.6569 db
+====== Gain_Margin  : -24.1568 db
+====== I_OPA        : 2.75256 mA
+====== Total_Area   : 10778.20275 um^2
+
+      - Probing PM16_m (+1)... Score: 1000132566.7500
+Design save result: True
+
+==== total area:  10776.342750000003
+
+==== iter 11 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 11 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 11 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 11 Begin simulate ====
+Simulation run started.
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2115 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 11 Simulation completed successfully ====
+==== iter 11 Succeeds in closing MDE ====
+
+==== iter 11 Result name: Results2115
+
+========== Evaluation result of iter 11 ==========
+====== UGB          : 154335000.0 Hz
+====== Phase_Margin : 54.8946 deg
+====== Gain_db      : 79.6557 db
+====== Gain_Margin  : -23.999 db
+====== I_OPA        : 2.74957 mA
+====== Total_Area   : 10776.342750000003 um^2
+
+      - Probing PM16_m (-1)... Score: 1000004303.7500
+  *** New overall best found! Score: 1000004303.7500, Iter: 3 ***
+  >>> GREEDY JUMP! Found significant improvement. Moving immediately.
+
+--- Iteration 4/20 (Phase: coarse_tune_m, Active Params: 43) ---
+Design save result: True
+
+==== total area:  10776.342750000003
+
+==== iter 12 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 12 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 12 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 12 Begin simulate ====
+Simulation run started.
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2117 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 12 Simulation completed successfully ====
+==== iter 12 Succeeds in closing MDE ====
+
+==== iter 12 Result name: Results2117
+
+========== Evaluation result of iter 12 ==========
+====== UGB          : 154335000.0 Hz
+====== Phase_Margin : 54.8946 deg
+====== Gain_db      : 79.6557 db
+====== Gain_Margin  : -23.999 db
+====== I_OPA        : 2.74957 mA
+====== Total_Area   : 10776.342750000003 um^2
+
+  - Current score: 1000004303.7500
+  - Attempting inertia move: PM16_m (-)
+Design save result: True
+
+==== total area:  10776.342750000003
+
+==== iter 13 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 13 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 13 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 13 Begin simulate ====
+Simulation run started.
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2119 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 13 Simulation completed successfully ====
+==== iter 13 Succeeds in closing MDE ====
+
+==== iter 13 Result name: Results2119
+
+========== Evaluation result of iter 13 ==========
+====== UGB          : 154335000.0 Hz
+====== Phase_Margin : 54.8946 deg
+====== Gain_db      : 79.6557 db
+====== Gain_Margin  : -23.999 db
+====== I_OPA        : 2.74957 mA
+====== Total_Area   : 10776.342750000003 um^2
+
+  - Inertia move failed. Score: 1000004303.7500. Resetting momentum.
+Design save result: True
+
+==== total area:  10789.625250000001
+
+==== iter 14 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 14 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 14 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 14 Begin simulate ====
+Simulation run started.
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2121 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 14 Simulation completed successfully ====
+==== iter 14 Succeeds in closing MDE ====
+
+==== iter 14 Result name: Results2121
+
+========== Evaluation result of iter 14 ==========
+====== UGB          : 154130000.0 Hz
+====== Phase_Margin : 54.8708 deg
+====== Gain_db      : 79.6446 db
+====== Gain_Margin  : -24.0072 db
+====== I_OPA        : 2.7459 mA
+====== Total_Area   : 10789.625250000001 um^2
+
+      - Probing NM0_m (+1)... Score: 1000004442.5000
+  - Parameter 'NM0_m' hit a local optimum. Freezing.
+Design save result: True
+
+==== total area:  10781.416500000003
+
+==== iter 15 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 15 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 15 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 15 Begin simulate ====
+Simulation run started.
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2123 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 15 Simulation completed successfully ====
+==== iter 15 Succeeds in closing MDE ====
+
+==== iter 15 Result name: Results2123
+
+========== Evaluation result of iter 15 ==========
+====== UGB          : 154745000.0 Hz
+====== Phase_Margin : 54.9414 deg
+====== Gain_db      : 79.6774 db
+====== Gain_Margin  : -23.9826 db
+====== I_OPA        : 2.75913 mA
+====== Total_Area   : 10781.416500000003 um^2
+
+      - Probing PM10_m (+1)... Score: 1000004032.5000
+  *** New overall best found! Score: 1000004032.5000, Iter: 4 ***
+  >>> GREEDY JUMP! Found significant improvement. Moving immediately.
+
+--- Iteration 5/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10781.416500000003
+
+==== iter 16 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 16 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 16 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 16 Begin simulate ====
+Simulation run started.
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2125 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 16 Simulation completed successfully ====
+==== iter 16 Succeeds in closing MDE ====
+
+==== iter 16 Result name: Results2125
+
+========== Evaluation result of iter 16 ==========
+====== UGB          : 154745000.0 Hz
+====== Phase_Margin : 54.9414 deg
+====== Gain_db      : 79.6774 db
+====== Gain_Margin  : -23.9826 db
+====== I_OPA        : 2.75913 mA
+====== Total_Area   : 10781.416500000003 um^2
+
+  - Current score: 1000004032.5000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10786.490250000003
+
+==== iter 17 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 17 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 17 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 17 Begin simulate ====
+Simulation run started.
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2127 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 17 Simulation completed successfully ====
+==== iter 17 Succeeds in closing MDE ====
+
+==== iter 17 Result name: Results2127
+
+========== Evaluation result of iter 17 ==========
+====== UGB          : 155081000.0 Hz
+====== Phase_Margin : 54.9799 deg
+====== Gain_db      : 79.695 db
+====== Gain_Margin  : -23.9691 db
+====== I_OPA        : 2.76699 mA
+====== Total_Area   : 10786.490250000003 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003812.5000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003812.5000, Iter: 5 ***
+
+--- Iteration 6/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10786.490250000003
+
+==== iter 18 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 18 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 18 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 18 Begin simulate ====
+Simulation run started.
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2129 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 18 Simulation completed successfully ====
+==== iter 18 Succeeds in closing MDE ====
+
+==== iter 18 Result name: Results2129
+
+========== Evaluation result of iter 18 ==========
+====== UGB          : 155081000.0 Hz
+====== Phase_Margin : 54.9799 deg
+====== Gain_db      : 79.695 db
+====== Gain_Margin  : -23.9691 db
+====== I_OPA        : 2.76699 mA
+====== Total_Area   : 10786.490250000003 um^2
+
+  - Current score: 1000003812.5000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10791.564000000002
+
+==== iter 19 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 19 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 19 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 19 Begin simulate ====
+Simulation run started.
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2131 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 19 Simulation completed successfully ====
+==== iter 19 Succeeds in closing MDE ====
+
+==== iter 19 Result name: Results2131
+
+========== Evaluation result of iter 19 ==========
+====== UGB          : 155364000.0 Hz
+====== Phase_Margin : 55.0124 deg
+====== Gain_db      : 79.7096 db
+====== Gain_Margin  : -23.9579 db
+====== I_OPA        : 2.77357 mA
+====== Total_Area   : 10791.564000000002 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003630.0000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003630.0000, Iter: 6 ***
+
+--- Iteration 7/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10791.564000000002
+
+==== iter 20 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 20 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 20 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 20 Begin simulate ====
+Simulation run started.
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2133 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 20 Simulation completed successfully ====
+==== iter 20 Succeeds in closing MDE ====
+
+==== iter 20 Result name: Results2133
+
+========== Evaluation result of iter 20 ==========
+====== UGB          : 155364000.0 Hz
+====== Phase_Margin : 55.0124 deg
+====== Gain_db      : 79.7096 db
+====== Gain_Margin  : -23.9579 db
+====== I_OPA        : 2.77357 mA
+====== Total_Area   : 10791.564000000002 um^2
+
+  - Current score: 1000003630.0000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10796.637750000002
+
+==== iter 21 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 21 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 21 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 21 Begin simulate ====
+Simulation run started.
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2135 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 21 Simulation completed successfully ====
+==== iter 21 Succeeds in closing MDE ====
+
+==== iter 21 Result name: Results2135
+
+========== Evaluation result of iter 21 ==========
+====== UGB          : 155604000.0 Hz
+====== Phase_Margin : 55.04 deg
+====== Gain_db      : 79.7218 db
+====== Gain_Margin  : -23.9484 db
+====== I_OPA        : 2.77917 mA
+====== Total_Area   : 10796.637750000002 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003477.5000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003477.5000, Iter: 7 ***
+
+--- Iteration 8/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10796.637750000002
+
+==== iter 22 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 22 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 22 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 22 Begin simulate ====
+Simulation run started.
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2137 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 22 Simulation completed successfully ====
+==== iter 22 Succeeds in closing MDE ====
+
+==== iter 22 Result name: Results2137
+
+========== Evaluation result of iter 22 ==========
+====== UGB          : 155604000.0 Hz
+====== Phase_Margin : 55.04 deg
+====== Gain_db      : 79.7218 db
+====== Gain_Margin  : -23.9484 db
+====== I_OPA        : 2.77917 mA
+====== Total_Area   : 10796.637750000002 um^2
+
+  - Current score: 1000003477.5000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10801.711500000001
+
+==== iter 23 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 23 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 23 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 23 Begin simulate ====
+Simulation run started.
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2139 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 23 Simulation completed successfully ====
+==== iter 23 Succeeds in closing MDE ====
+
+==== iter 23 Result name: Results2139
+
+========== Evaluation result of iter 23 ==========
+====== UGB          : 155810000.0 Hz
+====== Phase_Margin : 55.0638 deg
+====== Gain_db      : 79.7324 db
+====== Gain_Margin  : -23.9402 db
+====== I_OPA        : 2.78399 mA
+====== Total_Area   : 10801.711500000001 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003345.0000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003345.0000, Iter: 8 ***
+
+--- Iteration 9/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10801.711500000001
+
+==== iter 24 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 24 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 24 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 24 Begin simulate ====
+Simulation run started.
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2141 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 24 Simulation completed successfully ====
+==== iter 24 Succeeds in closing MDE ====
+
+==== iter 24 Result name: Results2141
+
+========== Evaluation result of iter 24 ==========
+====== UGB          : 155810000.0 Hz
+====== Phase_Margin : 55.0638 deg
+====== Gain_db      : 79.7324 db
+====== Gain_Margin  : -23.9402 db
+====== I_OPA        : 2.78399 mA
+====== Total_Area   : 10801.711500000001 um^2
+
+  - Current score: 1000003345.0000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10806.78525
+
+==== iter 25 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 25 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 25 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 25 Begin simulate ====
+Simulation run started.
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2143 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 25 Simulation completed successfully ====
+==== iter 25 Succeeds in closing MDE ====
+
+==== iter 25 Result name: Results2143
+
+========== Evaluation result of iter 25 ==========
+====== UGB          : 155989000.0 Hz
+====== Phase_Margin : 55.0845 deg
+====== Gain_db      : 79.7414 db
+====== Gain_Margin  : -23.9332 db
+====== I_OPA        : 2.78818 mA
+====== Total_Area   : 10806.78525 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003232.5000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003232.5000, Iter: 9 ***
+
+--- Iteration 10/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10806.78525
+
+==== iter 26 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 26 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 26 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 26 Begin simulate ====
+Simulation run started.
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2145 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 26 Simulation completed successfully ====
+==== iter 26 Succeeds in closing MDE ====
+
+==== iter 26 Result name: Results2145
+
+========== Evaluation result of iter 26 ==========
+====== UGB          : 155989000.0 Hz
+====== Phase_Margin : 55.0845 deg
+====== Gain_db      : 79.7414 db
+====== Gain_Margin  : -23.9332 db
+====== I_OPA        : 2.78818 mA
+====== Total_Area   : 10806.78525 um^2
+
+  - Current score: 1000003232.5000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10811.859
+
+==== iter 27 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 27 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 27 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 27 Begin simulate ====
+Simulation run started.
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2147 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 27 Simulation completed successfully ====
+==== iter 27 Succeeds in closing MDE ====
+
+==== iter 27 Result name: Results2147
+
+========== Evaluation result of iter 27 ==========
+====== UGB          : 156147000.0 Hz
+====== Phase_Margin : 55.1027 deg
+====== Gain_db      : 79.7494 db
+====== Gain_Margin  : -23.927 db
+====== I_OPA        : 2.7918600000000002 mA
+====== Total_Area   : 10811.859 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003132.5000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003132.5000, Iter: 10 ***
+
+--- Iteration 11/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10811.859
+
+==== iter 28 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 28 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 28 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 28 Begin simulate ====
+Simulation run started.
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2149 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 28 Simulation completed successfully ====
+==== iter 28 Succeeds in closing MDE ====
+
+==== iter 28 Result name: Results2149
+
+========== Evaluation result of iter 28 ==========
+====== UGB          : 156147000.0 Hz
+====== Phase_Margin : 55.1027 deg
+====== Gain_db      : 79.7494 db
+====== Gain_Margin  : -23.927 db
+====== I_OPA        : 2.7918600000000002 mA
+====== Total_Area   : 10811.859 um^2
+
+  - Current score: 1000003132.5000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10816.93275
+
+==== iter 29 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 29 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 29 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 29 Begin simulate ====
+Simulation run started.
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2151 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 29 Simulation completed successfully ====
+==== iter 29 Succeeds in closing MDE ====
+
+==== iter 29 Result name: Results2151
+
+========== Evaluation result of iter 29 ==========
+====== UGB          : 156286000.0 Hz
+====== Phase_Margin : 55.1189 deg
+====== Gain_db      : 79.7564 db
+====== Gain_Margin  : -23.9215 db
+====== I_OPA        : 2.79512 mA
+====== Total_Area   : 10816.93275 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000003045.0000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000003045.0000, Iter: 11 ***
+
+--- Iteration 12/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10816.93275
+
+==== iter 30 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 30 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 30 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 30 Begin simulate ====
+Simulation run started.
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2153 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 30 Simulation completed successfully ====
+==== iter 30 Succeeds in closing MDE ====
+
+==== iter 30 Result name: Results2153
+
+========== Evaluation result of iter 30 ==========
+====== UGB          : 156286000.0 Hz
+====== Phase_Margin : 55.1189 deg
+====== Gain_db      : 79.7564 db
+====== Gain_Margin  : -23.9215 db
+====== I_OPA        : 2.79512 mA
+====== Total_Area   : 10816.93275 um^2
+
+  - Current score: 1000003045.0000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10822.006500000003
+
+==== iter 31 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 31 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 31 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 31 Begin simulate ====
+Simulation run started.
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2155 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 31 Simulation completed successfully ====
+==== iter 31 Succeeds in closing MDE ====
+
+==== iter 31 Result name: Results2155
+
+========== Evaluation result of iter 31 ==========
+====== UGB          : 156410000.0 Hz
+====== Phase_Margin : 55.1333 deg
+====== Gain_db      : 79.7626 db
+====== Gain_Margin  : -23.9166 db
+====== I_OPA        : 2.79802 mA
+====== Total_Area   : 10822.006500000003 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002967.5000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002967.5000, Iter: 12 ***
+
+--- Iteration 13/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10822.006500000003
+
+==== iter 32 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 32 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 32 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 32 Begin simulate ====
+Simulation run started.
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2157 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 32 Simulation completed successfully ====
+==== iter 32 Succeeds in closing MDE ====
+
+==== iter 32 Result name: Results2157
+
+========== Evaluation result of iter 32 ==========
+====== UGB          : 156410000.0 Hz
+====== Phase_Margin : 55.1333 deg
+====== Gain_db      : 79.7626 db
+====== Gain_Margin  : -23.9166 db
+====== I_OPA        : 2.79802 mA
+====== Total_Area   : 10822.006500000003 um^2
+
+  - Current score: 1000002967.5000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10827.080250000003
+
+==== iter 33 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 33 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 33 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 33 Begin simulate ====
+Simulation run started.
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2159 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 33 Simulation completed successfully ====
+==== iter 33 Succeeds in closing MDE ====
+
+==== iter 33 Result name: Results2159
+
+========== Evaluation result of iter 33 ==========
+====== UGB          : 156521000.0 Hz
+====== Phase_Margin : 55.1462 deg
+====== Gain_db      : 79.7681 db
+====== Gain_Margin  : -23.9123 db
+====== I_OPA        : 2.8006200000000003 mA
+====== Total_Area   : 10827.080250000003 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002898.7500. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002898.7500, Iter: 13 ***
+
+--- Iteration 14/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10827.080250000003
+
+==== iter 34 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 34 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 34 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 34 Begin simulate ====
+Simulation run started.
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2161 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 34 Simulation completed successfully ====
+==== iter 34 Succeeds in closing MDE ====
+
+==== iter 34 Result name: Results2161
+
+========== Evaluation result of iter 34 ==========
+====== UGB          : 156521000.0 Hz
+====== Phase_Margin : 55.1462 deg
+====== Gain_db      : 79.7681 db
+====== Gain_Margin  : -23.9123 db
+====== I_OPA        : 2.8006200000000003 mA
+====== Total_Area   : 10827.080250000003 um^2
+
+  - Current score: 1000002898.7500
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10832.154000000002
+
+==== iter 35 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 35 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 35 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 35 Begin simulate ====
+Simulation run started.
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2163 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 35 Simulation completed successfully ====
+==== iter 35 Succeeds in closing MDE ====
+
+==== iter 35 Result name: Results2163
+
+========== Evaluation result of iter 35 ==========
+====== UGB          : 156621000.0 Hz
+====== Phase_Margin : 55.1579 deg
+====== Gain_db      : 79.7731 db
+====== Gain_Margin  : -23.9083 db
+====== I_OPA        : 2.80296 mA
+====== Total_Area   : 10832.154000000002 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002836.2500. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002836.2500, Iter: 14 ***
+
+--- Iteration 15/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10832.154000000002
+
+==== iter 36 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 36 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 36 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 36 Begin simulate ====
+Simulation run started.
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2165 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 36 Simulation completed successfully ====
+==== iter 36 Succeeds in closing MDE ====
+
+==== iter 36 Result name: Results2165
+
+========== Evaluation result of iter 36 ==========
+====== UGB          : 156621000.0 Hz
+====== Phase_Margin : 55.1579 deg
+====== Gain_db      : 79.7731 db
+====== Gain_Margin  : -23.9083 db
+====== I_OPA        : 2.80296 mA
+====== Total_Area   : 10832.154000000002 um^2
+
+  - Current score: 1000002836.2500
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10837.227750000002
+
+==== iter 37 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 37 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 37 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 37 Begin simulate ====
+Simulation run started.
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2167 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 37 Simulation completed successfully ====
+==== iter 37 Succeeds in closing MDE ====
+
+==== iter 37 Result name: Results2167
+
+========== Evaluation result of iter 37 ==========
+====== UGB          : 156711000.0 Hz
+====== Phase_Margin : 55.1684 deg
+====== Gain_db      : 79.7776 db
+====== Gain_Margin  : -23.9048 db
+====== I_OPA        : 2.8050900000000003 mA
+====== Total_Area   : 10837.227750000002 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002780.0000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002780.0000, Iter: 15 ***
+
+--- Iteration 16/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10837.227750000002
+
+==== iter 38 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 38 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 38 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 38 Begin simulate ====
+Simulation run started.
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2169 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 38 Simulation completed successfully ====
+==== iter 38 Succeeds in closing MDE ====
+
+==== iter 38 Result name: Results2169
+
+========== Evaluation result of iter 38 ==========
+====== UGB          : 156711000.0 Hz
+====== Phase_Margin : 55.1684 deg
+====== Gain_db      : 79.7776 db
+====== Gain_Margin  : -23.9048 db
+====== I_OPA        : 2.8050900000000003 mA
+====== Total_Area   : 10837.227750000002 um^2
+
+  - Current score: 1000002780.0000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10842.301500000001
+
+==== iter 39 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 39 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 39 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 39 Begin simulate ====
+Simulation run started.
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2171 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 39 Simulation completed successfully ====
+==== iter 39 Succeeds in closing MDE ====
+
+==== iter 39 Result name: Results2171
+
+========== Evaluation result of iter 39 ==========
+====== UGB          : 156794000.0 Hz
+====== Phase_Margin : 55.1781 deg
+====== Gain_db      : 79.7817 db
+====== Gain_Margin  : -23.9015 db
+====== I_OPA        : 2.80702 mA
+====== Total_Area   : 10842.301500000001 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002728.7500. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002728.7500, Iter: 16 ***
+
+--- Iteration 17/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10842.301500000001
+
+==== iter 40 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 40 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 40 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 40 Begin simulate ====
+Simulation run started.
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2173 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 40 Simulation completed successfully ====
+==== iter 40 Succeeds in closing MDE ====
+
+==== iter 40 Result name: Results2173
+
+========== Evaluation result of iter 40 ==========
+====== UGB          : 156794000.0 Hz
+====== Phase_Margin : 55.1781 deg
+====== Gain_db      : 79.7817 db
+====== Gain_Margin  : -23.9015 db
+====== I_OPA        : 2.80702 mA
+====== Total_Area   : 10842.301500000001 um^2
+
+  - Current score: 1000002728.7500
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10847.375250000001
+
+==== iter 41 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 41 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 41 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 41 Begin simulate ====
+Simulation run started.
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2175 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 41 Simulation completed successfully ====
+==== iter 41 Succeeds in closing MDE ====
+
+==== iter 41 Result name: Results2175
+
+========== Evaluation result of iter 41 ==========
+====== UGB          : 156869000.0 Hz
+====== Phase_Margin : 55.1869 deg
+====== Gain_db      : 79.7855 db
+====== Gain_Margin  : -23.8986 db
+====== I_OPA        : 2.8087899999999997 mA
+====== Total_Area   : 10847.375250000001 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002681.2500. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002681.2500, Iter: 17 ***
+
+--- Iteration 18/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10847.375250000001
+
+==== iter 42 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 42 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 42 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 42 Begin simulate ====
+Simulation run started.
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2177 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 42 Simulation completed successfully ====
+==== iter 42 Succeeds in closing MDE ====
+
+==== iter 42 Result name: Results2177
+
+========== Evaluation result of iter 42 ==========
+====== UGB          : 156869000.0 Hz
+====== Phase_Margin : 55.1869 deg
+====== Gain_db      : 79.7855 db
+====== Gain_Margin  : -23.8986 db
+====== I_OPA        : 2.8087899999999997 mA
+====== Total_Area   : 10847.375250000001 um^2
+
+  - Current score: 1000002681.2500
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10852.449
+
+==== iter 43 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 43 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 43 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 43 Begin simulate ====
+Simulation run started.
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2179 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 43 Simulation completed successfully ====
+==== iter 43 Succeeds in closing MDE ====
+
+==== iter 43 Result name: Results2179
+
+========== Evaluation result of iter 43 ==========
+====== UGB          : 156938000.0 Hz
+====== Phase_Margin : 55.195 deg
+====== Gain_db      : 79.7889 db
+====== Gain_Margin  : -23.8959 db
+====== I_OPA        : 2.81041 mA
+====== Total_Area   : 10852.449 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002638.7500. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002638.7500, Iter: 18 ***
+
+--- Iteration 19/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10852.449
+
+==== iter 44 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 44 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 44 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 44 Begin simulate ====
+Simulation run started.
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2181 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 44 Simulation completed successfully ====
+==== iter 44 Succeeds in closing MDE ====
+
+==== iter 44 Result name: Results2181
+
+========== Evaluation result of iter 44 ==========
+====== UGB          : 156938000.0 Hz
+====== Phase_Margin : 55.195 deg
+====== Gain_db      : 79.7889 db
+====== Gain_Margin  : -23.8959 db
+====== I_OPA        : 2.81041 mA
+====== Total_Area   : 10852.449 um^2
+
+  - Current score: 1000002638.7500
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10857.52275
+
+==== iter 45 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 45 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 45 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 45 Begin simulate ====
+Simulation run started.
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2183 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 45 Simulation completed successfully ====
+==== iter 45 Succeeds in closing MDE ====
+
+==== iter 45 Result name: Results2183
+
+========== Evaluation result of iter 45 ==========
+====== UGB          : 157002000.0 Hz
+====== Phase_Margin : 55.2024 deg
+====== Gain_db      : 79.792 db
+====== Gain_Margin  : -23.8934 db
+====== I_OPA        : 2.81191 mA
+====== Total_Area   : 10857.52275 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002600.0000. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002600.0000, Iter: 19 ***
+
+--- Iteration 20/20 (Phase: coarse_tune_m, Active Params: 42) ---
+Design save result: True
+
+==== total area:  10857.52275
+
+==== iter 46 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 46 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 46 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 46 Begin simulate ====
+Simulation run started.
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2185 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 46 Simulation completed successfully ====
+==== iter 46 Succeeds in closing MDE ====
+
+==== iter 46 Result name: Results2185
+
+========== Evaluation result of iter 46 ==========
+====== UGB          : 157002000.0 Hz
+====== Phase_Margin : 55.2024 deg
+====== Gain_db      : 79.792 db
+====== Gain_Margin  : -23.8934 db
+====== I_OPA        : 2.81191 mA
+====== Total_Area   : 10857.52275 um^2
+
+  - Current score: 1000002600.0000
+  - Attempting inertia move: PM10_m (+)
+Design save result: True
+
+==== total area:  10862.596500000003
+
+==== iter 47 ae.MdeSession.open(2025_EDA_case1, OPA_loopgain, spe_state1_Corner) successfully ====
+
+==== iter 47 Project directory: /home/edauser19/simulation/edauser19
+
+==== iter 47 Current settings: MdeSetting (ProjectDir: /home/edauser19/simulation/edauser19, FilePath: /home/edauser19/EDA_2025_Empyrean_demo_1/2025_EDA_case1/OPA_loopgain/spe_state1_Corner/setting)
+Simulation run started.
+Creating simulation netlist succeeds.
+
+==== iter 47 Begin simulate ====
+Simulation run started.
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 1
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 2
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 3
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 4
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 5
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 6
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 7
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 8
+Results2187 Sim Done! #maxJob: 1 #total sim: 9 #finished sim: 9
+
+==== iter 47 Simulation completed successfully ====
+==== iter 47 Succeeds in closing MDE ====
+
+==== iter 47 Result name: Results2187
+
+========== Evaluation result of iter 47 ==========
+====== UGB          : 157061000.0 Hz
+====== Phase_Margin : 55.2093 deg
+====== Gain_db      : 79.7949 db
+====== Gain_Margin  : -23.8911 db
+====== I_OPA        : 2.81329 mA
+====== Total_Area   : 10862.596500000003 um^2
+
+  >>> INERTIA SUCCESS! Score improved to 1000002563.7500. Continuing with momentum.
+  *** New overall best found during inertia! Score: 1000002563.7500, Iter: 20 ***
+
+=======================================================
+===      HYBRID OPTIMIZATION COMPLETED            ===
+=======================================================
+Final best parameters found (from overall optimization):
+
+========== Best Evaluation Result (from Iter 20) ==========
+====== Gain_db      : 79.7949
+====== UGB          : 157061000.0
+====== Phase_Margin : 55.2093
+====== Gain_Margin  : -23.8911
+====== I_OPA        : 0.00281329
+====== Total_Area   : 10862.596500000003
+
+Script finished.
+[edauser19@jingying01 EDA_2025_Empyrean_demo_2]$ 

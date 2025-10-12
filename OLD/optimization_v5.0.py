@@ -1,4 +1,4 @@
-# V4.5 参数分层搜索 + 惯性 + 分阶段冻结 + 步长调整 + 阈值终止
+# V4.5基础上由单维度调整修改为多维度，也就是增加了梯度的维度（也许原来就不叫梯度
 
 import argparse
 import pyAether as ae
@@ -45,31 +45,36 @@ def parse_arguments():
 
     return parser.parse_args()
 
-def run_hybrid_optimization_v4_5(platform: SimulatePlatform, initial_parameters: dict,
+def run_hybrid_optimization_v5_0(platform: SimulatePlatform, initial_parameters: dict,
                                   circuit_graph: CircuitGraph,
                                   max_sim_count: int = 500,
                                   perturb_ratio: float = 0.1,
                                   initial_greedy_alpha_pct: float = 5.0,
                                   min_greedy_alpha_pct: float = 1.0):
     """
-    执行一个混合两阶段优化算法 (V4.5)，融合了分层、惯性、冻结、自适应Alpha和阈值终止。
+    执行一个混合优化算法 (V5.0)，融合了贪婪扫描和梯度下降回退。
     
-    - 核心特性:
-      - 分层搜索: 先优化 'm' 参数 (阶段一)，再优化其他连续参数 (阶段二)。
-      - 惯性机制: 记录并优先尝试每个参数上次成功的探索方向。
-      - 分阶段冻结: 在每个阶段，如果一个参数在所有方向上都无法带来任何改进，则将其冻结。
-      - 自适应Alpha: 接受阈值(alpha)会根据上一轮的最佳改进动态调整，变得更灵敏。
-      - 阈值终止: 如果一轮迭代中找到的最佳改进低于最小阈值，则认为该阶段收敛。
-    - 终止条件:
-      - 达到最大仿真次数 (max_sim_count)。
-      - 两个阶段都因收敛或参数全部冻结而自然结束。
+    - 核心特性 (V5.0):
+      - 阶段一 ('m' 参数) 保持不变，使用原有的贪心局部搜索。
+      - 阶段二 (连续参数) 采用新混合策略：
+        1. **快速贪婪扫描**:
+           - 优先只对每个参数进行正向(+)微扰。
+           - 如果发现任何一次微扰的收益超过动态阈值 (alpha)，则判定为“贪婪跳跃机会”。
+           - 特殊检查：一旦发现正向(+)有机会，会额外检查一次负向(-)是否机会更大，然后选择最优方向进行立即跳跃，并开始下一次大迭代。
+        2. **梯度下降回退**:
+           - 如果完整扫描所有参数后，都未能触发贪婪跳跃。
+           - 算法会利用扫描过程中收集的所有正向微扰信息，构建一个梯度向量。
+           - 执行一次基于该梯度的复合移动（梯度下降）。
+           - 根据复合移动的收益情况，自适应地调整alpha和步长，或在收益为负时终止并发出警告。
+    - 保留特性:
+      - 分层搜索, 惯性机制, 分阶段冻结, 自适应Alpha, 阈值终止。
     """
     print("\n===================================================================")
-    print("===   HYBRID TWO-STAGE OPTIMIZATION (V4.5)                  ===")
-    print("===   (Hierarchical + Inertia + Freezing + Adaptive Alpha)  ===")
+    print("===   HYBRID OPTIMIZATION (V5.0)                              ===")
+    print("===   (Greedy Scan + Gradient Descent Fallback)             ===")
     print("===================================================================")
 
-    # --- 目标函数 get_score (与V4.3版本相同) ---
+    # --- 目标函数 get_score (与V4.5版本相同) ---
     platform.only_set_params(initial_parameters)
     baseline_scores = platform.evaluate()
     if not baseline_scores:
@@ -95,7 +100,7 @@ def run_hybrid_optimization_v4_5(platform: SimulatePlatform, initial_parameters:
             area_norm = scores.get('Total_Area', 0) / initial_area_val
             return 0.5 * area_norm - 0.5 * ugb_norm
 
-    # --- 构建对称参数映射 (与V4.3版本相同) ---
+    # --- 构建对称参数映射 (与V4.5版本相同) ---
     param_mapping = {}
     devices_in_groups = set()
     for group in circuit_graph.constraint_groups:
@@ -113,18 +118,25 @@ def run_hybrid_optimization_v4_5(platform: SimulatePlatform, initial_parameters:
             if name not in param_mapping:
                  param_mapping[name] = [name]
 
+    print("\n[DEBUG] Applying patch to ensure all non-dummy params are in the mapping...")
+    missing_params_added = 0
+    for name, param in initial_parameters.items():
+        if not param.is_dummy and name not in param_mapping:
+            param_mapping[name] = [name]  # 每个参数独立优化，不考虑对称性
+            missing_params_added += 1
+    print(f"[DEBUG] Patch complete. Added {missing_params_added} missing parameters to the optimization set.\n")
+    # --- [调试修改] END ---
+
     # --- 参数分类和状态初始化 ---
     m_param_names = {name for name in param_mapping.keys() if name.endswith('_m')}
     other_param_names = {name for name in param_mapping.keys() if not name.endswith('_m')}
     
-    # 状态变量
     frozen_params_stage1 = set()
     frozen_params_stage2 = set()
     last_success_direction = {name: None for name in param_mapping.keys()}
     current_greedy_alpha_pct = initial_greedy_alpha_pct
     simulation_count = 1
 
-    # --- 全局最优解追踪器 ---
     tracking_info = {
         'best_params': copy.deepcopy(initial_parameters),
         'best_score': get_score(baseline_scores),
@@ -133,8 +145,9 @@ def run_hybrid_optimization_v4_5(platform: SimulatePlatform, initial_parameters:
     }
     X_current_params = copy.deepcopy(initial_parameters)
 
-    # ======================== 阶段一: 'm' 参数优化 (带冻结、惯性、自适应Alpha) ========================
+    # ======================== 阶段一: 'm' 参数优化 (与V4.5完全相同) ========================
     print(f"\n{'#'*25} Starting Stage 1: 'm' Parameter Tuning {'#'*25}")
+    
     stage1_iter_count = 0
     while simulation_count < max_sim_count:
         stage1_iter_count += 1
@@ -245,11 +258,14 @@ def run_hybrid_optimization_v4_5(platform: SimulatePlatform, initial_parameters:
         if simulation_count >= max_sim_count:
             print(f"\n--- HALTING: Max simulations reached during Stage 1. ---")
             break
+    
+    print(f"\n--- Stage 1 Finished. Current best score: {tracking_info['best_score']:.4f} ---")
 
-    # ======================== 阶段二: 'fw/l/r/c' 参数优化 (逻辑与阶段一类似) ========================
-    print(f"\n{'#'*25} Starting Stage 2: Continuous Parameter Tuning {'#'*25}")
+
+    # ======================== 阶段二: 连续参数优化 (V5.0 混合策略) ========================
+    print(f"\n{'#'*25} Starting Stage 2: Continuous Parameter Tuning (V5.0) {'#'*25}")
     stage2_iter_count = 0
-    current_greedy_alpha_pct = initial_greedy_alpha_pct # 重置Alpha进入新阶段
+    current_greedy_alpha_pct = initial_greedy_alpha_pct # 重置Alpha
 
     while simulation_count < max_sim_count:
         stage2_iter_count += 1
@@ -258,149 +274,161 @@ def run_hybrid_optimization_v4_5(platform: SimulatePlatform, initial_parameters:
             print(f"\n--- Stage 2 CONVERGENCE: All continuous parameters have been frozen. ---")
             break
 
-        print(f"\n--- Stage 2 Iteration {stage2_iter_count} (Alpha: {current_greedy_alpha_pct:.2f}%) ---")
-        
         platform.only_set_params(X_current_params)
         eval_results = platform.evaluate(); simulation_count += 1
         score_current = get_score(eval_results)
+        print(f"\n--- Stage 2 Iteration {stage2_iter_count} (Alpha: {current_greedy_alpha_pct:.2f}%, Perturb: {perturb_ratio:.4f}) ---")
         print(f"  - Current score: {score_current:.4f} (Sim count: {simulation_count})")
 
         found_immediate_jump = False
-        best_neighbor_so_far = {'params': None, 'score': score_current, 'name': None, 'sign': None}
+        gradient_vector = {}
         shuffled_param_names = random.sample(active_other_params, len(active_other_params))
 
+        # --- PART 1: 快速贪婪扫描 ---
         for name in shuffled_param_names:
-            found_improvement_for_this_param = False
-            # 惯性机制
-            directions = [1, -1]
-            if last_success_direction[name] is not None:
-                directions.insert(0, last_success_direction[name])
-                directions = list(dict.fromkeys(directions))
+            # 1. 只进行正向(+)微扰
+            params_probe_plus = copy.deepcopy(X_current_params)
+            original_value = params_probe_plus[name].value
+            h = original_value * perturb_ratio
+            if h == 0: continue
 
-            for sign in directions:
-                params_probe = copy.deepcopy(X_current_params)
-                original_value = params_probe[name].value
-                step = original_value * perturb_ratio
-                new_value = original_value + sign * step
-                if new_value <= 0: continue # 确保参数值为正
-                
-                for actual_param in param_mapping[name]:
-                    params_probe[actual_param].value = new_value
-                
-                platform.only_set_params(params_probe)
-                probe_eval_results = platform.evaluate(); simulation_count += 1
-                score_probe = get_score(probe_eval_results)
-                
-                if score_probe < tracking_info['best_score']:
-                    print(f"  *** New overall best found! Score: {score_probe:.4f}, Sim: {simulation_count} ***")
-                    tracking_info.update({
-                        'best_score': score_probe, 'best_params': copy.deepcopy(params_probe),
-                        'best_sim_num': simulation_count, 'best_metrics': probe_eval_results
-                    })
-
-                if score_probe < best_neighbor_so_far['score']:
-                    best_neighbor_so_far = {'params': params_probe, 'score': score_probe, 'name': name, 'sign': sign}
-                
-                if score_probe < score_current:
-                    found_improvement_for_this_param = True
-                else:
-                    last_success_direction[name] = None
-                
-                # 检查贪婪跳转
-                improvement = score_current - score_probe
-                threshold = 0
-                if score_current >= 1e9:
-                    penalty_part = score_current - 1e9
-                    threshold = penalty_part * (current_greedy_alpha_pct / 100.0)
-                
-                if improvement > threshold:
-                    print(f"  >>> GREEDY JUMP on '{name}'! Improvement > {current_greedy_alpha_pct:.2f}%.")
-                    X_current_params = params_probe
-                    last_success_direction[name] = sign
-                    found_immediate_jump = True
-                    current_greedy_alpha_pct = initial_greedy_alpha_pct
-                    break
+            new_value_plus = original_value + h
+            for actual_param in param_mapping[name]:
+                params_probe_plus[actual_param].value = new_value_plus
             
-            if found_immediate_jump: break
+            platform.only_set_params(params_probe_plus)
+            probe_eval_plus = platform.evaluate(); simulation_count += 1
+            score_probe_plus = get_score(probe_eval_plus)
 
-            # 分阶段冻结
-            if score_current < 1e9 and not found_improvement_for_this_param:
-                print(f"  - Parameter '{name}' hit a local optimum (in feasible region). Freezing for Stage 2.")
-                frozen_params_stage2.add(name)
+            # 存储梯度信息以备后用
+            gradient_vector[name] = (score_probe_plus - score_current) / h
+            
+            # 更新全局最优解
+            if score_probe_plus < tracking_info['best_score']:
+                print(f"  *** New overall best found! Score: {score_probe_plus:.4f}, Sim: {simulation_count} ***")
+                tracking_info.update({'best_score': score_probe_plus, 'best_params': copy.deepcopy(params_probe_plus), 'best_sim_num': simulation_count, 'best_metrics': probe_eval_plus})
 
+            # 2. 检查是否触发贪婪跳跃
+            improvement_plus = score_current - score_probe_plus
+            penalty_part = score_current - 1e9 if score_current >= 1e9 else abs(score_current)
+            threshold = penalty_part * (current_greedy_alpha_pct / 100.0) if penalty_part > 0 else 0
+
+            if improvement_plus > threshold:
+                print(f"  >>> GREEDY JUMP opportunity on '{name}' (+)! Improvement > {current_greedy_alpha_pct:.2f}%.")
+                
+                # 3. 特殊检查: 既然(+)很有效，破例检查(-)是否更有效
+                params_probe_minus = copy.deepcopy(X_current_params)
+                new_value_minus = original_value - h
+                if new_value_minus > 0:
+                    for actual_param in param_mapping[name]: params_probe_minus[actual_param].value = new_value_minus
+                    
+                    platform.only_set_params(params_probe_minus)
+                    probe_eval_minus = platform.evaluate(); simulation_count += 1
+                    score_probe_minus = get_score(probe_eval_minus)
+
+                    improvement_minus = score_current - score_probe_minus
+                    if improvement_minus > threshold and score_probe_minus < score_probe_plus:
+                        print(f"  >>> Exceptional check: '-' direction is even better! Jumping to (-).")
+                        X_current_params = params_probe_minus
+                        last_success_direction[name] = -1
+                    else:
+                        X_current_params = params_probe_plus
+                        last_success_direction[name] = 1
+                else:
+                    X_current_params = params_probe_plus
+                    last_success_direction[name] = 1
+
+                found_immediate_jump = True
+                current_greedy_alpha_pct = initial_greedy_alpha_pct # 重置Alpha
+                break # 立即跳跃，结束本次扫描
+
+            if simulation_count >= max_sim_count: break
         if found_immediate_jump: continue
 
-        # 检查最佳邻居
-        if best_neighbor_so_far['params'] is not None:
-            improvement = score_current - best_neighbor_so_far['score']
-            improvement_pct = 0
-            # 在惩罚区计算改进百分比
-            if score_current >= 1e9 and (score_current - 1e9) > 0:
-                improvement_pct = (improvement / (score_current - 1e9)) * 100.0
-            # 在性能区也可以定义百分比，例如基于score的相对变化
-            elif score_current > 0:
-                 improvement_pct = (improvement / abs(score_current)) * 100.0
 
-            # 阈值终止
-            if improvement_pct < min_greedy_alpha_pct and score_current < 1e9: # 通常在性能区更关注阈值终止
-                print(f"\n--- Stage 2 CONVERGENCE: Best improvement ({improvement_pct:.2f}%) is below min alpha ({min_greedy_alpha_pct:.2f}%). ---")
-                X_current_params = best_neighbor_so_far['params']
-                break
+        # --- PART 2: 梯度下降回退 (仅在没有贪婪跳跃时执行) ---
+        print("  - No greedy jump found. Attempting gradient descent step.")
+        if not gradient_vector: continue
 
-            print(f"  - No greedy jump. Moving to best neighbor (Improvement: {improvement_pct:.2f}%).")
-            X_current_params = best_neighbor_so_far['params']
-            last_success_direction[best_neighbor_so_far['name']] = best_neighbor_so_far['sign']
+        # 1. 构造梯度下降后的新点
+        X_gradient_params = copy.deepcopy(X_current_params)
+        # 学习率与扰动率关联，使得步长自适应
+        learning_rate = perturb_ratio 
+        for name in active_other_params:
+            grad_val = gradient_vector.get(name, 0.0)
+            # 更新规则: p_new = p_old - lr * grad
+            update_step = learning_rate * grad_val
+            # 按比例更新，使得对大数值参数的更新更大
+            X_gradient_params[name].value -= update_step * X_gradient_params[name].value
             
-            # 自适应Alpha
+            # 边界检查
+            if X_gradient_params[name].value <= 0:
+                X_gradient_params[name].value = X_current_params[name].value * 0.1
+
+        # 2. 评估梯度移动的效果
+        platform.only_set_params(X_gradient_params)
+        eval_gradient_results = platform.evaluate(); simulation_count += 1
+        score_gradient = get_score(eval_gradient_results)
+        
+        improvement = score_current - score_gradient
+        
+        # 3. 分析梯度移动的结果
+        if improvement <= 0:
+            print("\n" + "!"*80)
+            print("!!! WARNING: GRADIENT DESCENT FAILED TO IMPROVE SCORE !!!")
+            print(f"!!! Original Score: {score_current:.4f} -> Gradient Move Score: {score_gradient:.4f}")
+            print("!!! This may indicate a highly non-linear or deceptive search space.")
+            print("!!! Halting Stage 2.")
+            
+            print("\nOriginal Point Vector:")
+            orig_vec = [f"{name}: {param.value:.4e}" for name, param in X_current_params.items() if name in active_other_params]
+            print(orig_vec)
+            
+            print("\nComputed Gradient Vector (Score Change per Unit Perturbation):")
+            grad_vec = [f"{name}: {gradient_vector.get(name, 0):.4e}" for name in active_other_params]
+            print(grad_vec)
+            print("!"*80 + "\n")
+            break # 终止阶段二
+        
+        # 如果移动有效，则接受
+        X_current_params = X_gradient_params
+        print(f"  >>> Gradient step successful! New score: {score_gradient:.4f}")
+        if score_gradient < tracking_info['best_score']:
+             print(f"  *** New overall best found via gradient! Score: {score_gradient:.4f}, Sim: {simulation_count} ***")
+             tracking_info.update({'best_score': score_gradient, 'best_params': copy.deepcopy(X_gradient_params), 'best_sim_num': simulation_count, 'best_metrics': eval_gradient_results})
+
+        # 4. 自适应调整Alpha和步长
+        improvement_pct = 0
+        penalty_part = score_current - 1e9 if score_current >= 1e9 else abs(score_current)
+        if penalty_part > 1e-9:
+             improvement_pct = (improvement / penalty_part) * 100.0
+
+        threshold = penalty_part * (current_greedy_alpha_pct / 100.0)
+        
+        if improvement > threshold:
+            print(f"  - Composite improvement ({improvement_pct:.2f}%) exceeded alpha. Resetting alpha.")
+            current_greedy_alpha_pct = initial_greedy_alpha_pct
+        else:
             new_alpha = max(min_greedy_alpha_pct, improvement_pct)
+            print(f"  - Composite improvement ({improvement_pct:.2f}%) is below alpha. Adjusting alpha.")
             print(f"  >>> Adjusting alpha from {current_greedy_alpha_pct:.2f}% to {new_alpha:.2f}%")
             current_greedy_alpha_pct = new_alpha
             
-            perturb_ratio = perturb_ratio * new_alpha / initial_greedy_alpha_pct
-            print(f"  >>> Adjusting perturb_ratio to {perturb_ratio:.4f}")
-            
-        else:
-            print(f"\n--- Stage 2 CONVERGENCE: No improvement found in this iteration. ---")
-            break
-            
+            # 同比例降低步长
+            new_perturb_ratio = perturb_ratio * (new_alpha / initial_greedy_alpha_pct) if initial_greedy_alpha_pct > 0 else perturb_ratio
+            print(f"  >>> Adjusting perturb_ratio from {perturb_ratio:.4f} to {new_perturb_ratio:.4f}")
+            perturb_ratio = new_perturb_ratio
+
         if simulation_count >= max_sim_count:
             print(f"\n--- HALTING: Max simulations reached during Stage 2. ---")
             break
-
-    # ======================== 结束和保存 ========================
-    print("\n=======================================================")
-    print("===      HYBRID OPTIMIZATION (V4.5) COMPLETED       ===")
-    print("=======================================================")
-    print(f"Total simulations performed: {simulation_count}")
-    print("Final best parameters found (from overall optimization):")
+            
+    print("\n===================================================================")
+    print("===   OPTIMIZATION FINISHED                                     ===")
+    print(f"===   Best score found: {tracking_info['best_score']:.4f} at simulation #{tracking_info['best_sim_num']}")
+    print("===================================================================")
     
-    print("\n========== Best Evaluation Result (from Sim #{}) ==========".format(tracking_info['best_sim_num']))
-    for key, value in tracking_info['best_metrics'].items():
-        print(f"====== {key:<12} : {value}")
-
-    output_dir = f"{platform.output_path}"
-    os.makedirs(output_dir, exist_ok=True)
-    final_result_file = f"{output_dir}/hybrid_v4.5_final_solution.txt"
-    with open(final_result_file, 'w') as f:
-        f.write(f"Optimization Status: Finished Hybrid Two-Stage Optimization (V4.5).\n")
-        f.write(f"Total Simulations: {simulation_count}\n")
-        f.write(f"Best Solution Found at Simulation: {tracking_info['best_sim_num']}\n")
-        f.write(f"Final Score: {tracking_info['best_score']:.4f}\n\n")
-        f.write(f"Frozen 'm' parameters ({len(frozen_params_stage1)}): {sorted(list(frozen_params_stage1))}\n")
-        f.write(f"Frozen other parameters ({len(frozen_params_stage2)}): {sorted(list(frozen_params_stage2))}\n\n")
-        
-        final_best_params = tracking_info['best_params']
-        all_optimizable_names = list(m_param_names) + list(other_param_names)
-        for name in sorted(all_optimizable_names):
-            if name in final_best_params:
-                param_obj = final_best_params[name]
-                formatted_value = param_obj.format_value(param_obj.value)
-                status = ""
-                if name in frozen_params_stage1:
-                    status = " (Frozen Stage 1)"
-                elif name in frozen_params_stage2:
-                    status = " (Frozen Stage 2)"
-                f.write(f"  {name}: {formatted_value}{status}\n")
+    return tracking_info
 
 if __name__ == "__main__":
     args = parse_arguments()
@@ -465,7 +493,7 @@ if __name__ == "__main__":
             print("Error: Failed to read initial parameters for GD. Exiting.")
             exit(1)
         
-        run_hybrid_optimization_v4_5(platform, initial_parameters, circuit_graph,
+        run_hybrid_optimization_v5_0(platform, initial_parameters, circuit_graph,
                                     max_sim_count=500,
                                     perturb_ratio=0.1,
                                     initial_greedy_alpha_pct=args.greedy_alpha,
