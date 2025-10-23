@@ -1,4 +1,4 @@
-# V 1.0.0 加上手动管理进程实现并行，无bug
+# 基于V1.0.0 继续开发 V1.0.0
 
 import argparse
 import pyAether as ae
@@ -11,6 +11,12 @@ from src.optimizer import SimulatePlatform
 from src.data_models import CircuitGraph
 from src.graph_builder import build_graph_from_eda
 from src.circuit_analyzer import analyze_circuit_constraints
+
+# Note: skopt (scikit-optimize) imports removed — not used in current file
+# If you later add Bayesian optimization (gp_minimize / Real / Integer / use_named_args), re-enable these imports
+#from skopt import gp_minimize
+#from skopt.space import Real, Integer
+#from skopt.utils import use_named_args
 
 def parse_arguments():
     """Parse command-line arguments for the optimization tool"""
@@ -63,22 +69,19 @@ def get_score(scores, initial_ugb_val, initial_area_val):
 def evaluate_and_count(platform, params, simulation_count):
 	"""设置参数并运行一次仿真，返回 (results, new_simulation_count)。"""
 	platform.only_set_params(params)
-	platform.calc_area()
-	results = platform.evaluate() 
+	results = platform.evaluate()
 	return results, simulation_count + 1
 
-def update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count, best_params_filepath):
-    """如果 probe 优于全局最优则更新 tracking_info 并打印提示。"""
-    if score_probe < tracking_info['best_score']:
-        print(f"  *** New overall best found! Score: {score_probe:.4f}, Sim: {simulation_count} ***")
-        tracking_info.update({
-            'best_score': score_probe,
-            'best_params': copy.deepcopy(params_probe),
-            'best_sim_num': simulation_count,
-            'best_metrics': probe_eval_results
-        })
-        # 每次找到更优解时，调用新函数更新最优参数文件
-        write_params_to_file(tracking_info['best_params'], best_params_filepath)
+def update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count):
+	"""如果 probe 优于全局最优则更新 tracking_info 并打印提示。"""
+	if score_probe < tracking_info['best_score']:
+		print(f"  *** New overall best found! Score: {score_probe:.4f}, Sim: {simulation_count} ***")
+		tracking_info.update({
+			'best_score': score_probe,
+			'best_params': copy.deepcopy(params_probe),
+			'best_sim_num': simulation_count,
+			'best_metrics': probe_eval_results
+		})
 
 def finalize_and_save_results(tracking_info, platform, simulation_count, frozen_params, m_param_names, other_param_names, filename="dynamic_v1.0.0_final_solution.txt"):
 	"""
@@ -115,20 +118,6 @@ def finalize_and_save_results(tracking_info, platform, simulation_count, frozen_
 				status = " (Frozen)" if name in frozen_params else ""
 				f.write(f"  {name}: {formatted_value}{status}\n")
 
-def write_params_to_file(params: dict, output_filepath: str):
-    """将 Parameter 对象字典按指定格式写入文件。"""
-    try:
-        with open(output_filepath, 'w') as f:
-            # 按参数名称排序，确保每次输出的文件内容顺序一致
-            for name in sorted(params.keys()):
-                param = params[name]
-                # 使用 Parameter 对象自带的 format() 方法来获取带单位的字符串值
-                formatted_value = param.format()
-                # 写入格式："parameter","NM17_m","2"
-                f.write(f'"parameter","{name}","{formatted_value}"\n')
-    except Exception as e:
-        print(f"  [Warning] Failed to write best params to {output_filepath}: {e}")
-
 def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_parameters: dict,
                                   circuit_graph: CircuitGraph,
                                   perturb_ratio: float = 0.10,
@@ -148,8 +137,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
 
     # --- 目标函数 get_score (保持不变) ---
     platform.only_set_params(initial_parameters)
-    platform.calc_area()
-    baseline_scores = platform.evaluate() 
+    baseline_scores = platform.evaluate()
     if not baseline_scores:
         print("FATAL: Baseline simulation failed."); return
 
@@ -161,9 +149,9 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         print("WARNING: Initial Total_Area is 0")
 
     # --- DEBUG: 打印初始参数及is_dummy状态 ---
-    # print("\n--- DEBUG: Initial Parameters Read ---")
-    # for name, param in initial_parameters.items():
-    #     print(f"  - Param: {name}, Value: {param.value}, is_dummy: {getattr(param, 'is_dummy', 'N/A')}")
+    print("\n--- DEBUG: Initial Parameters Read ---")
+    for name, param in initial_parameters.items():
+        print(f"  - Param: {name}, Value: {param.value}, is_dummy: {getattr(param, 'is_dummy', 'N/A')}")
     # --- 构建对称参数映射 (逻辑不变) ---
     param_mapping = {}
     devices_in_groups = set()
@@ -182,24 +170,20 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
             if name not in param_mapping:
                  param_mapping[name] = [name]
     # --- DEBUG: 打印参数映射结果 ---
-    # print("\n--- DEBUG: Parameter Mapping ---")
-    # for k, v in param_mapping.items():
-    #     print(f"  {k}: {v}")
+    print("\n--- DEBUG: Parameter Mapping ---")
+    for k, v in param_mapping.items():
+        print(f"  {k}: {v}")
     # --- 参数分类和状态初始化 ---
     m_param_names = {name for name in param_mapping.keys() if name.endswith('_m')}
     other_param_names = {name for name in param_mapping.keys() if not name.endswith('_m')}
     # --- DEBUG: 打印参数分类结果 ---
-    # print("\n--- DEBUG: Parameter Categorization ---")
-    # print(f"M-Params ({len(m_param_names)}): {sorted(list(m_param_names))}")
-    # print(f"Other-Params ({len(other_param_names)}): {sorted(list(other_param_names))}")
+    print("\n--- DEBUG: Parameter Categorization ---")
+    print(f"M-Params ({len(m_param_names)}): {sorted(list(m_param_names))}")
+    print(f"Other-Params ({len(other_param_names)}): {sorted(list(other_param_names))}")
     frozen_params = set()
     last_success_direction = {name: None for name in param_mapping.keys()}  # 记录上次成功的方向
 
     simulation_count = 1  # Baseline simulation is the first one
-
-    output_dir = platform.output_path
-    optimization_log_file = os.path.join(output_dir, "optimization_log.txt")
-    best_params_filepath = os.path.join(output_dir, "best_params_so_far.txt")
 
     # --- 全局最优解追踪器 ---
     tracking_info = {
@@ -208,23 +192,11 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         'best_sim_num': 1,
         'best_metrics': baseline_scores
     }
-    # 初始时就写入一次最优参数
-    write_params_to_file(tracking_info['best_params'], best_params_filepath)
 
     X_current_params = copy.deepcopy(initial_parameters)
 
-    log_f = open(optimization_log_file, 'w', encoding='utf-8')
-    log_f.write(f"--- Iteration 1 (Baseline) ---\n")
-    log_f.write(f"Score: {tracking_info['best_score']:.4f}\n")
-    for key, value in baseline_scores.items():
-        log_f.write(f"  {key:<15}: {value}\n")
-    log_f.write("\n")
-    log_f.flush()
-
     # ======================== 阶段一: 'm' 参数优化 (带参数冻结) ========================
     print(f"\n{'#'*25} Starting Stage 1: 'm' Parameter Tuning {'#'*25}")
-    log_f.write(f"\n{'#'*25} Starting Stage 1: 'm' Parameter Tuning {'#'*25}\n\n")
-    log_f.flush()
     stage1_iter_count = 0
     # 新增：阶段一仿真预算（到达后退出到阶段二，而非整体停止）
     stage1_sim_budget = 200
@@ -235,17 +207,11 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
 
         # 如果阶段一预算已经耗尽，跳出到阶段二
         if stage1_budget_exhausted:
-            message = f"\n--- Stage 1 exiting early: stage1_sim_budget ({stage1_sim_budget}) reached. Moving to Stage 2. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"\n--- Stage 1 exiting early: stage1_sim_budget ({stage1_sim_budget}) reached. Moving to Stage 2. ---")
             break
 
         if not active_m_params:
-            message = "\n--- Stage 1 CONVERGENCE: All 'm' parameters have been frozen. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"\n--- Stage 1 CONVERGENCE: All 'm' parameters have been frozen. ---")
             break
 
         print(f"\n--- Stage 1 Iteration {stage1_iter_count} (Active 'm' params: {len(active_m_params)}) ---")
@@ -254,23 +220,11 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         eval_results, simulation_count = evaluate_and_count(platform, X_current_params, simulation_count)
         # 检查阶段一预算
         if simulation_count >= stage1_sim_budget:
-            message = f"  - Stage1 simulation budget reached ({simulation_count} / {stage1_sim_budget}). Exiting Stage 1 to Stage 2."
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"  - Stage1 simulation budget reached ({simulation_count} / {stage1_sim_budget}). Exiting Stage 1 to Stage 2.")
             stage1_budget_exhausted = True
             break
         score_current = get_score(eval_results, initial_ugb_val, initial_area_val)
         print(f"  - Current score: {score_current:.4f} (Sim count: {simulation_count})")
-        log_f.write(f"--- Stage 1 Iteration {stage1_iter_count} (Current) ---\n")
-        log_f.write(f"Score: {score_current:.4f}\n")
-        if eval_results:
-            for key, value in eval_results.items():
-                log_f.write(f"  {key:<15}: {value}\n")
-        else:
-            log_f.write("  Simulation failed.\n")
-        log_f.write("\n")
-        log_f.flush()
 
         found_immediate_jump = False
         shuffled_param_names = random.sample(active_m_params, len(active_m_params))
@@ -298,27 +252,12 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                 probe_eval_results, simulation_count = evaluate_and_count(platform, params_probe, simulation_count)
                 # 检查阶段一预算（在内层也要及时退出）
                 if simulation_count >= stage1_sim_budget:
-                    message = f"  - Stage1 simulation budget reached during probing ({simulation_count} / {stage1_sim_budget}). Will exit to Stage 2 after this iteration."
-                    print(message)
-                    log_f.write(message + "\n")
-                    log_f.flush()
+                    print(f"  - Stage1 simulation budget reached during probing ({simulation_count} / {stage1_sim_budget}). Will exit to Stage 2 after this iteration.")
                     stage1_budget_exhausted = True
                 score_probe = get_score(probe_eval_results, initial_ugb_val, initial_area_val)
                 
                 # 用通用更新函数处理全局最优更新
-                update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count, best_params_filepath)
-
-                log_f.write(f"--- Iteration {simulation_count} (Probe) ---\n")
-                log_f.write(f"Action: Perturbed '{name}' with sign {sign}, new value ~{new_value}\n")
-                log_f.write(f"Value formatted: {params_probe[name].format()}\n")
-                log_f.write(f"Score: {score_probe:.4f}\n")
-                if probe_eval_results:
-                    for key, value in probe_eval_results.items():
-                        log_f.write(f"  {key:<15}: {value}\n")
-                else:
-                    log_f.write("  Simulation failed.\n")
-                log_f.write("\n")
-                log_f.flush()
+                update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count)
 
                 if score_probe < score_current:
                     found_improvement_for_this_param = True
@@ -334,10 +273,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                     break
             
             if not found_improvement_for_this_param:
-                message = f"  - Parameter '{name}' hit a local optimum. Freezing."
-                print(message)
-                log_f.write(message + "\n\n")
-                log_f.flush()
+                print(f"  - Parameter '{name}' hit a local optimum. Freezing.")
                 frozen_params.add(name)
                 last_success_direction[name] = None
 
@@ -345,23 +281,15 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                 break
         
         if not found_immediate_jump:
-            message = "  - No greedy jump found in this iteration. Re-evaluating with new frozen set."
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"  - No greedy jump found in this iteration. Re-evaluating with new frozen set.")
         
         # 如果阶段一预算耗尽，则退出到阶段二
         if stage1_budget_exhausted:
-            message = f"\n--- Stage 1 halted due to stage1_sim_budget ({stage1_sim_budget}). Proceeding to Stage 2. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"\n--- Stage 1 halted due to stage1_sim_budget ({stage1_sim_budget}). Proceeding to Stage 2. ---")
             break
 
     # ======================== 阶段二: 'fw/l/r/c' 参数优化 (带参数冻结) ========================
     print(f"\n{'#'*25} Starting Stage 2: Continuous Parameter Tuning {'#'*25}")
-    log_f.write(f"\n{'#'*25} Starting Stage 2: Continuous Parameter Tuning {'#'*25}\n\n")
-    log_f.flush()
     stage2_iter_count = 0
     perturb_ratio = 0.1  # 对于fw/l/r/c参数使用10%的相对步长
     
@@ -373,10 +301,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         active_other_params = list(other_param_names - frozen_params_stage2)
 
         if not active_other_params:
-            message = "\n--- Stage 2 CONVERGENCE: All 'other' parameters have been frozen. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"\n--- Stage 2 CONVERGENCE: All 'other' parameters have been frozen. ---")
             break
 
         print(f"\n--- Stage 2 Iteration {stage2_iter_count} (Active 'other' params: {len(active_other_params)}) ---")
@@ -385,15 +310,6 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         eval_results, simulation_count = evaluate_and_count(platform, X_current_params, simulation_count)
         score_current = get_score(eval_results, initial_ugb_val, initial_area_val)
         print(f"  - Current score: {score_current:.4f} (Sim count: {simulation_count})")
-        log_f.write(f"--- Stage 2 Iteration {stage2_iter_count} (Current) ---\n")
-        log_f.write(f"Score: {score_current:.4f}\n")
-        if eval_results:
-            for key, value in eval_results.items():
-                log_f.write(f"  {key:<15}: {value}\n")
-        else:
-            log_f.write("  Simulation failed.\n")
-        log_f.write("\n")
-        log_f.flush()
 
         best_neighbor_so_far = {'params': None, 'score': score_current}
         shuffled_param_names = random.sample(active_other_params, len(active_other_params))
@@ -423,19 +339,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                 probe_eval_results, simulation_count = evaluate_and_count(platform, params_probe, simulation_count)
                 score_probe = get_score(probe_eval_results, initial_ugb_val, initial_area_val)
 
-                update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count, best_params_filepath)
-
-                log_f.write(f"--- Iteration {simulation_count} (Probe) ---\n")
-                log_f.write(f"Action: Stage 2 perturb '{name}' with sign {sign}, new value ~{new_value}\n")
-                log_f.write(f"Value formatted: {params_probe[name].format()}\n")
-                log_f.write(f"Score: {score_probe:.4f}\n")
-                if probe_eval_results:
-                    for key, value in probe_eval_results.items():
-                        log_f.write(f"  {key:<15}: {value}\n")
-                else:
-                    log_f.write("  Simulation failed.\n")
-                log_f.write("\n")
-                log_f.flush()
+                update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count)
 
                 if score_probe < best_neighbor_so_far['score']:
                     best_neighbor_so_far = {'params': params_probe, 'score': score_probe}
@@ -449,10 +353,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
             if found_improvement_for_this_param:
                 any_improvement_in_iteration = True
             else:
-                message = f"  - Parameter '{name}' hit a local optimum. Freezing for Stage 2."
-                print(message)
-                log_f.write(message + "\n\n")
-                log_f.flush()
+                print(f"  - Parameter '{name}' hit a local optimum. Freezing for Stage 2.")
                 frozen_params_stage2.add(name)
 
         if best_neighbor_so_far['score'] < score_current:
@@ -460,20 +361,12 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
             X_current_params = best_neighbor_so_far['params']
         
         if not any_improvement_in_iteration:
-            message = "\n--- Stage 2 CONVERGENCE: No improvement found in a full iteration. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"\n--- Stage 2 CONVERGENCE: No improvement found in a full iteration. ---")
             break
         
         if simulation_count >= max_sim_count:
-            message = f"\n--- HALTING: Maximum simulation count ({max_sim_count}) reached during Stage 2. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+            print(f"\n--- HALTING: Maximum simulation count ({max_sim_count}) reached during Stage 2. ---")
             break
-
-    log_f.close()
 
     # ======================== 结束和保存 ========================
     # 将输出与保存步骤委托给独立函数，保持行为不变
@@ -487,33 +380,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         filename="dynamic_v1.0.0_final_solution.txt"
     )
 
-    print("\n=======================================================")
-    print("===      STARTING FINAL VERIFICATION                ===")
-    print("=======================================================")
-    print(f"Loading best parameters from: {best_params_filepath}")
-
-    try:
-        best_params_from_file = read_parameters(best_params_filepath)
-        print("Setting best parameters on the schematic...")
-        platform.only_set_params(best_params_from_file)
-        platform.calc_area()
-
-        print("Running final verification simulation...")
-        verification_scores = platform.evaluate()
-
-        if verification_scores:
-            print("\n========== FINAL VERIFICATION RESULT ==========")
-            for key, value in verification_scores.items():
-                print(f"====== {key:<15} : {value}")
-            print("==============================================")
-        else:
-            print("\n--- FINAL VERIFICATION FAILED ---")
-
-    except Exception as e:
-        print(f"\nAn error occurred during final verification: {e}")
-
 if __name__ == "__main__":
-    
     args = parse_arguments()
     ae.emyInitAether('-adv')
     
