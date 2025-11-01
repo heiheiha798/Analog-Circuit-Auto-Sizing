@@ -1,0 +1,2918 @@
+--- Pass 1 (Strict Goal: 80dB) - Start @ Sim 1 (Baseline from caller) ---
+Score: 1001325053.9000
+  Gain_db        : 56.018
+  UGB            : 5576480.0
+  Phase_Margin   : 89.7714
+  Gain_Margin    : 0.252789
+  I_OPA          : 0.000256636
+  Total_Area     : 3040.919999999999
+
+
+######################### Pass 1 (Strict Goal: 80dB) - Stage 1: 'm' Parameter Tuning #########################
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 1 (Current) ---
+Score: 1001325053.9000
+  Gain_db        : 56.018
+  UGB            : 5576480.0
+  Phase_Margin   : 89.7714
+  Gain_Margin    : 0.252789
+  I_OPA          : 0.000256636
+  Total_Area     : 3040.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 3 (Probe) ---
+Action: Perturbed 'PM12_m' with sign 1, new value ~2
+Score: 1001330933.4000
+  Gain_db        : 55.9194
+  UGB            : 6331660.0
+  Phase_Margin   : 89.7507
+  Gain_Margin    : 0.299259
+  I_OPA          : 0.000266992
+  Total_Area     : 3057.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 4 (Probe) ---
+Action: Perturbed 'PM17_m' with sign 1, new value ~3
+Score: 1001389471.2500
+  Gain_db        : 54.2579
+  UGB            : 3219980.0
+  Phase_Margin   : 89.6718
+  Gain_Margin    : 0.67695
+  I_OPA          : 0.00018093
+  Total_Area     : 3046.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 5 (Probe) ---
+Action: Perturbed 'PM17_m' with sign -1, new value ~1
+Score: 1001157679.0000
+  Gain_db        : 56.3672
+  UGB            : 13290500.0
+  Phase_Margin   : 89.7601
+  Gain_Margin    : -1.37731
+  I_OPA          : 0.000472942
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 2 (Current) ---
+Score: 1001157679.0000
+  Gain_db        : 56.3672
+  UGB            : 13290500.0
+  Phase_Margin   : 89.7601
+  Gain_Margin    : -1.37731
+  I_OPA          : 0.000472942
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 7 (Probe) ---
+Action: Perturbed 'NM8_m' with sign 1, new value ~2
+Score: 1001165585.2500
+  Gain_db        : 56.3463
+  UGB            : 12549400.0
+  Phase_Margin   : 89.7285
+  Gain_Margin    : -1.30086
+  I_OPA          : 0.000484576
+  Total_Area     : 3042.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 8 (Probe) ---
+Action: Perturbed 'NM5_m' with sign 1, new value ~4
+Score: 1001220210.3500
+  Gain_db        : 55.2567
+  UGB            : 13265200.0
+  Phase_Margin   : 89.0122
+  Gain_Margin    : -0.890809
+  I_OPA          : 0.00047296
+  Total_Area     : 3046.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 9 (Probe) ---
+Action: Perturbed 'NM5_m' with sign -1, new value ~2
+Score: 1001159392.0000
+  Gain_db        : 55.8268
+  UGB            : 13230700.0
+  Phase_Margin   : 90.1963
+  Gain_Margin    : -1.42773
+  I_OPA          : 0.000472915
+  Total_Area     : 3022.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 10 (Probe) ---
+Action: Perturbed 'PM21_m' with sign 1, new value ~2
+Score: 1001157677.7500
+  Gain_db        : 56.3673
+  UGB            : 13289600.0
+  Phase_Margin   : 89.7602
+  Gain_Margin    : -1.37731
+  I_OPA          : 0.000472923
+  Total_Area     : 3035.1599999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 11 (Probe) ---
+Action: Perturbed 'PM25_m' with sign 1, new value ~9
+Score: 1001157239.7500
+  Gain_db        : 56.4037
+  UGB            : 13291100.0
+  Phase_Margin   : 89.7617
+  Gain_Margin    : -1.37714
+  I_OPA          : 0.000472925
+  Total_Area     : 3040.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 12 (Probe) ---
+Action: Perturbed 'PM25_m' with sign -1, new value ~7
+Score: 1001158342.7500
+  Gain_db        : 56.3125
+  UGB            : 13289500.0
+  Phase_Margin   : 89.7585
+  Gain_Margin    : -1.37751
+  I_OPA          : 0.000472968
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 13 (Probe) ---
+Action: Perturbed 'NM11_m' with sign 1, new value ~2
+Score: 1001157684.0000
+  Gain_db        : 56.3668
+  UGB            : 13287700.0
+  Phase_Margin   : 89.7601
+  Gain_Margin    : -1.37731
+  I_OPA          : 0.000472891
+  Total_Area     : 3035.039999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 14 (Probe) ---
+Action: Perturbed 'PM13_m' with sign 1, new value ~9
+Score: 1001151905.0000
+  Gain_db        : 55.9672
+  UGB            : 13116300.0
+  Phase_Margin   : 89.5147
+  Gain_Margin    : -1.48505
+  I_OPA          : 0.000483364
+  Total_Area     : 3040.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 15 (Probe) ---
+Action: Perturbed 'PM13_m' with sign -1, new value ~7
+Score: 1001181885.5000
+  Gain_db        : 56.7478
+  UGB            : 13474700.0
+  Phase_Margin   : 90.0352
+  Gain_Margin    : -1.08767
+  I_OPA          : 0.000462419
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 16 (Probe) ---
+Action: Perturbed 'PM15_m' with sign 1, new value ~3
+Score: 1001150262.5000
+  Gain_db        : 55.2194
+  UGB            : 12846800.0
+  Phase_Margin   : 89.7536
+  Gain_Margin    : -1.59495
+  I_OPA          : 0.000474044
+  Total_Area     : 3046.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 17 (Probe) ---
+Action: Perturbed 'PM15_m' with sign -1, new value ~1
+Score: 1001196115.9000
+  Gain_db        : 57.8004
+  UGB            : 13781600.0
+  Phase_Margin   : 89.7898
+  Gain_Margin    : -0.813791
+  I_OPA          : 0.000469987
+  Total_Area     : 3022.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 18 (Probe) ---
+Action: Perturbed 'PM2_m' with sign 1, new value ~5
+Score: 1001273055.7000
+  Gain_db        : 55.3364
+  UGB            : 12822100.0
+  Phase_Margin   : 89.0439
+  Gain_Margin    : -0.352393
+  I_OPA          : 0.000473299
+  Total_Area     : 3046.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 19 (Probe) ---
+Action: Perturbed 'PM2_m' with sign -1, new value ~3
+Score: 1001025306.5000
+  Gain_db        : 57.5022
+  UGB            : 13573300.0
+  Phase_Margin   : 90.5392
+  Gain_Margin    : -2.55916
+  I_OPA          : 0.000472367
+  Total_Area     : 3022.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 3 (Current) ---
+Score: 1001025306.5000
+  Gain_db        : 57.5022
+  UGB            : 13573300.0
+  Phase_Margin   : 90.5392
+  Gain_Margin    : -2.55916
+  I_OPA          : 0.000472367
+  Total_Area     : 3022.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 21 (Probe) ---
+Action: Perturbed 'PM13_m' with sign 1, new value ~9
+Score: 1001020351.5000
+  Gain_db        : 57.0926
+  UGB            : 13404500.0
+  Phase_Margin   : 90.296
+  Gain_Margin    : -2.65991
+  I_OPA          : 0.00048279
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 22 (Probe) ---
+Action: Perturbed 'PM13_m' with sign -1, new value ~7
+Score: 1001032081.5000
+  Gain_db        : 57.893
+  UGB            : 13752500.0
+  Phase_Margin   : 90.8122
+  Gain_Margin    : -2.44256
+  I_OPA          : 0.000461842
+  Total_Area     : 3016.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 23 (Probe) ---
+Action: Perturbed 'PM8_m' with sign 1, new value ~2
+Score: 1001102226.0000
+  Gain_db        : 54.5184
+  UGB            : 10335600.0
+  Phase_Margin   : 89.9891
+  Gain_Margin    : -2.16294
+  I_OPA          : 0.000476856
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 24 (Probe) ---
+Action: Perturbed 'NM1_m' with sign 1, new value ~4
+Score: 1001015639.2500
+  Gain_db        : 57.4095
+  UGB            : 13395800.0
+  Phase_Margin   : 90.3044
+  Gain_Margin    : -2.66742
+  I_OPA          : 0.000471508
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 25 (Probe) ---
+Action: Perturbed 'NM1_m' with sign -1, new value ~2
+Score: 1001067029.0000
+  Gain_db        : 56.5508
+  UGB            : 13871000.0
+  Phase_Margin   : 91.0415
+  Gain_Margin    : -2.26086
+  I_OPA          : 0.00047403
+  Total_Area     : 3010.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 26 (Probe) ---
+Action: Perturbed 'PM2_m' with sign -1, new value ~2
+Score: 1000829756.5000
+  Gain_db        : 58.7066
+  UGB            : 13399600.0
+  Phase_Margin   : 91.3468
+  Gain_Margin    : -4.36411
+  I_OPA          : 0.000471253
+  Total_Area     : 3010.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 4 (Current) ---
+Score: 1000829756.5000
+  Gain_db        : 58.7066
+  UGB            : 13399600.0
+  Phase_Margin   : 91.3468
+  Gain_Margin    : -4.36411
+  I_OPA          : 0.000471253
+  Total_Area     : 3010.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 28 (Probe) ---
+Action: Perturbed 'PM21_m' with sign 1, new value ~2
+Score: 1000829754.0000
+  Gain_db        : 58.7068
+  UGB            : 13398900.0
+  Phase_Margin   : 91.3469
+  Gain_Margin    : -4.36411
+  I_OPA          : 0.000471234
+  Total_Area     : 3011.1599999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 29 (Probe) ---
+Action: Perturbed 'PM16_m' with sign 1, new value ~5
+Score: 1000826005.0000
+  Gain_db        : 58.7424
+  UGB            : 13300400.0
+  Phase_Margin   : 91.3524
+  Gain_Margin    : -4.39715
+  I_OPA          : 0.000468509
+  Total_Area     : 3016.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 30 (Probe) ---
+Action: Perturbed 'PM16_m' with sign -1, new value ~3
+Score: 1000836216.2500
+  Gain_db        : 58.6399
+  UGB            : 13579400.0
+  Phase_Margin   : 91.3362
+  Gain_Margin    : -4.30785
+  I_OPA          : 0.000476266
+  Total_Area     : 3004.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 31 (Probe) ---
+Action: Perturbed 'NM9_m' with sign 1, new value ~2
+Score: 1000615618.0000
+  Gain_db        : 55.5892
+  UGB            : 28605500.0
+  Phase_Margin   : 88.2082
+  Gain_Margin    : -6.89517
+  I_OPA          : 0.00087453
+  Total_Area     : 3018.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 5 (Current) ---
+Score: 1000615618.0000
+  Gain_db        : 55.5892
+  UGB            : 28605500.0
+  Phase_Margin   : 88.2082
+  Gain_Margin    : -6.89517
+  I_OPA          : 0.00087453
+  Total_Area     : 3018.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 33 (Probe) ---
+Action: Perturbed 'PM21_m' with sign 1, new value ~2
+Score: 1000615609.5000
+  Gain_db        : 55.5898
+  UGB            : 28605500.0
+  Phase_Margin   : 88.2086
+  Gain_Margin    : -6.89518
+  I_OPA          : 0.00087453
+  Total_Area     : 3018.3599999999997
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 34 (Probe) ---
+Action: Perturbed 'PM25_m' with sign 1, new value ~9
+Score: 1000615716.2500
+  Gain_db        : 55.5899
+  UGB            : 28605600.0
+  Phase_Margin   : 88.2078
+  Gain_Margin    : -6.8941
+  I_OPA          : 0.000874524
+  Total_Area     : 3024.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 35 (Probe) ---
+Action: Perturbed 'PM25_m' with sign -1, new value ~7
+Score: 1000615476.0000
+  Gain_db        : 55.5884
+  UGB            : 28605400.0
+  Phase_Margin   : 88.2086
+  Gain_Margin    : -6.89669
+  I_OPA          : 0.000874538
+  Total_Area     : 3012.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 36 (Probe) ---
+Action: Perturbed 'PM4_m' with sign 1, new value ~13
+Score: 1000609112.0000
+  Gain_db        : 55.2344
+  UGB            : 28586200.0
+  Phase_Margin   : 89.0779
+  Gain_Margin    : -7.00458
+  I_OPA          : 0.000900605
+  Total_Area     : 3030.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 37 (Probe) ---
+Action: Perturbed 'PM4_m' with sign -1, new value ~11
+Score: 1000621153.2500
+  Gain_db        : 55.9183
+  UGB            : 28604100.0
+  Phase_Margin   : 87.1819
+  Gain_Margin    : -6.79868
+  I_OPA          : 0.000847267
+  Total_Area     : 3006.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 38 (Probe) ---
+Action: Perturbed 'PM0_m' with sign 1, new value ~13
+Score: 1000596452.5000
+  Gain_db        : 55.5178
+  UGB            : 28560800.0
+  Phase_Margin   : 87.4445
+  Gain_Margin    : -7.09575
+  I_OPA          : 0.000874612
+  Total_Area     : 3030.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 39 (Probe) ---
+Action: Perturbed 'PM0_m' with sign -1, new value ~11
+Score: 1000600279.2500
+  Gain_db        : 55.6599
+  UGB            : 28637200.0
+  Phase_Margin   : 88.9797
+  Gain_Margin    : -7.03972
+  I_OPA          : 0.00087443
+  Total_Area     : 3006.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 40 (Probe) ---
+Action: Perturbed 'NM7_m' with sign 1, new value ~2
+Score: 1000771278.5000
+  Gain_db        : 58.5022
+  UGB            : 17233100.0
+  Phase_Margin   : 91.3431
+  Gain_Margin    : -4.97444
+  I_OPA          : 0.000483915
+  Total_Area     : 3025.3199999999997
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 41 (Probe) ---
+Action: Perturbed 'NM12_m' with sign 1, new value ~2
+Score: 1000615618.0000
+  Gain_db        : 55.5892
+  UGB            : 28605500.0
+  Phase_Margin   : 88.2082
+  Gain_Margin    : -6.89517
+  I_OPA          : 0.00087453
+  Total_Area     : 3018.2399999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 42 (Probe) ---
+Action: Perturbed 'PM17_m' with sign 1, new value ~2
+Score: 1000711205.0000
+  Gain_db        : 63.2792
+  UGB            : 19537200.0
+  Phase_Margin   : 92.561
+  Gain_Margin    : -4.97805
+  I_OPA          : 0.000491073
+  Total_Area     : 3024.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 43 (Probe) ---
+Action: Perturbed 'NM13_m' with sign 1, new value ~3
+Score: 1000673389.0000
+  Gain_db        : 55.57
+  UGB            : 28711600.0
+  Phase_Margin   : 88.5364
+  Gain_Margin    : -6.31986
+  I_OPA          : 0.000878743
+  Total_Area     : 3024.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 44 (Probe) ---
+Action: Perturbed 'NM13_m' with sign -1, new value ~1
+Score: 1000550922.5000
+  Gain_db        : 55.2926
+  UGB            : 28486200.0
+  Phase_Margin   : 87.8205
+  Gain_Margin    : -7.5792
+  I_OPA          : 0.000868012
+  Total_Area     : 3012.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 6 (Current) ---
+Score: 1000550922.5000
+  Gain_db        : 55.2926
+  UGB            : 28486200.0
+  Phase_Margin   : 87.8205
+  Gain_Margin    : -7.5792
+  I_OPA          : 0.000868012
+  Total_Area     : 3012.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 46 (Probe) ---
+Action: Perturbed 'PM13_m' with sign 1, new value ~9
+Score: 1000539579.0000
+  Gain_db        : 54.8948
+  UGB            : 28440300.0
+  Phase_Margin   : 87.7437
+  Gain_Margin    : -7.74236
+  I_OPA          : 0.000887404
+  Total_Area     : 3018.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 47 (Probe) ---
+Action: Perturbed 'PM13_m' with sign -1, new value ~7
+Score: 1000568875.5000
+  Gain_db        : 55.4486
+  UGB            : 28541900.0
+  Phase_Margin   : 87.9135
+  Gain_Margin    : -7.38017
+  I_OPA          : 0.00084752
+  Total_Area     : 3006.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 48 (Probe) ---
+Action: Perturbed 'NM14_m' with sign 1, new value ~3
+Score: 1000551175.5000
+  Gain_db        : 55.2962
+  UGB            : 28486800.0
+  Phase_Margin   : 87.8225
+  Gain_Margin    : -7.57622
+  I_OPA          : 0.000868077
+  Total_Area     : 3018.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 49 (Probe) ---
+Action: Perturbed 'NM14_m' with sign -1, new value ~1
+Score: 1000550382.0000
+  Gain_db        : 55.2828
+  UGB            : 28484500.0
+  Phase_Margin   : 87.8153
+  Gain_Margin    : -7.58583
+  I_OPA          : 0.000867852
+  Total_Area     : 3006.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 50 (Probe) ---
+Action: Perturbed 'NM10_m' with sign 1, new value ~2
+Score: 1000552335.2500
+  Gain_db        : 55.3691
+  UGB            : 29445300.0
+  Phase_Margin   : 88.9805
+  Gain_Margin    : -7.55551
+  I_OPA          : 0.000869252
+  Total_Area     : 3027.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 51 (Probe) ---
+Action: Perturbed 'PM9_m' with sign 1, new value ~25
+Score: 1000548300.5000
+  Gain_db        : 55.3398
+  UGB            : 28494000.0
+  Phase_Margin   : 87.954
+  Gain_Margin    : -7.59952
+  I_OPA          : 0.000872411
+  Total_Area     : 3024.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 52 (Probe) ---
+Action: Perturbed 'PM9_m' with sign -1, new value ~23
+Score: 1000553824.0000
+  Gain_db        : 55.24
+  UGB            : 28477600.0
+  Phase_Margin   : 87.6732
+  Gain_Margin    : -7.55676
+  I_OPA          : 0.000863316
+  Total_Area     : 3000.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 53 (Probe) ---
+Action: Perturbed 'NM9_m' with sign 1, new value ~3
+Score: 1000449715.0000
+  Gain_db        : 48.9628
+  UGB            : 28889500.0
+  Phase_Margin   : 82.6591
+  Gain_Margin    : -9.3825
+  I_OPA          : 0.00122563
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 7 (Current) ---
+Score: 1000449715.0000
+  Gain_db        : 48.9628
+  UGB            : 28889500.0
+  Phase_Margin   : 82.6591
+  Gain_Margin    : -9.3825
+  I_OPA          : 0.00122563
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 55 (Probe) ---
+Action: Perturbed 'NM1_m' with sign 1, new value ~4
+Score: 1000443594.2500
+  Gain_db        : 49.0027
+  UGB            : 28879200.0
+  Phase_Margin   : 82.6518
+  Gain_Margin    : -9.43872
+  I_OPA          : 0.00121516
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 56 (Probe) ---
+Action: Perturbed 'NM1_m' with sign -1, new value ~2
+Score: 1000467109.5000
+  Gain_db        : 48.3774
+  UGB            : 28919200.0
+  Phase_Margin   : 82.626
+  Gain_Margin    : -9.28173
+  I_OPA          : 0.00124394
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 57 (Probe) ---
+Action: Perturbed 'PM4_m' with sign 1, new value ~13
+Score: 1000469124.5000
+  Gain_db        : 48.5666
+  UGB            : 28887800.0
+  Phase_Margin   : 83.3614
+  Gain_Margin    : -9.23793
+  I_OPA          : 0.00125373
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 58 (Probe) ---
+Action: Perturbed 'PM4_m' with sign -1, new value ~11
+Score: 1000427253.7500
+  Gain_db        : 49.3573
+  UGB            : 28865500.0
+  Phase_Margin   : 81.8644
+  Gain_Margin    : -9.5578
+  I_OPA          : 0.00119577
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 59 (Probe) ---
+Action: Perturbed 'PM25_m' with sign 1, new value ~9
+Score: 1000449718.2500
+  Gain_db        : 48.9631
+  UGB            : 28889500.0
+  Phase_Margin   : 82.6589
+  Gain_Margin    : -9.38243
+  I_OPA          : 0.00122562
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 60 (Probe) ---
+Action: Perturbed 'PM25_m' with sign -1, new value ~7
+Score: 1000449713.2500
+  Gain_db        : 48.9623
+  UGB            : 28889600.0
+  Phase_Margin   : 82.6595
+  Gain_Margin    : -9.38258
+  I_OPA          : 0.00122564
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 61 (Probe) ---
+Action: Perturbed 'NM14_m' with sign 1, new value ~3
+Score: 1000450033.7500
+  Gain_db        : 48.9657
+  UGB            : 28890200.0
+  Phase_Margin   : 82.6602
+  Gain_Margin    : -9.37895
+  I_OPA          : 0.00122595
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 62 (Probe) ---
+Action: Perturbed 'NM14_m' with sign -1, new value ~1
+Score: 1000448892.5000
+  Gain_db        : 48.9546
+  UGB            : 28887900.0
+  Phase_Margin   : 82.6563
+  Gain_Margin    : -9.39175
+  I_OPA          : 0.0012248
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 63 (Probe) ---
+Action: Perturbed 'PM18_m' with sign 1, new value ~9
+Score: 1000447450.7500
+  Gain_db        : 48.8385
+  UGB            : 29584500.0
+  Phase_Margin   : 82.5518
+  Gain_Margin    : -9.42068
+  I_OPA          : 0.0012514
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 64 (Probe) ---
+Action: Perturbed 'PM18_m' with sign -1, new value ~7
+Score: 1000451140.7500
+  Gain_db        : 49.0777
+  UGB            : 28029600.0
+  Phase_Margin   : 82.7884
+  Gain_Margin    : -9.35388
+  I_OPA          : 0.00119597
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 65 (Probe) ---
+Action: Perturbed 'PM19_m' with sign 1, new value ~5
+Score: 1000420513.7500
+  Gain_db        : 48.1773
+  UGB            : 28707600.0
+  Phase_Margin   : 80.2753
+  Gain_Margin    : -9.7727
+  I_OPA          : 0.0012293
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 8 (Current) ---
+Score: 1000420513.7500
+  Gain_db        : 48.1773
+  UGB            : 28707600.0
+  Phase_Margin   : 80.2753
+  Gain_Margin    : -9.7727
+  I_OPA          : 0.0012293
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 67 (Probe) ---
+Action: Perturbed 'NM14_m' with sign 1, new value ~3
+Score: 1000420836.2500
+  Gain_db        : 48.1795
+  UGB            : 28708200.0
+  Phase_Margin   : 80.2756
+  Gain_Margin    : -9.7692
+  I_OPA          : 0.0012296
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 68 (Probe) ---
+Action: Perturbed 'NM14_m' with sign -1, new value ~1
+Score: 1000419692.5000
+  Gain_db        : 48.171
+  UGB            : 28705900.0
+  Phase_Margin   : 80.2746
+  Gain_Margin    : -9.7817
+  I_OPA          : 0.00122855
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 69 (Probe) ---
+Action: Perturbed 'PM4_m' with sign 1, new value ~13
+Score: 1000445335.0000
+  Gain_db        : 47.7588
+  UGB            : 28740600.0
+  Phase_Margin   : 81.0081
+  Gain_Margin    : -9.5768
+  I_OPA          : 0.0012574
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 70 (Probe) ---
+Action: Perturbed 'PM4_m' with sign -1, new value ~11
+Score: 1000401622.5000
+  Gain_db        : 48.6046
+  UGB            : 28642400.0
+  Phase_Margin   : 79.4607
+  Gain_Margin    : -9.9082
+  I_OPA          : 0.00119944
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 71 (Probe) ---
+Action: Perturbed 'NM13_m' with sign 1, new value ~2
+Score: 1000463667.7500
+  Gain_db        : 48.3289
+  UGB            : 28826600.0
+  Phase_Margin   : 80.2798
+  Gain_Margin    : -9.32221
+  I_OPA          : 0.00126265
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 72 (Probe) ---
+Action: Perturbed 'NM9_m' with sign 1, new value ~4
+Score: 1000435733.7500
+  Gain_db        : 45.1413
+  UGB            : 28832300.0
+  Phase_Margin   : 76.4783
+  Gain_Margin    : -15.0545
+  I_OPA          : 0.00146918
+  Total_Area     : 3032.5199999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 73 (Probe) ---
+Action: Perturbed 'NM9_m' with sign -1, new value ~2
+Score: 1000562489.2500
+  Gain_db        : 54.2671
+  UGB            : 28356500.0
+  Phase_Margin   : 86.1429
+  Gain_Margin    : -7.59172
+  I_OPA          : 0.000869877
+  Total_Area     : 3018.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 74 (Probe) ---
+Action: Perturbed 'PM20_m' with sign 1, new value ~3
+Score: 1000416906.2500
+  Gain_db        : 46.6475
+  UGB            : 27379700.0
+  Phase_Margin   : 74.3833
+  Gain_Margin    : -11.3168
+  I_OPA          : 0.00124297
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 75 (Probe) ---
+Action: Perturbed 'PM20_m' with sign -1, new value ~1
+Score: 1000370597.5000
+  Gain_db        : 51.6402
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2405
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121187
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 9 (Current) ---
+Score: 1000370597.5000
+  Gain_db        : 51.6402
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2405
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121187
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 77 (Probe) ---
+Action: Perturbed 'PM19_m' with sign 1, new value ~6
+Score: 1000382605.0000
+  Gain_db        : 51.7132
+  UGB            : 29387800.0
+  Phase_Margin   : 88.44
+  Gain_Margin    : -9.7098
+  I_OPA          : 0.00121254
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 78 (Probe) ---
+Action: Perturbed 'PM19_m' with sign -1, new value ~4
+Score: 1000357143.7500
+  Gain_db        : 51.4285
+  UGB            : 29453100.0
+  Phase_Margin   : 87.7197
+  Gain_Margin    : -10.0183
+  I_OPA          : 0.00121111
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 79 (Probe) ---
+Action: Perturbed 'NM14_m' with sign 1, new value ~3
+Score: 1000371761.2500
+  Gain_db        : 51.6503
+  UGB            : 29413000.0
+  Phase_Margin   : 88.2482
+  Gain_Margin    : -9.8261
+  I_OPA          : 0.00121256
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 80 (Probe) ---
+Action: Perturbed 'NM14_m' with sign -1, new value ~1
+Score: 1000365512.5000
+  Gain_db        : 51.603
+  UGB            : 29410700.0
+  Phase_Margin   : 88.2125
+  Gain_Margin    : -9.8945
+  I_OPA          : 0.00120886
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 81 (Probe) ---
+Action: Perturbed 'NM1_m' with sign 1, new value ~4
+Score: 1000383317.5000
+  Gain_db        : 52.385
+  UGB            : 29359900.0
+  Phase_Margin   : 88.9228
+  Gain_Margin    : -9.6187
+  I_OPA          : 0.00120057
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 82 (Probe) ---
+Action: Perturbed 'NM1_m' with sign -1, new value ~2
+Score: 1000371355.0000
+  Gain_db        : 50.2916
+  UGB            : 29575800.0
+  Phase_Margin   : 86.7223
+  Gain_Margin    : -10.0452
+  I_OPA          : 0.00123038
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 83 (Probe) ---
+Action: Perturbed 'PM20_m' with sign 1, new value ~2
+Score: 1000420513.7500
+  Gain_db        : 48.1773
+  UGB            : 28707600.0
+  Phase_Margin   : 80.2753
+  Gain_Margin    : -9.7727
+  I_OPA          : 0.0012293
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 84 (Probe) ---
+Action: Perturbed 'PM22_m' with sign 1, new value ~2
+Score: 1000370597.5000
+  Gain_db        : 51.6402
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2405
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121187
+  Total_Area     : 3019.5599999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 85 (Probe) ---
+Action: Perturbed 'PM4_m' with sign 1, new value ~13
+Score: 1000381092.5000
+  Gain_db        : 51.0126
+  UGB            : 29340500.0
+  Phase_Margin   : 88.2231
+  Gain_Margin    : -9.8125
+  I_OPA          : 0.00123998
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 86 (Probe) ---
+Action: Perturbed 'PM4_m' with sign -1, new value ~11
+Score: 1000360023.7500
+  Gain_db        : 52.2293
+  UGB            : 29485300.0
+  Phase_Margin   : 88.2345
+  Gain_Margin    : -9.8711
+  I_OPA          : 0.00118199
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 87 (Probe) ---
+Action: Perturbed 'PM15_m' with sign 1, new value ~3
+Score: 1000377351.2500
+  Gain_db        : 49.8119
+  UGB            : 29250200.0
+  Phase_Margin   : 87.1339
+  Gain_Margin    : -10.3532
+  I_OPA          : 0.00124562
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 88 (Probe) ---
+Action: Perturbed 'PM15_m' with sign -1, new value ~1
+Score: 1000450032.0000
+  Gain_db        : 54.1548
+  UGB            : 29736500.0
+  Phase_Margin   : 89.7335
+  Gain_Margin    : -8.73033
+  I_OPA          : 0.00113978
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 89 (Probe) ---
+Action: Perturbed 'PM21_m' with sign 1, new value ~2
+Score: 1000370591.2500
+  Gain_db        : 51.6407
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2408
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121187
+  Total_Area     : 3019.5599999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 90 (Probe) ---
+Action: Perturbed 'PM25_m' with sign 1, new value ~9
+Score: 1000370590.0000
+  Gain_db        : 51.6408
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2409
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121186
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 91 (Probe) ---
+Action: Perturbed 'PM25_m' with sign -1, new value ~7
+Score: 1000370607.5000
+  Gain_db        : 51.6394
+  UGB            : 29412300.0
+  Phase_Margin   : 88.24
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121188
+  Total_Area     : 3013.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 92 (Probe) ---
+Action: Perturbed 'PM2_m' with sign -1, new value ~1
+Score: 1000365098.7500
+  Gain_db        : 50.7921
+  UGB            : 16054600.0
+  Phase_Margin   : 90.5721
+  Gain_Margin    : -13.5198
+  I_OPA          : 0.00111605
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 93 (Probe) ---
+Action: Perturbed 'PM2_m' with sign 1, new value ~3
+Score: 1000599158.5000
+  Gain_db        : 51.1698
+  UGB            : 41002400.0
+  Phase_Margin   : 85.0214
+  Gain_Margin    : -7.61219
+  I_OPA          : 0.00124383
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 94 (Probe) ---
+Action: Perturbed 'PM9_m' with sign 1, new value ~25
+Score: 1000372677.5000
+  Gain_db        : 51.5394
+  UGB            : 29409600.0
+  Phase_Margin   : 88.2143
+  Gain_Margin    : -9.8308
+  I_OPA          : 0.00122045
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 95 (Probe) ---
+Action: Perturbed 'PM9_m' with sign -1, new value ~23
+Score: 1000368391.2500
+  Gain_db        : 51.7383
+  UGB            : 29415400.0
+  Phase_Margin   : 88.2643
+  Gain_Margin    : -9.8488
+  I_OPA          : 0.00120284
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 96 (Probe) ---
+Action: Perturbed 'PM0_m' with sign 1, new value ~13
+Score: 1000361123.7500
+  Gain_db        : 51.8413
+  UGB            : 29353800.0
+  Phase_Margin   : 87.3653
+  Gain_Margin    : -9.9086
+  I_OPA          : 0.00121233
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 97 (Probe) ---
+Action: Perturbed 'PM0_m' with sign -1, new value ~11
+Score: 1000383160.0000
+  Gain_db        : 51.36
+  UGB            : 29457700.0
+  Phase_Margin   : 89.1067
+  Gain_Margin    : -9.7484
+  I_OPA          : 0.00121132
+  Total_Area     : 3007.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 98 (Probe) ---
+Action: Perturbed 'NM3_m' with sign 1, new value ~4
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 10 (Current) ---
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 100 (Probe) ---
+Action: Perturbed 'PM2_m' with sign -1, new value ~1
+Score: 1000364823.7500
+  Gain_db        : 50.8141
+  UGB            : 15903500.0
+  Phase_Margin   : 89.6288
+  Gain_Margin    : -14.1276
+  I_OPA          : 0.00111523
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 101 (Probe) ---
+Action: Perturbed 'PM2_m' with sign 1, new value ~3
+Score: 1000535585.2500
+  Gain_db        : 52.6427
+  UGB            : 39735700.0
+  Phase_Margin   : 85.3428
+  Gain_Margin    : -8.06381
+  I_OPA          : 0.00124141
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 102 (Probe) ---
+Action: Perturbed 'PM26_m' with sign 1, new value ~3
+Score: 1000337868.7500
+  Gain_db        : 52.9705
+  UGB            : 28911300.0
+  Phase_Margin   : 87.3755
+  Gain_Margin    : -10.3412
+  I_OPA          : 0.00120835
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 103 (Probe) ---
+Action: Perturbed 'PM26_m' with sign -1, new value ~1
+Score: 1000346022.5000
+  Gain_db        : 52.3182
+  UGB            : 28879500.0
+  Phase_Margin   : 87.8127
+  Gain_Margin    : -10.1429
+  I_OPA          : 0.00121339
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 104 (Probe) ---
+Action: Perturbed 'PM18_m' with sign 1, new value ~9
+Score: 1000342685.0000
+  Gain_db        : 52.5852
+  UGB            : 29610100.0
+  Phase_Margin   : 87.3535
+  Gain_Margin    : -10.4247
+  I_OPA          : 0.00123589
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 105 (Probe) ---
+Action: Perturbed 'PM18_m' with sign -1, new value ~7
+Score: 1000336047.5000
+  Gain_db        : 53.1162
+  UGB            : 28048700.0
+  Phase_Margin   : 87.8982
+  Gain_Margin    : -10.1254
+  I_OPA          : 0.00118019
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 106 (Probe) ---
+Action: Perturbed 'PM9_m' with sign 1, new value ~25
+Score: 1000341231.2500
+  Gain_db        : 52.7015
+  UGB            : 28907900.0
+  Phase_Margin   : 87.6069
+  Gain_Margin    : -10.2602
+  I_OPA          : 0.00121857
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 107 (Probe) ---
+Action: Perturbed 'PM9_m' with sign -1, new value ~23
+Score: 1000337517.5000
+  Gain_db        : 52.9986
+  UGB            : 28914400.0
+  Phase_Margin   : 87.6218
+  Gain_Margin    : -10.2849
+  I_OPA          : 0.00120095
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 108 (Probe) ---
+Action: Perturbed 'NM3_m' with sign 1, new value ~5
+Score: 1000333845.0000
+  Gain_db        : 53.2924
+  UGB            : 28635100.0
+  Phase_Margin   : 86.8076
+  Gain_Margin    : -10.6861
+  I_OPA          : 0.00120923
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 109 (Probe) ---
+Action: Perturbed 'NM3_m' with sign -1, new value ~3
+Score: 1000370597.5000
+  Gain_db        : 51.6402
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2405
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121187
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 110 (Probe) ---
+Action: Perturbed 'NM14_m' with sign 1, new value ~3
+Score: 1000339325.0000
+  Gain_db        : 52.854
+  UGB            : 28911700.0
+  Phase_Margin   : 87.6195
+  Gain_Margin    : -10.2619
+  I_OPA          : 0.0012106
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 111 (Probe) ---
+Action: Perturbed 'NM14_m' with sign -1, new value ~1
+Score: 1000339606.2500
+  Gain_db        : 52.8315
+  UGB            : 28909200.0
+  Phase_Margin   : 87.6062
+  Gain_Margin    : -10.3109
+  I_OPA          : 0.00120736
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 112 (Probe) ---
+Action: Perturbed 'PM19_m' with sign 1, new value ~6
+Score: 1000340380.0000
+  Gain_db        : 52.7696
+  UGB            : 28897400.0
+  Phase_Margin   : 87.5127
+  Gain_Margin    : -10.1903
+  I_OPA          : 0.00121094
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 113 (Probe) ---
+Action: Perturbed 'PM19_m' with sign -1, new value ~4
+Score: 1000339650.0000
+  Gain_db        : 52.828
+  UGB            : 28932700.0
+  Phase_Margin   : 87.5822
+  Gain_Margin    : -10.4057
+  I_OPA          : 0.00120874
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 114 (Probe) ---
+Action: Perturbed 'PM13_m' with sign 1, new value ~9
+Score: 1000343772.5000
+  Gain_db        : 52.4982
+  UGB            : 28876600.0
+  Phase_Margin   : 87.465
+  Gain_Margin    : -10.5209
+  I_OPA          : 0.0012284
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 115 (Probe) ---
+Action: Perturbed 'PM13_m' with sign -1, new value ~7
+Score: 1000335967.5000
+  Gain_db        : 53.2314
+  UGB            : 28953200.0
+  Phase_Margin   : 87.7839
+  Gain_Margin    : -9.9864
+  I_OPA          : 0.00118886
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 116 (Probe) ---
+Action: Perturbed 'PM25_m' with sign 1, new value ~9
+Score: 1000339376.2500
+  Gain_db        : 52.8499
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6169
+  Gain_Margin    : -10.2712
+  I_OPA          : 0.00120997
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 117 (Probe) ---
+Action: Perturbed 'PM25_m' with sign -1, new value ~7
+Score: 1000339397.5000
+  Gain_db        : 52.8482
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6162
+  Gain_Margin    : -10.2714
+  I_OPA          : 0.00120999
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 118 (Probe) ---
+Action: Perturbed 'PM16_m' with sign 1, new value ~5
+Score: 1000325900.0000
+  Gain_db        : 53.928
+  UGB            : 28854800.0
+  Phase_Margin   : 88.5686
+  Gain_Margin    : -10.1545
+  I_OPA          : 0.00116541
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 119 (Probe) ---
+Action: Perturbed 'PM16_m' with sign -1, new value ~3
+Score: 1000364998.7500
+  Gain_db        : 50.8001
+  UGB            : 29004700.0
+  Phase_Margin   : 86.0504
+  Gain_Margin    : -10.6463
+  I_OPA          : 0.00128642
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 120 (Probe) ---
+Action: Perturbed 'PM0_m' with sign 1, new value ~13
+Score: 1000336540.0000
+  Gain_db        : 53.0768
+  UGB            : 28855800.0
+  Phase_Margin   : 86.8178
+  Gain_Margin    : -10.422
+  I_OPA          : 0.00121043
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 121 (Probe) ---
+Action: Perturbed 'PM0_m' with sign -1, new value ~11
+Score: 1000343333.7500
+  Gain_db        : 52.5333
+  UGB            : 28953500.0
+  Phase_Margin   : 88.4084
+  Gain_Margin    : -10.0949
+  I_OPA          : 0.00120944
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 122 (Probe) ---
+Action: Perturbed 'PM4_m' with sign 1, new value ~13
+Score: 1000348970.0000
+  Gain_db        : 52.0824
+  UGB            : 28841400.0
+  Phase_Margin   : 87.6415
+  Gain_Margin    : -10.2082
+  I_OPA          : 0.00123808
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 123 (Probe) ---
+Action: Perturbed 'PM4_m' with sign -1, new value ~11
+Score: 1000329898.7500
+  Gain_db        : 53.6081
+  UGB            : 28981500.0
+  Phase_Margin   : 87.5521
+  Gain_Margin    : -10.3484
+  I_OPA          : 0.00118011
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 124 (Probe) ---
+Action: Perturbed 'PM21_m' with sign 1, new value ~2
+Score: 1000339380.0000
+  Gain_db        : 52.8496
+  UGB            : 28910900.0
+  Phase_Margin   : 87.617
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.5599999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 1 Iteration 11 (Current) ---
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 126 (Probe) ---
+Action: Perturbed 'PM26_m' with sign 1, new value ~3
+Score: 1000337868.7500
+  Gain_db        : 52.9705
+  UGB            : 28911300.0
+  Phase_Margin   : 87.3755
+  Gain_Margin    : -10.3412
+  I_OPA          : 0.00120835
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 127 (Probe) ---
+Action: Perturbed 'PM26_m' with sign -1, new value ~1
+Score: 1000346022.5000
+  Gain_db        : 52.3182
+  UGB            : 28879500.0
+  Phase_Margin   : 87.8127
+  Gain_Margin    : -10.1429
+  I_OPA          : 0.00121339
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 128 (Probe) ---
+Action: Perturbed 'PM16_m' with sign 1, new value ~5
+Score: 1000325900.0000
+  Gain_db        : 53.928
+  UGB            : 28854800.0
+  Phase_Margin   : 88.5686
+  Gain_Margin    : -10.1545
+  I_OPA          : 0.00116541
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 129 (Probe) ---
+Action: Perturbed 'PM16_m' with sign -1, new value ~3
+Score: 1000364998.7500
+  Gain_db        : 50.8001
+  UGB            : 29004700.0
+  Phase_Margin   : 86.0504
+  Gain_Margin    : -10.6463
+  I_OPA          : 0.00128642
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 130 (Probe) ---
+Action: Perturbed 'NM3_m' with sign 1, new value ~5
+Score: 1000333845.0000
+  Gain_db        : 53.2924
+  UGB            : 28635100.0
+  Phase_Margin   : 86.8076
+  Gain_Margin    : -10.6861
+  I_OPA          : 0.00120923
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 131 (Probe) ---
+Action: Perturbed 'NM3_m' with sign -1, new value ~3
+Score: 1000370597.5000
+  Gain_db        : 51.6402
+  UGB            : 29412300.0
+  Phase_Margin   : 88.2405
+  Gain_Margin    : -9.839
+  I_OPA          : 0.00121187
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 132 (Probe) ---
+Action: Perturbed 'PM13_m' with sign 1, new value ~9
+Score: 1000343772.5000
+  Gain_db        : 52.4982
+  UGB            : 28876600.0
+  Phase_Margin   : 87.465
+  Gain_Margin    : -10.5209
+  I_OPA          : 0.0012284
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 133 (Probe) ---
+Action: Perturbed 'PM13_m' with sign -1, new value ~7
+Score: 1000335967.5000
+  Gain_db        : 53.2314
+  UGB            : 28953200.0
+  Phase_Margin   : 87.7839
+  Gain_Margin    : -9.9864
+  I_OPA          : 0.00118886
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 134 (Probe) ---
+Action: Perturbed 'PM9_m' with sign 1, new value ~25
+Score: 1000341231.2500
+  Gain_db        : 52.7015
+  UGB            : 28907900.0
+  Phase_Margin   : 87.6069
+  Gain_Margin    : -10.2602
+  I_OPA          : 0.00121857
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 135 (Probe) ---
+Action: Perturbed 'PM9_m' with sign -1, new value ~23
+Score: 1000337517.5000
+  Gain_db        : 52.9986
+  UGB            : 28914400.0
+  Phase_Margin   : 87.6218
+  Gain_Margin    : -10.2849
+  I_OPA          : 0.00120095
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 136 (Probe) ---
+Action: Perturbed 'NM14_m' with sign 1, new value ~3
+Score: 1000339325.0000
+  Gain_db        : 52.854
+  UGB            : 28911700.0
+  Phase_Margin   : 87.6195
+  Gain_Margin    : -10.2619
+  I_OPA          : 0.0012106
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 137 (Probe) ---
+Action: Perturbed 'NM14_m' with sign -1, new value ~1
+Score: 1000339606.2500
+  Gain_db        : 52.8315
+  UGB            : 28909200.0
+  Phase_Margin   : 87.6062
+  Gain_Margin    : -10.3109
+  I_OPA          : 0.00120736
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 138 (Probe) ---
+Action: Perturbed 'PM0_m' with sign 1, new value ~13
+Score: 1000336540.0000
+  Gain_db        : 53.0768
+  UGB            : 28855800.0
+  Phase_Margin   : 86.8178
+  Gain_Margin    : -10.422
+  I_OPA          : 0.00121043
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 139 (Probe) ---
+Action: Perturbed 'PM0_m' with sign -1, new value ~11
+Score: 1000343333.7500
+  Gain_db        : 52.5333
+  UGB            : 28953500.0
+  Phase_Margin   : 88.4084
+  Gain_Margin    : -10.0949
+  I_OPA          : 0.00120944
+  Total_Area     : 3019.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 140 (Probe) ---
+Action: Perturbed 'PM18_m' with sign 1, new value ~9
+Score: 1000342685.0000
+  Gain_db        : 52.5852
+  UGB            : 29610100.0
+  Phase_Margin   : 87.3535
+  Gain_Margin    : -10.4247
+  I_OPA          : 0.00123589
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 141 (Probe) ---
+Action: Perturbed 'PM18_m' with sign -1, new value ~7
+Score: 1000336047.5000
+  Gain_db        : 53.1162
+  UGB            : 28048700.0
+  Phase_Margin   : 87.8982
+  Gain_Margin    : -10.1254
+  I_OPA          : 0.00118019
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 142 (Probe) ---
+Action: Perturbed 'PM25_m' with sign 1, new value ~9
+Score: 1000339376.2500
+  Gain_db        : 52.8499
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6169
+  Gain_Margin    : -10.2712
+  I_OPA          : 0.00120997
+  Total_Area     : 3037.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 143 (Probe) ---
+Action: Perturbed 'PM25_m' with sign -1, new value ~7
+Score: 1000339397.5000
+  Gain_db        : 52.8482
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6162
+  Gain_Margin    : -10.2714
+  I_OPA          : 0.00120999
+  Total_Area     : 3025.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 144 (Probe) ---
+Action: Perturbed 'PM21_m' with sign 1, new value ~2
+Score: 1000339380.0000
+  Gain_db        : 52.8496
+  UGB            : 28910900.0
+  Phase_Margin   : 87.617
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.5599999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 145 (Probe) ---
+Action: Perturbed 'PM4_m' with sign 1, new value ~13
+Score: 1000348970.0000
+  Gain_db        : 52.0824
+  UGB            : 28841400.0
+  Phase_Margin   : 87.6415
+  Gain_Margin    : -10.2082
+  I_OPA          : 0.00123808
+  Total_Area     : 3043.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Iteration 146 (Probe) ---
+Action: Perturbed 'PM4_m' with sign -1, new value ~11
+Score: 1000329898.7500
+  Gain_db        : 53.6081
+  UGB            : 28981500.0
+  Phase_Margin   : 87.5521
+  Gain_Margin    : -10.3484
+  I_OPA          : 0.00118011
+  Total_Area     : 3019.3199999999993
+
+
+######################### Pass 1 (Strict Goal: 80dB) - Stage 2: Continuous Parameter Tuning #########################
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 (Current) ---
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 148 (Probe) ---
+Action: Perturbed 'PM8_l' with sign 1, new value ~1.1000e+00
+Score: 1000341823.7500
+  Gain_db        : 52.6541
+  UGB            : 28811900.0
+  Phase_Margin   : 87.21
+  Gain_Margin    : -10.3253
+  I_OPA          : 0.00120631
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 149 (Probe) ---
+Action: Perturbed 'PM8_l' with sign -1, new value ~9.0000e-01
+Score: 1000336445.0000
+  Gain_db        : 53.0844
+  UGB            : 29011800.0
+  Phase_Margin   : 88.0486
+  Gain_Margin    : -10.2335
+  I_OPA          : 0.00121368
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 150 (Probe) ---
+Action: Perturbed 'NM13_fw' with sign 1, new value ~4.4000e+00
+Score: 1000338898.7500
+  Gain_db        : 52.8881
+  UGB            : 28919900.0
+  Phase_Margin   : 87.6417
+  Gain_Margin    : -10.2152
+  I_OPA          : 0.00121362
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 151 (Probe) ---
+Action: Perturbed 'NM13_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339963.7500
+  Gain_db        : 52.8029
+  UGB            : 28900900.0
+  Phase_Margin   : 87.5905
+  Gain_Margin    : -10.3287
+  I_OPA          : 0.00120617
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 152 (Probe) ---
+Action: Perturbed 'NM7_l' with sign 1, new value ~1.3200e+00
+Score: 1000356443.7500
+  Gain_db        : 51.4845
+  UGB            : 28868500.0
+  Phase_Margin   : 86.7736
+  Gain_Margin    : -10.3562
+  I_OPA          : 0.00126481
+  Total_Area     : 3032.0399999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 153 (Probe) ---
+Action: Perturbed 'NM7_l' with sign -1, new value ~1.0800e+00
+Score: 1000324095.0000
+  Gain_db        : 54.0724
+  UGB            : 28959100.0
+  Phase_Margin   : 88.5835
+  Gain_Margin    : -10.3104
+  I_OPA          : 0.00115268
+  Total_Area     : 3030.5999999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 154 (Probe) ---
+Action: Perturbed 'PM12_l' with sign 1, new value ~3.0800e+00
+Score: 1000334363.7500
+  Gain_db        : 53.3693
+  UGB            : 28803700.0
+  Phase_Margin   : 88.4186
+  Gain_Margin    : -9.9852
+  I_OPA          : 0.00120115
+  Total_Area     : 3032.999999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 155 (Probe) ---
+Action: Perturbed 'PM12_l' with sign -1, new value ~2.5200e+00
+Score: 1000347282.5000
+  Gain_db        : 52.2174
+  UGB            : 29041900.0
+  Phase_Margin   : 86.5618
+  Gain_Margin    : -10.6512
+  I_OPA          : 0.0012212
+  Total_Area     : 3029.639999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 156 (Probe) ---
+Action: Perturbed 'NM8_fw' with sign 1, new value ~4.4000e+00
+Score: 1000333868.7500
+  Gain_db        : 53.3649
+  UGB            : 28802400.0
+  Phase_Margin   : 88.4121
+  Gain_Margin    : -9.9907
+  I_OPA          : 0.00120242
+  Total_Area     : 3032.0399999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 157 (Probe) ---
+Action: Perturbed 'NM8_fw' with sign -1, new value ~3.6000e+00
+Score: 1000347246.2500
+  Gain_db        : 52.2203
+  UGB            : 29044700.0
+  Phase_Margin   : 86.5669
+  Gain_Margin    : -10.6435
+  I_OPA          : 0.00121988
+  Total_Area     : 3030.5999999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 158 (Probe) ---
+Action: Perturbed 'PM18_l' with sign 1, new value ~1.1000e+00
+Score: 1000337130.0000
+  Gain_db        : 53.0296
+  UGB            : 28366600.0
+  Phase_Margin   : 87.8044
+  Gain_Margin    : -10.1718
+  I_OPA          : 0.00119047
+  Total_Area     : 3036.119999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 159 (Probe) ---
+Action: Perturbed 'PM18_l' with sign -1, new value ~9.0000e-01
+Score: 1000342082.5000
+  Gain_db        : 52.6334
+  UGB            : 29474500.0
+  Phase_Margin   : 87.4009
+  Gain_Margin    : -10.3951
+  I_OPA          : 0.00123118
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 160 (Probe) ---
+Action: Perturbed 'PM0_fw' with sign 1, new value ~4.4000e+00
+Score: 1000336108.7500
+  Gain_db        : 53.1113
+  UGB            : 28843100.0
+  Phase_Margin   : 86.6641
+  Gain_Margin    : -10.45
+  I_OPA          : 0.0012105
+  Total_Area     : 3045.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 161 (Probe) ---
+Action: Perturbed 'PM0_fw' with sign -1, new value ~3.6000e+00
+Score: 1000344182.5000
+  Gain_db        : 52.4654
+  UGB            : 28961100.0
+  Phase_Margin   : 88.56
+  Gain_Margin    : -10.0539
+  I_OPA          : 0.00120934
+  Total_Area     : 3016.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 162 (Probe) ---
+Action: Perturbed 'NM5_l' with sign 1, new value ~1.1000e+00
+Score: 1000352327.5000
+  Gain_db        : 51.8138
+  UGB            : 28750700.0
+  Phase_Margin   : 86.5397
+  Gain_Margin    : -10.7481
+  I_OPA          : 0.00120994
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 163 (Probe) ---
+Action: Perturbed 'NM5_l' with sign -1, new value ~9.0000e-01
+Score: 1000398846.0000
+  Gain_db        : 53.7132
+  UGB            : 29067600.0
+  Phase_Margin   : 88.5752
+  Gain_Margin    : -9.29739
+  I_OPA          : 0.00121002
+  Total_Area     : 3027.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 164 (Probe) ---
+Action: Perturbed 'PM16_l' with sign 1, new value ~1.1000e+00
+Score: 1000346263.7500
+  Gain_db        : 52.2989
+  UGB            : 28932600.0
+  Phase_Margin   : 87.215
+  Gain_Margin    : -10.3366
+  I_OPA          : 0.00122899
+  Total_Area     : 3033.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 165 (Probe) ---
+Action: Perturbed 'PM16_l' with sign -1, new value ~9.0000e-01
+Score: 1000332218.7500
+  Gain_db        : 53.4225
+  UGB            : 28889500.0
+  Phase_Margin   : 88.0118
+  Gain_Margin    : -10.2177
+  I_OPA          : 0.00119129
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 166 (Probe) ---
+Action: Perturbed 'NM3_l' with sign 1, new value ~1.1000e+00
+Score: 1000388408.7500
+  Gain_db        : 52.6129
+  UGB            : 29125800.0
+  Phase_Margin   : 88.256
+  Gain_Margin    : -9.5393
+  I_OPA          : 0.00121035
+  Total_Area     : 3036.119999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 167 (Probe) ---
+Action: Perturbed 'NM3_l' with sign -1, new value ~9.0000e-01
+Score: 1000336851.2500
+  Gain_db        : 53.0519
+  UGB            : 28703600.0
+  Phase_Margin   : 86.9349
+  Gain_Margin    : -11.0606
+  I_OPA          : 0.00120965
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 168 (Probe) ---
+Action: Perturbed 'PM13_fw' with sign 1, new value ~4.4000e+00
+Score: 1000342845.0000
+  Gain_db        : 52.5724
+  UGB            : 28883400.0
+  Phase_Margin   : 87.497
+  Gain_Margin    : -10.4683
+  I_OPA          : 0.00122452
+  Total_Area     : 3036.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 169 (Probe) ---
+Action: Perturbed 'PM13_fw' with sign -1, new value ~3.6000e+00
+Score: 1000335688.7500
+  Gain_db        : 53.1449
+  UGB            : 28943300.0
+  Phase_Margin   : 87.7458
+  Gain_Margin    : -10.0529
+  I_OPA          : 0.00119381
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 170 (Probe) ---
+Action: Perturbed 'PM8_fw' with sign 1, new value ~4.4000e+00
+Score: 1000336448.7500
+  Gain_db        : 53.0841
+  UGB            : 29015600.0
+  Phase_Margin   : 88.0481
+  Gain_Margin    : -10.2338
+  I_OPA          : 0.00121364
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 171 (Probe) ---
+Action: Perturbed 'PM8_fw' with sign -1, new value ~3.6000e+00
+Score: 1000342275.0000
+  Gain_db        : 52.618
+  UGB            : 28786700.0
+  Phase_Margin   : 87.1293
+  Gain_Margin    : -10.3377
+  I_OPA          : 0.0012056
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 172 (Probe) ---
+Action: Perturbed 'PM9_l' with sign 1, new value ~1.1000e+00
+Score: 1000335331.2500
+  Gain_db        : 53.1735
+  UGB            : 28920900.0
+  Phase_Margin   : 87.5813
+  Gain_Margin    : -10.3199
+  I_OPA          : 0.00119218
+  Total_Area     : 3060.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 173 (Probe) ---
+Action: Perturbed 'PM9_l' with sign -1, new value ~9.0000e-01
+Score: 1000344018.7500
+  Gain_db        : 52.4785
+  UGB            : 28901000.0
+  Phase_Margin   : 87.6378
+  Gain_Margin    : -10.2225
+  I_OPA          : 0.00122901
+  Total_Area     : 3002.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 174 (Probe) ---
+Action: Perturbed 'NM9_l' with sign 1, new value ~1.3200e+00
+Score: 1000325468.7500
+  Gain_db        : 53.9625
+  UGB            : 28863500.0
+  Phase_Margin   : 89.059
+  Gain_Margin    : -10.1215
+  I_OPA          : 0.00115047
+  Total_Area     : 3033.4799999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 175 (Probe) ---
+Action: Perturbed 'NM9_l' with sign -1, new value ~1.0800e+00
+Score: 1000360605.0000
+  Gain_db        : 51.1516
+  UGB            : 28957500.0
+  Phase_Margin   : 86.1303
+  Gain_Margin    : -10.6631
+  I_OPA          : 0.00127325
+  Total_Area     : 3029.1599999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 176 (Probe) ---
+Action: Perturbed 'PM16_fw' with sign 1, new value ~4.4000e+00
+Score: 1000331570.0000
+  Gain_db        : 53.4744
+  UGB            : 28885700.0
+  Phase_Margin   : 88.0463
+  Gain_Margin    : -10.215
+  I_OPA          : 0.00119029
+  Total_Area     : 3033.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 177 (Probe) ---
+Action: Perturbed 'PM16_fw' with sign -1, new value ~3.6000e+00
+Score: 1000348337.5000
+  Gain_db        : 52.133
+  UGB            : 28941700.0
+  Phase_Margin   : 87.0902
+  Gain_Margin    : -10.3567
+  I_OPA          : 0.00123416
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 178 (Probe) ---
+Action: Perturbed 'PM26_fw' with sign 1, new value ~4.4000e+00
+Score: 1000338925.0000
+  Gain_db        : 52.886
+  UGB            : 28912400.0
+  Phase_Margin   : 87.5694
+  Gain_Margin    : -10.2932
+  I_OPA          : 0.00120958
+  Total_Area     : 3033.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 179 (Probe) ---
+Action: Perturbed 'PM26_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339986.2500
+  Gain_db        : 52.8011
+  UGB            : 28908500.0
+  Phase_Margin   : 87.6627
+  Gain_Margin    : -10.2466
+  I_OPA          : 0.00121043
+  Total_Area     : 3028.9199999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 180 (Probe) ---
+Action: Perturbed 'PM22_fw' with sign 1, new value ~8.8000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3439999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 181 (Probe) ---
+Action: Perturbed 'PM22_fw' with sign -1, new value ~7.2000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.2959999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 182 (Probe) ---
+Action: Perturbed 'PM13_l' with sign 1, new value ~1.1000e+00
+Score: 1000336203.7500
+  Gain_db        : 53.1037
+  UGB            : 28937700.0
+  Phase_Margin   : 87.7277
+  Gain_Margin    : -10.0845
+  I_OPA          : 0.00119615
+  Total_Area     : 3036.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 183 (Probe) ---
+Action: Perturbed 'PM13_l' with sign -1, new value ~9.0000e-01
+Score: 1000342991.2500
+  Gain_db        : 52.5607
+  UGB            : 28883200.0
+  Phase_Margin   : 87.4919
+  Gain_Margin    : -10.4756
+  I_OPA          : 0.00122506
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 184 (Probe) ---
+Action: Perturbed 'PM15_l' with sign 1, new value ~1.1000e+00
+Score: 1000335075.0000
+  Gain_db        : 53.194
+  UGB            : 28950500.0
+  Phase_Margin   : 87.7149
+  Gain_Margin    : -10.1587
+  I_OPA          : 0.00120136
+  Total_Area     : 3033.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 185 (Probe) ---
+Action: Perturbed 'PM15_l' with sign -1, new value ~9.0000e-01
+Score: 1000344262.5000
+  Gain_db        : 52.459
+  UGB            : 28867600.0
+  Phase_Margin   : 87.5072
+  Gain_Margin    : -10.3896
+  I_OPA          : 0.00121899
+  Total_Area     : 3028.9199999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 186 (Probe) ---
+Action: Perturbed 'PM19_fw' with sign 1, new value ~4.4000e+00
+Score: 1000339772.5000
+  Gain_db        : 52.8182
+  UGB            : 28903600.0
+  Phase_Margin   : 87.5769
+  Gain_Margin    : -10.2276
+  I_OPA          : 0.00121047
+  Total_Area     : 3034.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 187 (Probe) ---
+Action: Perturbed 'PM19_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339280.0000
+  Gain_db        : 52.8576
+  UGB            : 28920200.0
+  Phase_Margin   : 87.6257
+  Gain_Margin    : -10.327
+  I_OPA          : 0.00120942
+  Total_Area     : 3028.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 188 (Probe) ---
+Action: Perturbed 'NM1_fw' with sign 1, new value ~4.4000e+00
+Score: 1000337427.5000
+  Gain_db        : 53.0058
+  UGB            : 28900200.0
+  Phase_Margin   : 87.7161
+  Gain_Margin    : -10.224
+  I_OPA          : 0.00120638
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 189 (Probe) ---
+Action: Perturbed 'NM1_fw' with sign -1, new value ~3.6000e+00
+Score: 1000342110.0000
+  Gain_db        : 52.6312
+  UGB            : 28925900.0
+  Phase_Margin   : 87.4772
+  Gain_Margin    : -10.3266
+  I_OPA          : 0.00121416
+  Total_Area     : 3027.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 190 (Probe) ---
+Action: Perturbed 'PM25_fw' with sign 1, new value ~4.4000e+00
+Score: 1000339378.7500
+  Gain_db        : 52.8497
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6168
+  Gain_Margin    : -10.2712
+  I_OPA          : 0.00120997
+  Total_Area     : 3036.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 191 (Probe) ---
+Action: Perturbed 'PM25_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339395.0000
+  Gain_db        : 52.8484
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6163
+  Gain_Margin    : -10.2714
+  I_OPA          : 0.00120999
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 192 (Probe) ---
+Action: Perturbed 'PM22_l' with sign 1, new value ~2.2000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3439999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 193 (Probe) ---
+Action: Perturbed 'PM22_l' with sign -1, new value ~1.8000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.2959999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 194 (Probe) ---
+Action: Perturbed 'PM25_l' with sign 1, new value ~1.1000e+00
+Score: 1000339392.5000
+  Gain_db        : 52.8486
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6164
+  Gain_Margin    : -10.2714
+  I_OPA          : 0.00120998
+  Total_Area     : 3036.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 195 (Probe) ---
+Action: Perturbed 'PM25_l' with sign -1, new value ~9.0000e-01
+Score: 1000339380.0000
+  Gain_db        : 52.8496
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6168
+  Gain_Margin    : -10.2712
+  I_OPA          : 0.00120997
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 196 (Probe) ---
+Action: Perturbed 'NM13_l' with sign 1, new value ~1.1000e+00
+Score: 1000339831.2500
+  Gain_db        : 52.8135
+  UGB            : 28904200.0
+  Phase_Margin   : 87.5962
+  Gain_Margin    : -10.3166
+  I_OPA          : 0.00120699
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 197 (Probe) ---
+Action: Perturbed 'NM13_l' with sign -1, new value ~9.0000e-01
+Score: 1000338926.2500
+  Gain_db        : 52.8859
+  UGB            : 28918300.0
+  Phase_Margin   : 87.6402
+  Gain_Margin    : -10.2185
+  I_OPA          : 0.00121341
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 198 (Probe) ---
+Action: Perturbed 'NM1_l' with sign 1, new value ~1.1000e+00
+Score: 1000341297.5000
+  Gain_db        : 52.6962
+  UGB            : 28904300.0
+  Phase_Margin   : 87.5376
+  Gain_Margin    : -10.2663
+  I_OPA          : 0.00121324
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 199 (Probe) ---
+Action: Perturbed 'NM1_l' with sign -1, new value ~9.0000e-01
+Score: 1000337958.7500
+  Gain_db        : 52.9633
+  UGB            : 28921900.0
+  Phase_Margin   : 87.6728
+  Gain_Margin    : -10.2727
+  I_OPA          : 0.00120659
+  Total_Area     : 3027.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 200 (Probe) ---
+Action: Perturbed 'NM9_fw' with sign 1, new value ~4.4000e+00
+Score: 1000366053.7500
+  Gain_db        : 50.7157
+  UGB            : 28969200.0
+  Phase_Margin   : 85.7366
+  Gain_Margin    : -10.8355
+  I_OPA          : 0.00128942
+  Total_Area     : 3033.4799999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 201 (Probe) ---
+Action: Perturbed 'NM9_fw' with sign -1, new value ~3.6000e+00
+Score: 1000322881.2500
+  Gain_db        : 54.1695
+  UGB            : 28834800.0
+  Phase_Margin   : 89.2023
+  Gain_Margin    : -10.0211
+  I_OPA          : 0.00112035
+  Total_Area     : 3029.1599999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 202 (Probe) ---
+Action: Perturbed 'PM15_fw' with sign 1, new value ~4.4000e+00
+Score: 1000343692.5000
+  Gain_db        : 52.5046
+  UGB            : 28867800.0
+  Phase_Margin   : 87.4982
+  Gain_Margin    : -10.3908
+  I_OPA          : 0.00121863
+  Total_Area     : 3033.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 203 (Probe) ---
+Action: Perturbed 'PM15_fw' with sign -1, new value ~3.6000e+00
+Score: 1000334775.0000
+  Gain_db        : 53.218
+  UGB            : 28959000.0
+  Phase_Margin   : 87.7438
+  Gain_Margin    : -10.1345
+  I_OPA          : 0.00119998
+  Total_Area     : 3028.9199999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 204 (Probe) ---
+Action: Perturbed 'PM17_fw' with sign 1, new value ~4.4000e+00
+Score: 1000322871.2500
+  Gain_db        : 54.1703
+  UGB            : 28759900.0
+  Phase_Margin   : 88.8941
+  Gain_Margin    : -10.1092
+  I_OPA          : 0.00114473
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 205 (Probe) ---
+Action: Perturbed 'PM17_fw' with sign -1, new value ~3.6000e+00
+Score: 1000361736.2500
+  Gain_db        : 51.0611
+  UGB            : 29064800.0
+  Phase_Margin   : 86.2567
+  Gain_Margin    : -10.5882
+  I_OPA          : 0.00127826
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 206 (Probe) ---
+Action: Perturbed 'PM18_fw' with sign 1, new value ~4.4000e+00
+Score: 1000341970.0000
+  Gain_db        : 52.6424
+  UGB            : 29471200.0
+  Phase_Margin   : 87.4097
+  Gain_Margin    : -10.3906
+  I_OPA          : 0.00123045
+  Total_Area     : 3036.119999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 207 (Probe) ---
+Action: Perturbed 'PM18_fw' with sign -1, new value ~3.6000e+00
+Score: 1000336776.2500
+  Gain_db        : 53.0579
+  UGB            : 28250400.0
+  Phase_Margin   : 87.8347
+  Gain_Margin    : -10.1564
+  I_OPA          : 0.00118717
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 208 (Probe) ---
+Action: Perturbed 'PM20_l' with sign 1, new value ~1.1000e+00
+Score: 1000340028.7500
+  Gain_db        : 52.7977
+  UGB            : 28967000.0
+  Phase_Margin   : 87.5389
+  Gain_Margin    : -10.4613
+  I_OPA          : 0.00120831
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 209 (Probe) ---
+Action: Perturbed 'PM20_l' with sign -1, new value ~9.0000e-01
+Score: 1000342246.2500
+  Gain_db        : 52.6203
+  UGB            : 28864600.0
+  Phase_Margin   : 87.3089
+  Gain_Margin    : -10.1197
+  I_OPA          : 0.00121206
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 210 (Probe) ---
+Action: Perturbed 'NM5_fw' with sign 1, new value ~4.4000e+00
+Score: 1000326592.5000
+  Gain_db        : 53.8726
+  UGB            : 29054000.0
+  Phase_Margin   : 88.0273
+  Gain_Margin    : -10.1721
+  I_OPA          : 0.00121002
+  Total_Area     : 3034.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 211 (Probe) ---
+Action: Perturbed 'NM5_fw' with sign -1, new value ~3.6000e+00
+Score: 1000357757.5000
+  Gain_db        : 51.3794
+  UGB            : 28731700.0
+  Phase_Margin   : 86.943
+  Gain_Margin    : -10.4577
+  I_OPA          : 0.00120993
+  Total_Area     : 3027.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 212 (Probe) ---
+Action: Perturbed 'PM2_l' with sign 1, new value ~1.1000e+00
+Score: 1000339197.5000
+  Gain_db        : 52.8642
+  UGB            : 26790500.0
+  Phase_Margin   : 87.6487
+  Gain_Margin    : -10.5854
+  I_OPA          : 0.0012
+  Total_Area     : 3033.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 213 (Probe) ---
+Action: Perturbed 'PM2_l' with sign -1, new value ~9.0000e-01
+Score: 1000353496.2500
+  Gain_db        : 52.8099
+  UGB            : 31189900.0
+  Phase_Margin   : 87.5375
+  Gain_Margin    : -9.8638
+  I_OPA          : 0.00121967
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 214 (Probe) ---
+Action: Perturbed 'C0_l' with sign 1, new value ~1.7974e+01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 26320000.0
+  Phase_Margin   : 89.0434
+  Gain_Margin    : -10.2692
+  I_OPA          : 0.00120998
+  Total_Area     : 3227.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 215 (Probe) ---
+Action: Perturbed 'C0_l' with sign -1, new value ~1.4706e+01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 31741200.0
+  Phase_Margin   : 85.8542
+  Gain_Margin    : -10.2273
+  I_OPA          : 0.00120998
+  Total_Area     : 2835.119999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 216 (Probe) ---
+Action: Perturbed 'PM20_fw' with sign 1, new value ~4.4000e+00
+Score: 1000342058.7500
+  Gain_db        : 52.6353
+  UGB            : 28864500.0
+  Phase_Margin   : 87.3298
+  Gain_Margin    : -10.124
+  I_OPA          : 0.00121198
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 217 (Probe) ---
+Action: Perturbed 'PM20_fw' with sign -1, new value ~3.6000e+00
+Score: 1000340402.5000
+  Gain_db        : 52.7678
+  UGB            : 28981800.0
+  Phase_Margin   : 87.4959
+  Gain_Margin    : -10.4967
+  I_OPA          : 0.00120805
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 218 (Probe) ---
+Action: Perturbed 'NM3_fw' with sign 1, new value ~4.4000e+00
+Score: 1000336541.2500
+  Gain_db        : 53.0767
+  UGB            : 28786200.0
+  Phase_Margin   : 87.2938
+  Gain_Margin    : -10.4359
+  I_OPA          : 0.00120963
+  Total_Area     : 3036.119999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 219 (Probe) ---
+Action: Perturbed 'NM3_fw' with sign -1, new value ~3.6000e+00
+Score: 1000343565.0000
+  Gain_db        : 52.5148
+  UGB            : 29067700.0
+  Phase_Margin   : 87.9318
+  Gain_Margin    : -10.1047
+  I_OPA          : 0.00121048
+  Total_Area     : 3026.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 220 (Probe) ---
+Action: Perturbed 'NM14_l' with sign 1, new value ~1.1000e+00
+Score: 1000339400.0000
+  Gain_db        : 52.848
+  UGB            : 28910800.0
+  Phase_Margin   : 87.6159
+  Gain_Margin    : -10.2737
+  I_OPA          : 0.00120982
+  Total_Area     : 3032.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 221 (Probe) ---
+Action: Perturbed 'NM14_l' with sign -1, new value ~9.0000e-01
+Score: 1000339372.5000
+  Gain_db        : 52.8502
+  UGB            : 28911100.0
+  Phase_Margin   : 87.6172
+  Gain_Margin    : -10.269
+  I_OPA          : 0.00121013
+  Total_Area     : 3030.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 222 (Probe) ---
+Action: Perturbed 'NM12_fw' with sign 1, new value ~4.4000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 223 (Probe) ---
+Action: Perturbed 'NM12_fw' with sign -1, new value ~3.6000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3079999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 224 (Probe) ---
+Action: Perturbed 'PM4_fw' with sign 1, new value ~4.4000e+00
+Score: 1000350600.0000
+  Gain_db        : 51.952
+  UGB            : 28829100.0
+  Phase_Margin   : 87.6434
+  Gain_Margin    : -10.199
+  I_OPA          : 0.00124264
+  Total_Area     : 3045.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 225 (Probe) ---
+Action: Perturbed 'PM4_fw' with sign -1, new value ~3.6000e+00
+Score: 1000328315.0000
+  Gain_db        : 53.7348
+  UGB            : 28994200.0
+  Phase_Margin   : 87.5348
+  Gain_Margin    : -10.3626
+  I_OPA          : 0.00117491
+  Total_Area     : 3016.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 226 (Probe) ---
+Action: Perturbed 'PM26_l' with sign 1, new value ~1.1000e+00
+Score: 1000339875.0000
+  Gain_db        : 52.81
+  UGB            : 28911600.0
+  Phase_Margin   : 87.5497
+  Gain_Margin    : -10.2996
+  I_OPA          : 0.00121036
+  Total_Area     : 3033.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 227 (Probe) ---
+Action: Perturbed 'PM26_l' with sign -1, new value ~9.0000e-01
+Score: 1000338930.0000
+  Gain_db        : 52.8856
+  UGB            : 28909700.0
+  Phase_Margin   : 87.6828
+  Gain_Margin    : -10.2392
+  I_OPA          : 0.00120958
+  Total_Area     : 3028.9199999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 228 (Probe) ---
+Action: Perturbed 'PM17_l' with sign 1, new value ~1.1000e+00
+Score: 1000358952.5000
+  Gain_db        : 51.2838
+  UGB            : 29038700.0
+  Phase_Margin   : 86.4324
+  Gain_Margin    : -10.5279
+  I_OPA          : 0.00126883
+  Total_Area     : 3031.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 229 (Probe) ---
+Action: Perturbed 'PM17_l' with sign -1, new value ~9.0000e-01
+Score: 1000322700.0000
+  Gain_db        : 54.184
+  UGB            : 28760900.0
+  Phase_Margin   : 88.9395
+  Gain_Margin    : -10.1042
+  I_OPA          : 0.00114242
+  Total_Area     : 3030.7199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 230 (Probe) ---
+Action: Perturbed 'NM10_fw' with sign 1, new value ~2.2000e+00
+Score: 1000340772.5000
+  Gain_db        : 52.7382
+  UGB            : 28982200.0
+  Phase_Margin   : 87.453
+  Gain_Margin    : -10.5214
+  I_OPA          : 0.00121049
+  Total_Area     : 3032.8199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 231 (Probe) ---
+Action: Perturbed 'NM10_fw' with sign -1, new value ~1.8000e+00
+Score: 1000344137.5000
+  Gain_db        : 52.469
+  UGB            : 28854600.0
+  Phase_Margin   : 87.0945
+  Gain_Margin    : -10.0864
+  I_OPA          : 0.00120961
+  Total_Area     : 3029.8199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 232 (Probe) ---
+Action: Perturbed 'PM4_l' with sign 1, new value ~1.1000e+00
+Score: 1000329777.5000
+  Gain_db        : 53.6178
+  UGB            : 28979700.0
+  Phase_Margin   : 87.5486
+  Gain_Margin    : -10.3511
+  I_OPA          : 0.00117985
+  Total_Area     : 3045.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 233 (Probe) ---
+Action: Perturbed 'PM4_l' with sign -1, new value ~9.0000e-01
+Score: 1000351087.5000
+  Gain_db        : 51.913
+  UGB            : 28829600.0
+  Phase_Margin   : 87.6462
+  Gain_Margin    : -10.194
+  I_OPA          : 0.00124394
+  Total_Area     : 3016.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 234 (Probe) ---
+Action: Perturbed 'NM8_l' with sign 1, new value ~1.3200e+00
+Score: 1000344665.0000
+  Gain_db        : 52.4268
+  UGB            : 28994400.0
+  Phase_Margin   : 86.9217
+  Gain_Margin    : -10.5274
+  I_OPA          : 0.00121686
+  Total_Area     : 3032.0399999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 235 (Probe) ---
+Action: Perturbed 'NM8_l' with sign -1, new value ~1.0800e+00
+Score: 1000334020.0000
+  Gain_db        : 53.2784
+  UGB            : 28826300.0
+  Phase_Margin   : 88.2826
+  Gain_Margin    : -10.0283
+  I_OPA          : 0.00120341
+  Total_Area     : 3030.5999999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 236 (Probe) ---
+Action: Perturbed 'NM12_l' with sign 1, new value ~2.2000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 237 (Probe) ---
+Action: Perturbed 'NM12_l' with sign -1, new value ~1.8000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3079999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 238 (Probe) ---
+Action: Perturbed 'NM14_fw' with sign 1, new value ~4.4000e+00
+Score: 1000339370.0000
+  Gain_db        : 52.8504
+  UGB            : 28911100.0
+  Phase_Margin   : 87.6173
+  Gain_Margin    : -10.2687
+  I_OPA          : 0.00121015
+  Total_Area     : 3032.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 239 (Probe) ---
+Action: Perturbed 'NM14_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339405.0000
+  Gain_db        : 52.8476
+  UGB            : 28910700.0
+  Phase_Margin   : 87.6157
+  Gain_Margin    : -10.2746
+  I_OPA          : 0.00120976
+  Total_Area     : 3030.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 240 (Probe) ---
+Action: Perturbed 'PM0_l' with sign 1, new value ~1.1000e+00
+Score: 1000343936.2500
+  Gain_db        : 52.4851
+  UGB            : 28749400.0
+  Phase_Margin   : 86.3944
+  Gain_Margin    : -10.6744
+  I_OPA          : 0.00120946
+  Total_Area     : 3045.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 241 (Probe) ---
+Action: Perturbed 'PM0_l' with sign -1, new value ~9.0000e-01
+Score: 1000370728.7500
+  Gain_db        : 53.1753
+  UGB            : 29066200.0
+  Phase_Margin   : 88.8566
+  Gain_Margin    : -9.6458
+  I_OPA          : 0.00121049
+  Total_Area     : 3016.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 242 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign 1, new value ~4.4000e+00
+Score: 1000322416.2500
+  Gain_db        : 54.2067
+  UGB            : 28976800.0
+  Phase_Margin   : 88.8513
+  Gain_Margin    : -10.3281
+  I_OPA          : 0.00113908
+  Total_Area     : 3032.0399999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 243 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign -1, new value ~3.6000e+00
+Score: 1000364612.5000
+  Gain_db        : 50.831
+  UGB            : 28844400.0
+  Phase_Margin   : 86.3982
+  Gain_Margin    : -10.4699
+  I_OPA          : 0.00129107
+  Total_Area     : 3030.5999999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 244 (Probe) ---
+Action: Perturbed 'NM10_l' with sign 1, new value ~5.5000e+00
+Score: 1000343156.2500
+  Gain_db        : 52.5475
+  UGB            : 28862500.0
+  Phase_Margin   : 87.2066
+  Gain_Margin    : -10.1003
+  I_OPA          : 0.00120964
+  Total_Area     : 3032.8199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 245 (Probe) ---
+Action: Perturbed 'NM10_l' with sign -1, new value ~4.5000e+00
+Score: 1000341005.0000
+  Gain_db        : 52.7196
+  UGB            : 28983900.0
+  Phase_Margin   : 87.4259
+  Gain_Margin    : -10.5442
+  I_OPA          : 0.00121054
+  Total_Area     : 3029.8199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 246 (Probe) ---
+Action: Perturbed 'PM9_fw' with sign 1, new value ~4.4000e+00
+Score: 1000343621.2500
+  Gain_db        : 52.5103
+  UGB            : 28904200.0
+  Phase_Margin   : 87.5882
+  Gain_Margin    : -10.2497
+  I_OPA          : 0.00122924
+  Total_Area     : 3060.1199999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 247 (Probe) ---
+Action: Perturbed 'PM9_fw' with sign -1, new value ~3.6000e+00
+Score: 1000335030.0000
+  Gain_db        : 53.1976
+  UGB            : 28919800.0
+  Phase_Margin   : 87.6202
+  Gain_Margin    : -10.3067
+  I_OPA          : 0.00118833
+  Total_Area     : 3002.519999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 248 (Probe) ---
+Action: Perturbed 'NM11_l' with sign 1, new value ~2.2000e-01
+Score: 1000339387.5000
+  Gain_db        : 52.849
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6165
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 249 (Probe) ---
+Action: Perturbed 'NM11_l' with sign -1, new value ~1.8000e-01
+Score: 1000339385.0000
+  Gain_db        : 52.8492
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6167
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3079999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 250 (Probe) ---
+Action: Perturbed 'PM21_fw' with sign 1, new value ~8.8000e-01
+Score: 1000339385.0000
+  Gain_db        : 52.8492
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3439999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 251 (Probe) ---
+Action: Perturbed 'PM21_fw' with sign -1, new value ~7.2000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6165
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.2959999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 252 (Probe) ---
+Action: Perturbed 'PM19_l' with sign 1, new value ~1.1000e+00
+Score: 1000339272.5000
+  Gain_db        : 52.8582
+  UGB            : 28917200.0
+  Phase_Margin   : 87.627
+  Gain_Margin    : -10.3146
+  I_OPA          : 0.00120954
+  Total_Area     : 3034.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 253 (Probe) ---
+Action: Perturbed 'PM19_l' with sign -1, new value ~9.0000e-01
+Score: 1000339722.5000
+  Gain_db        : 52.8222
+  UGB            : 28904800.0
+  Phase_Margin   : 87.5821
+  Gain_Margin    : -10.2301
+  I_OPA          : 0.00121044
+  Total_Area     : 3028.3199999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 254 (Probe) ---
+Action: Perturbed 'PM21_l' with sign 1, new value ~2.2000e-01
+Score: 1000339386.2500
+  Gain_db        : 52.8491
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3439999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 255 (Probe) ---
+Action: Perturbed 'PM21_l' with sign -1, new value ~1.8000e-01
+Score: 1000339385.0000
+  Gain_db        : 52.8492
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.2959999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 256 (Probe) ---
+Action: Perturbed 'PM12_fw' with sign 1, new value ~4.4000e+00
+Score: 1000346718.7500
+  Gain_db        : 52.2625
+  UGB            : 29033900.0
+  Phase_Margin   : 86.6403
+  Gain_Margin    : -10.6177
+  I_OPA          : 0.00122025
+  Total_Area     : 3032.999999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 257 (Probe) ---
+Action: Perturbed 'PM12_fw' with sign -1, new value ~3.6000e+00
+Score: 1000337007.5000
+  Gain_db        : 53.3866
+  UGB            : 28790100.0
+  Phase_Margin   : 88.5068
+  Gain_Margin    : -9.9566
+  I_OPA          : 0.00120028
+  Total_Area     : 3029.639999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 258 (Probe) ---
+Action: Perturbed 'NM11_fw' with sign 1, new value ~4.4000e-01
+Score: 1000339385.0000
+  Gain_db        : 52.8492
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6166
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120998
+  Total_Area     : 3031.3319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 259 (Probe) ---
+Action: Perturbed 'NM11_fw' with sign -1, new value ~3.6000e-01
+Score: 1000339387.5000
+  Gain_db        : 52.849
+  UGB            : 28910900.0
+  Phase_Margin   : 87.6165
+  Gain_Margin    : -10.2713
+  I_OPA          : 0.00120997
+  Total_Area     : 3031.3079999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 260 (Probe) ---
+Action: Perturbed 'PM2_fw' with sign 1, new value ~4.4000e+00
+Score: 1000362976.2500
+  Gain_db        : 52.8443
+  UGB            : 31050300.0
+  Phase_Margin   : 87.1741
+  Gain_Margin    : -9.7647
+  I_OPA          : 0.00121929
+  Total_Area     : 3033.719999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 1 / Sim 261 (Probe) ---
+Action: Perturbed 'PM2_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339745.0000
+  Gain_db        : 52.8204
+  UGB            : 26492400.0
+  Phase_Margin   : 88.0473
+  Gain_Margin    : -10.8299
+  I_OPA          : 0.00119836
+  Total_Area     : 3028.919999999999
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 (Current) ---
+Score: 1000322416.2500
+  Gain_db        : 54.2067
+  UGB            : 28976800.0
+  Phase_Margin   : 88.8513
+  Gain_Margin    : -10.3281
+  I_OPA          : 0.00113908
+  Total_Area     : 3032.0399999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 263 (Probe) ---
+Action: Perturbed 'PM8_l' with sign -1, new value ~9.0000e-01
+Score: 1000324453.7500
+  Gain_db        : 54.0437
+  UGB            : 29077600.0
+  Phase_Margin   : 88.9542
+  Gain_Margin    : -10.3453
+  I_OPA          : 0.00114261
+  Total_Area     : 3031.4399999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 264 (Probe) ---
+Action: Perturbed 'PM8_l' with sign 1, new value ~1.1000e+00
+Score: 1000320348.7500
+  Gain_db        : 54.3721
+  UGB            : 28877700.0
+  Phase_Margin   : 88.4541
+  Gain_Margin    : -10.3231
+  I_OPA          : 0.0011356
+  Total_Area     : 3032.6399999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 265 (Probe) ---
+Action: Perturbed 'NM7_l' with sign -1, new value ~1.0800e+00
+Score: 1000316546.2500
+  Gain_db        : 54.6763
+  UGB            : 29027900.0
+  Phase_Margin   : 88.8308
+  Gain_Margin    : -10.1912
+  I_OPA          : 0.00108452
+  Total_Area     : 3031.2479999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 266 (Probe) ---
+Action: Perturbed 'NM7_l' with sign 1, new value ~1.3200e+00
+Score: 1000331583.7500
+  Gain_db        : 53.4733
+  UGB            : 28931600.0
+  Phase_Margin   : 87.9951
+  Gain_Margin    : -10.2747
+  I_OPA          : 0.0011912
+  Total_Area     : 3032.8319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 267 (Probe) ---
+Action: Perturbed 'PM17_l' with sign -1, new value ~9.0000e-01
+Score: 1000318400.0000
+  Gain_db        : 54.7928
+  UGB            : 28822100.0
+  Phase_Margin   : 89.0255
+  Gain_Margin    : -9.9669
+  I_OPA          : 0.00107168
+  Total_Area     : 3031.4399999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 268 (Probe) ---
+Action: Perturbed 'PM17_l' with sign 1, new value ~1.1000e+00
+Score: 1000335885.0000
+  Gain_db        : 53.1292
+  UGB            : 29108300.0
+  Phase_Margin   : 87.6173
+  Gain_Margin    : -10.4642
+  I_OPA          : 0.00119789
+  Total_Area     : 3032.6399999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 269 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign 1, new value ~4.8400e+00
+Score: 1000314458.7500
+  Gain_db        : 54.8433
+  UGB            : 29048100.0
+  Phase_Margin   : 88.8027
+  Gain_Margin    : -10.1933
+  I_OPA          : 0.00107031
+  Total_Area     : 3032.8319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 270 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign -1, new value ~3.9600e+00
+Score: 1000342053.7500
+  Gain_db        : 52.6357
+  UGB            : 28904300.0
+  Phase_Margin   : 87.4843
+  Gain_Margin    : -10.2737
+  I_OPA          : 0.00121759
+  Total_Area     : 3031.2479999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 271 (Probe) ---
+Action: Perturbed 'NM9_fw' with sign -1, new value ~3.6000e+00
+Score: 1000337427.5000
+  Gain_db        : 54.8834
+  UGB            : 28890000.0
+  Phase_Margin   : 89.1049
+  Gain_Margin    : -9.7653
+  I_OPA          : 0.00104946
+  Total_Area     : 3029.8799999999997
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 272 (Probe) ---
+Action: Perturbed 'NM9_fw' with sign 1, new value ~4.4000e+00
+Score: 1000346691.2500
+  Gain_db        : 52.2647
+  UGB            : 29042100.0
+  Phase_Margin   : 86.6815
+  Gain_Margin    : -10.586
+  I_OPA          : 0.0012188
+  Total_Area     : 3034.2
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 273 (Probe) ---
+Action: Perturbed 'PM17_fw' with sign 1, new value ~4.4000e+00
+Score: 1000318282.5000
+  Gain_db        : 54.7774
+  UGB            : 28821300.0
+  Phase_Margin   : 89.023
+  Gain_Margin    : -9.97
+  I_OPA          : 0.00107386
+  Total_Area     : 3032.6399999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 2 / Sim 274 (Probe) ---
+Action: Perturbed 'PM17_fw' with sign -1, new value ~3.6000e+00
+Score: 1000339435.0000
+  Gain_db        : 52.8452
+  UGB            : 29134800.0
+  Phase_Margin   : 87.4047
+  Gain_Margin    : -10.4918
+  I_OPA          : 0.00120739
+  Total_Area     : 3031.4399999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 (Current) ---
+Score: 1000314458.7500
+  Gain_db        : 54.8433
+  UGB            : 29048100.0
+  Phase_Margin   : 88.8027
+  Gain_Margin    : -10.1933
+  I_OPA          : 0.00107031
+  Total_Area     : 3032.8319999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 / Sim 276 (Probe) ---
+Action: Perturbed 'PM8_l' with sign 1, new value ~1.1000e+00
+Score: 1000312987.5000
+  Gain_db        : 54.961
+  UGB            : 28950100.0
+  Phase_Margin   : 88.774
+  Gain_Margin    : -10.3076
+  I_OPA          : 0.00106696
+  Total_Area     : 3033.4319999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 / Sim 277 (Probe) ---
+Action: Perturbed 'PM8_l' with sign -1, new value ~9.0000e-01
+Score: 1000315798.7500
+  Gain_db        : 54.7361
+  UGB            : 29147500.0
+  Phase_Margin   : 88.8362
+  Gain_Margin    : -10.0932
+  I_OPA          : 0.00107371
+  Total_Area     : 3032.2319999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 / Sim 278 (Probe) ---
+Action: Perturbed 'NM7_l' with sign 1, new value ~1.3200e+00
+Score: 1000320068.7500
+  Gain_db        : 54.3945
+  UGB            : 29000200.0
+  Phase_Margin   : 88.8902
+  Gain_Margin    : -10.2645
+  I_OPA          : 0.00111995
+  Total_Area     : 3033.7031999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 / Sim 279 (Probe) ---
+Action: Perturbed 'NM7_l' with sign -1, new value ~1.0800e+00
+Score: 1000307525.0000
+  Gain_db        : 55.398
+  UGB            : 29101700.0
+  Phase_Margin   : 88.7502
+  Gain_Margin    : -10.2962
+  I_OPA          : 0.0010183
+  Total_Area     : 3031.9607999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 / Sim 280 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign 1, new value ~5.3240e+00
+Score: 1000304723.7500
+  Gain_db        : 55.6221
+  UGB            : 29124700.0
+  Phase_Margin   : 88.7472
+  Gain_Margin    : -10.3576
+  I_OPA          : 0.00100341
+  Total_Area     : 3033.7049999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 3 / Sim 281 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign -1, new value ~4.3560e+00
+Score: 1000323206.2500
+  Gain_db        : 54.1435
+  UGB            : 28969500.0
+  Phase_Margin   : 88.7285
+  Gain_Margin    : -10.3181
+  I_OPA          : 0.00114662
+  Total_Area     : 3031.9589999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 (Current) ---
+Score: 1000304723.7500
+  Gain_db        : 55.6221
+  UGB            : 29124700.0
+  Phase_Margin   : 88.7472
+  Gain_Margin    : -10.3576
+  I_OPA          : 0.00100341
+  Total_Area     : 3033.7049999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 / Sim 283 (Probe) ---
+Action: Perturbed 'NM7_l' with sign -1, new value ~1.0800e+00
+Score: 1000295870.0000
+  Gain_db        : 56.3304
+  UGB            : 29180700.0
+  Phase_Margin   : 88.8048
+  Gain_Margin    : -10.3125
+  I_OPA          : 0.00095387
+  Total_Area     : 3032.7464999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 / Sim 284 (Probe) ---
+Action: Perturbed 'NM7_l' with sign 1, new value ~1.3200e+00
+Score: 1000311520.0000
+  Gain_db        : 55.0784
+  UGB            : 29074400.0
+  Phase_Margin   : 88.7727
+  Gain_Margin    : -10.2256
+  I_OPA          : 0.00105071
+  Total_Area     : 3034.6634999999997
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 / Sim 285 (Probe) ---
+Action: Perturbed 'PM8_l' with sign 1, new value ~1.1000e+00
+Score: 1000304108.7500
+  Gain_db        : 55.6713
+  UGB            : 29029100.0
+  Phase_Margin   : 88.6909
+  Gain_Margin    : -10.3421
+  I_OPA          : 0.00100017
+  Total_Area     : 3034.3049999999994
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 / Sim 286 (Probe) ---
+Action: Perturbed 'PM8_l' with sign -1, new value ~9.0000e-01
+Score: 1000305035.0000
+  Gain_db        : 55.5972
+  UGB            : 29221400.0
+  Phase_Margin   : 88.8164
+  Gain_Margin    : -10.319
+  I_OPA          : 0.00100669
+  Total_Area     : 3033.1049999999996
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 / Sim 287 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign 1, new value ~5.8564e+00
+Score: 1000291955.0000
+  Gain_db        : 56.6436
+  UGB            : 29205900.0
+  Phase_Margin   : 88.8602
+  Gain_Margin    : -10.2673
+  I_OPA          : 0.000938938
+  Total_Area     : 3034.6589999999997
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 4 / Sim 288 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign -1, new value ~4.7916e+00
+Score: 1000315392.5000
+  Gain_db        : 54.7686
+  UGB            : 29040100.0
+  Phase_Margin   : 88.8146
+  Gain_Margin    : -10.1896
+  I_OPA          : 0.00107771
+  Total_Area     : 3032.7419999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 5 (Current) ---
+Score: 1000291955.0000
+  Gain_db        : 56.6436
+  UGB            : 29205900.0
+  Phase_Margin   : 88.8602
+  Gain_Margin    : -10.2673
+  I_OPA          : 0.000938938
+  Total_Area     : 3034.6589999999997
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 5 / Sim 290 (Probe) ---
+Action: Perturbed 'NM7_l' with sign 1, new value ~1.3200e+00
+Score: 1000300857.5000
+  Gain_db        : 55.9314
+  UGB            : 29153500.0
+  Phase_Margin   : 88.7602
+  Gain_Margin    : -10.3797
+  I_OPA          : 0.000983954
+  Total_Area     : 3035.7128999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 5 / Sim 291 (Probe) ---
+Action: Perturbed 'NM7_l' with sign -1, new value ~1.0800e+00
+Score: 1000374369.2500
+  Gain_db        : 57.5695
+  UGB            : 29264000.0
+  Phase_Margin   : 88.8543
+  Gain_Margin    : -9.06012
+  I_OPA          : 0.000891913
+  Total_Area     : 3033.6050999999993
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 5 / Sim 292 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign 1, new value ~6.4420e+00
+Score: 1000409610.2500
+  Gain_db        : 57.3367
+  UGB            : 29292400.0
+  Phase_Margin   : 88.7708
+  Gain_Margin    : -8.73681
+  I_OPA          : 0.000876418
+  Total_Area     : 3035.7119999999995
+
+--- Pass 1 (Strict Goal: 80dB) - Stage 2 Iteration 5 / Sim 293 (Probe) ---
+Action: Perturbed 'NM7_fw' with sign -1, new value ~5.2708e+00
+Score: 1000305903.7500
+  Gain_db        : 55.5277
+  UGB            : 29116100.0
+  Phase_Margin   : 88.7472
+  Gain_Margin    : -10.3322
+  I_OPA          : 0.00101059
+  Total_Area     : 3033.6059999999993

@@ -6,7 +6,6 @@ import multiprocessing
 import csv
 
 from typing import Dict, Optional
-from scipy.optimize import differential_evolution
 from multiprocessing import Process, Queue
 
 from src.data_models import Parameter, CircuitGraph
@@ -137,10 +136,9 @@ class SimulatePlatform:
 
     def evaluate(self) -> Dict[str, float]:
         """
-        [NEW VERSION using Manual Process Management]
-        This version avoids multiprocessing.Pool and manually creates, starts,
-        and joins 9 Process objects for maximum stability and control.
-        Communication is handled via a multiprocessing.Queue.
+        [MODIFIED FOR EFFICIENCY]
+        This version assumes the parallel views have already been created
+        and will be cleaned up externally. It only focuses on running the simulation.
         """
         self.iter_count += 1
         eval_path = os.path.join(self.output_path, f"iter_{self.iter_count}")
@@ -148,67 +146,59 @@ class SimulatePlatform:
 
         print(f"\n===== [Eval #{self.iter_count}] Starting Parallel Simulation (Manual Process Mode)... =====")
         
-        # 1. 准备 MDE 视图和任务列表 (这部分逻辑不变)
-        view_list = []
-        try:
-            view_list = parallel_utils.prepare_parallel_views(self.ae_lib, self.mde_cell, self.mde_view)
-            tasks = [(i, self.ae_lib, self.mde_cell, view, eval_path) for i, view in enumerate(view_list)]
+        # 1. 直接获取视图列表
+        view_list = parallel_utils.get_view_list(self.mde_view)
+        tasks = [(i, self.ae_lib, self.mde_cell, view, eval_path) for i, view in enumerate(view_list)]
 
-            # 2. [核心修改] 创建用于进程间通信的队列
-            #    这个队列将用于从子进程收集结果
-            results_queue = Queue()
+        # 2. 队列和进程管理逻辑 (保持不变)
+        results_queue = Queue()
 
-            # 3. [核心修改] 手动创建并启动9个子进程
-            processes = []
-            for task in tasks:
-                # 注意：args元组的最后一个元素需要一个逗号, 即使只有一个元素
-                # 我们将 results_queue 作为额外参数传递给 worker
-                process_args = task + (results_queue,) 
-                p = Process(target=parallel_utils.simulation_worker, args=(process_args,))
-                processes.append(p)
-                p.start() # 启动进程
-                # print(f"  - Started Process for view: {task[3]}")
+        # 3. [核心修改] 手动创建并启动9个子进程
+        processes = []
+        for task in tasks:
+            # 注意：args元组的最后一个元素需要一个逗号, 即使只有一个元素
+            # 我们将 results_queue 作为额外参数传递给 worker
+            process_args = task + (results_queue,) 
+            p = Process(target=parallel_utils.simulation_worker, args=(process_args,))
+            processes.append(p)
+            p.start() # 启动进程
+            # print(f"  - Started Process for view: {task[3]}")
 
-            # 4. [核心修改] 先从队列中收集所有结果
-            #    这个 get() 操作本身就是阻塞的，它会一直等待直到有结果为止。
-            #    这保证了我们能收到所有子进程的“回信”。
-            print("  - All processes started. Waiting for results from the queue...")
-            collected_results = []
-            for _ in range(len(tasks)):
-                result = results_queue.get() # 等待并获取一个结果
-                collected_results.append(result)
-            print("  - All results have been collected from the queue.")
+        # 4. [核心修改] 先从队列中收集所有结果
+        #    这个 get() 操作本身就是阻塞的，它会一直等待直到有结果为止。
+        #    这保证了我们能收到所有子进程的“回信”。
+        print("  - All processes started. Waiting for results from the queue...")
+        collected_results = []
+        for _ in range(len(tasks)):
+            result = results_queue.get() # 等待并获取一个结果
+            collected_results.append(result)
+        print("  - All results have been collected from the queue.")
 
 
-            # 5. [核心修改] 然后再 join() 所有子进程
-            #    此时，所有子进程的核心任务都已完成，它们要么已经退出，要么即将退出。
-            #    这里的 join() 只是一个快速的清理步骤，确保所有进程资源都被系统回收。
-            print("  - Joining processes for cleanup...")
-            for p in processes:
-                p.join() 
-            print("  - All processes have been joined.")
-            
-            # 6. 处理收集到的结果 (这部分逻辑与之前类似)
-            summary_files = [res[2] for res in collected_results if res[1] == "SUCCESS"]
-            failures = [res for res in collected_results if res[1] == "FAILURE"]
+        # 5. [核心修改] 然后再 join() 所有子进程
+        #    此时，所有子进程的核心任务都已完成，它们要么已经退出，要么即将退出。
+        #    这里的 join() 只是一个快速的清理步骤，确保所有进程资源都被系统回收。
+        print("  - Joining processes for cleanup...")
+        for p in processes:
+            p.join() 
+        print("  - All processes have been joined.")
+        
+        # 6. 处理收集到的结果 (这部分逻辑与之前类似)
+        summary_files = [res[2] for res in collected_results if res[1] == "SUCCESS"]
+        failures = [res for res in collected_results if res[1] == "FAILURE"]
 
-            if failures:
-                print(f"  WARNING: {len(failures)}/{len(tasks)} corners failed:")
-                for view, _, msg in failures:
-                    # 打印完整的错误报告
-                    print(f"    - Failure in view '{view}':\n--- ERROR REPORT START ---\n{msg}\n--- ERROR REPORT END ---")
-            
-            if not summary_files:
-                print("  FATAL: All corners failed. Cannot calculate score.")
-                return {}
+        if failures:
+            print(f"  WARNING: {len(failures)}/{len(tasks)} corners failed:")
+            for view, _, msg in failures:
+                # 打印完整的错误报告
+                print(f"    - Failure in view '{view}':\n--- ERROR REPORT START ---\n{msg}\n--- ERROR REPORT END ---")
+        
+        if not summary_files:
+            print("  FATAL: All corners failed. Cannot calculate score.")
+            return {}
 
-            # 使用现有的辅助函数来解析结果
-            scores = self._parse_and_merge_results_parallel(summary_files)
-
-        finally:
-            # 清理临时视图的逻辑保持不变
-            if view_list:
-                parallel_utils.cleanup_parallel_views(self.ae_lib, self.mde_cell, self.mde_view)
+        # 使用现有的辅助函数来解析结果
+        scores = self._parse_and_merge_results_parallel(summary_files)
         
         print(f"========== Aggregated Worst-Case Result of Eval #{self.iter_count} ==========")
         print(f"====== UGB          : {scores.get('UGB', 0)} Hz")

@@ -89,54 +89,6 @@ def cleanup_parallel_views(lib, cell, base_view):
 
 # --- Part 2: Simulation Worker (必须是顶层函数) ---
 
-# def simulation_worker(task_info):
-#     """
-#     在子进程中执行单个仿真的 Worker 函数。
-#     [已修改] 增加了更强的异常捕获，防止任何子进程崩溃。
-#     """
-#     task_id, lib, cell, view, output_path = task_info
-    
-#     mde = None # 将 mde 初始化提前
-#     try:
-#         # 重要的修改：将 ae.emyInitAether 也放入 try 块中
-#         # 因为初始化本身也可能失败
-#         ae.emyInitAether('-adv') # 每个子进程都需要初始化
-        
-#         mde = ae.MdeSession.open(lib, cell, view)
-#         if not mde:
-#             # 返回详细的错误信息，而不是让进程崩溃
-#             return (view, "FAILURE", f"无法打开 MDE session: {ae.MdeSession.staticLastError()}")
-
-#         result = mde.netlistAndRun()
-        
-#         # 检查 result 对象是否存在且有效
-#         if not result:
-#             return (view, "FAILURE", f"仿真返回了空结果. MDE 错误: {mde.lastError()}")
-#         if not result.isValid():
-#             return (view, "FAILURE", f"仿真结果无效. Result 错误: {result.lastError()}")
-            
-#         corner_output_dir = os.path.join(output_path, view)
-#         os.makedirs(corner_output_dir, exist_ok=True)
-#         result.saveResultsToDir(corner_output_dir)
-        
-#         summary_files = glob.glob(os.path.join(corner_output_dir, "*_summary.csv"))
-#         if not summary_files:
-#             return (view, "FAILURE", "仿真成功，但未在输出目录找到 summary.csv 文件")
-        
-#         # 成功时返回 summary 文件的路径
-#         return (view, "SUCCESS", summary_files[0])
-
-#     except Exception as e:
-#         # 关键的“兜底”异常捕获！
-#         # 捕获所有其他未预料到的错误 (许可证、内存、工具内部崩溃等)
-#         # 将详细的 Python 异常信息返回给主进程
-#         return (view, "FAILURE", f"子进程发生未知严重错误: {str(e)}")
-    
-#     finally:
-#         # 确保无论成功还是失败，mde session 都被尝试关闭
-#         if mde:
-#             mde.close()
-
 def simulation_worker(task_info_tuple):
     """
     [MANUAL PROCESS VERSION]

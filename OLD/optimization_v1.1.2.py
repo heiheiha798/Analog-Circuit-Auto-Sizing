@@ -1,16 +1,19 @@
-# V 1.0.0 加上手动管理进程实现并行，无bug
+# V 1.1.0 做了一点I/O管理优化以及嵌套循环debug
+# 结果很垃圾
 
 import argparse
 import pyAether as ae
 import copy
 import random
 import os
+import math # 确保导入 math 模块
 
 from src.utils import read_parameters
 from src.optimizer import SimulatePlatform
 from src.data_models import CircuitGraph
 from src.graph_builder import build_graph_from_eda
 from src.circuit_analyzer import analyze_circuit_constraints
+from src import parallel_utils
 
 def parse_arguments():
     """Parse command-line arguments for the optimization tool"""
@@ -60,6 +63,34 @@ def get_score(scores, initial_ugb_val, initial_area_val):
 		area_norm = scores.get('Total_Area', 0) / initial_area_val
 		return 0.5 * area_norm - 0.5 * ugb_norm
 
+def get_score_flexible(scores, initial_ugb_val, initial_area_val, gain_db_target=80.0):
+    """
+    [新增] 灵活版本的评分函数，可以动态传入直流增益的目标。
+    """
+    if not scores: return 1e12
+    pm = scores.get('Phase_Margin', -180.0)
+    gain = scores.get('Gain_db', -200.0)
+    gm = scores.get('Gain_Margin', 100.0)
+    if pm <= -180.0 or gain <= -200.0 or gm >= 100.0: return 1e12
+    
+    iopa_ma = scores.get('I_OPA', 1.0) * 1000.0
+    
+    pm_viol = max(0, (50.0 - pm) / 50.0)
+    # [修改] 使用传入的 gain_db_target
+    gain_viol = max(0, (gain_db_target - gain) / gain_db_target)
+    gm_viol = max(0, (gm - (-10.0)) / abs(-10.0))
+    iopa_viol = max((iopa_ma - 3.0) / 3.0, 0)
+    
+    total_violation = pm_viol + gain_viol + gm_viol + iopa_viol
+    
+    if total_violation > 0:
+        return 1e9 + total_violation * 1e6
+    else:
+        # 归一化因子保持不变，以确保两遍优化之间的分数可比
+        ugb_norm = scores.get('UGB', 0) / initial_ugb_val
+        area_norm = scores.get('Total_Area', 0) / initial_area_val
+        return 0.5 * area_norm - 0.5 * ugb_norm
+
 def evaluate_and_count(platform, params, simulation_count):
 	"""设置参数并运行一次仿真，返回 (results, new_simulation_count)。"""
 	platform.only_set_params(params)
@@ -80,7 +111,7 @@ def update_tracking_if_better(tracking_info, score_probe, params_probe, probe_ev
         # 每次找到更优解时，调用新函数更新最优参数文件
         write_params_to_file(tracking_info['best_params'], best_params_filepath)
 
-def finalize_and_save_results(tracking_info, platform, simulation_count, frozen_params, m_param_names, other_param_names, filename="dynamic_v1.0.0_final_solution.txt"):
+def finalize_and_save_results(tracking_info, platform, simulation_count, frozen_params, m_param_names, other_param_names, filename="dynamic_v1.1.0_final_solution.txt"):
 	"""
 	独立的结束与保存逻辑。接受追踪信息、平台和统计变量，打印最终信息并写文件。
 	保持与原脚本等价的输出格式。
@@ -99,7 +130,7 @@ def finalize_and_save_results(tracking_info, platform, simulation_count, frozen_
 	os.makedirs(output_dir, exist_ok=True)
 	final_result_file = f"{output_dir}/{filename}"
 	with open(final_result_file, 'w') as f:
-		f.write(f"Optimization Status: Finished Dynamic Two-Stage Optimization (V1.0.0).\n")
+		f.write(f"Optimization Status: Finished Dynamic Two-Stage Optimization (V1.1.0).\n")
 		f.write(f"Total Simulations: {simulation_count}\n")
 		f.write(f"Best Solution Found at Simulation: {tracking_info['best_sim_num']}\n")
 		f.write(f"Final Score: {tracking_info['best_score']:.4f}\n\n")
@@ -129,42 +160,61 @@ def write_params_to_file(params: dict, output_filepath: str):
     except Exception as e:
         print(f"  [Warning] Failed to write best params to {output_filepath}: {e}")
 
-def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_parameters: dict,
-                                  circuit_graph: CircuitGraph,
-                                  perturb_ratio: float = 0.10,
-                                  greedy_threshold_pct: float = 5.0,
-                                  max_sim_count: int = 1000): 
+def update_candidate_if_eligible(probe_eval_results, score_probe, params_probe, candidate_info):
     """
-    执行一个两阶段的动态收敛优化算法 (V1.0.0)。
-    - 阶段一: 优化 'm' 参数，使用参数冻结机制直至所有 'm' 收敛。
-    - 阶段二: 优化 'fw/l/r/c' 参数，不冻结，直至达到局部最优。
-    - 整个过程没有固定的迭代次数，但有一个总仿真次数上限作为保护。
-    - 始终追踪并输出全局最优解。
-    - 增加惯性机制，避免频繁的方向切换。
+    [新增] 检查一个解是否是合格的“下一轮候选解”并更新。
+    合格标准：恰好满足3个硬性约束。
+    更新标准：在所有合格解中，惩罚分最低。
     """
-    print("\n===================================================================")
-    print("===   DYNAMIC TWO-STAGE OPTIMIZATION (V1.0.0)               ===")
-    print("===================================================================")
+    if not probe_eval_results:
+        return # 仿真失败，不是候选解
 
-    # --- 目标函数 get_score (保持不变) ---
-    platform.only_set_params(initial_parameters)
-    platform.calc_area()
-    baseline_scores = platform.evaluate() 
-    if not baseline_scores:
-        print("FATAL: Baseline simulation failed."); return
+    # 1. 严格按照PDF标准，检查满足的硬约束数量
+    constraints_met = 0
+    if probe_eval_results.get('Phase_Margin', 0) >= 50.0: constraints_met += 1
+    if probe_eval_results.get('Gain_Margin', 0) <= -10.0: constraints_met += 1
+    if probe_eval_results.get('Gain_db', 0) >= 80.0: constraints_met += 1 # 注意：这里用80dB硬标准
+    if probe_eval_results.get('I_OPA', float('inf')) * 1000.0 <= 3.0: constraints_met += 1
+    
+    # 2. 如果恰好满足3个约束
+    if constraints_met == 3:
+        # 3. 并且它的惩罚分比当前记录的候选解更低
+        if score_probe < candidate_info['best_score']:
+            print(f"  --- Found a new best candidate for Pass 2! Score: {score_probe:.4f} ---")
+            candidate_info.update({
+                'best_score': score_probe,
+                'best_params': copy.deepcopy(params_probe),
+                'best_metrics': probe_eval_results
+            })
 
-    initial_ugb_val = baseline_scores.get('UGB', 1.0) # 如果获取失败，用1.0作为默认值，但通常不会发生
-    initial_area_val = baseline_scores.get('Total_Area', 1.0) # 如果获取失败，用1.0作为默认值
-    if initial_ugb_val == 0:
-        print("WARNING: Initial UGB is 0")
-    if initial_area_val == 0:
-        print("WARNING: Initial Total_Area is 0")
+def run_optimization_pass(
+    platform: SimulatePlatform, 
+    initial_parameters: dict,
+    circuit_graph: CircuitGraph,
+    get_score_func, # 接收评分函数作为参数
+    start_sim_count: int, # 接收起始仿真计数
+    max_sim_count: int,
+    initial_metrics: dict, # 接收用于归一化的初始指标
+    pass_name: str, # 用于日志打印，如 "Pass 1 (Strict)"
+    greedy_threshold_pct: float = 5.0,
+    perturb_ratio: float = 0.10,
+    candidate_info: dict = None # [新增] 接收候选解追踪器
+):
+    """
+    [重构] 这是单遍优化的核心逻辑。
+    它可以被多次调用，以实现不同的优化策略。
+    """
+    print(f"\n===================================================================")
+    print(f"===   STARTING OPTIMIZATION {pass_name.upper()}                 ===")
+    print(f"===================================================================")
 
-    # --- DEBUG: 打印初始参数及is_dummy状态 ---
-    # print("\n--- DEBUG: Initial Parameters Read ---")
-    # for name, param in initial_parameters.items():
-    #     print(f"  - Param: {name}, Value: {param.value}, is_dummy: {getattr(param, 'is_dummy', 'N/A')}")
-    # --- 构建对称参数映射 (逻辑不变) ---
+    # --- 从传入的参数获取归一化基准 ---
+    initial_ugb_val = initial_metrics.get('UGB', 1.0)
+    initial_area_val = initial_metrics.get('Total_Area', 1.0)
+    if initial_ugb_val == 0: print("WARNING: Initial UGB is 0")
+    if initial_area_val == 0: print("WARNING: Initial Total_Area is 0")
+
+    # --- 参数映射和分类 (逻辑不变) ---
     param_mapping = {}
     devices_in_groups = set()
     for group in circuit_graph.constraint_groups:
@@ -181,43 +231,49 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         if device_name not in devices_in_groups and not param.is_dummy:
             if name not in param_mapping:
                  param_mapping[name] = [name]
-    # --- DEBUG: 打印参数映射结果 ---
-    # print("\n--- DEBUG: Parameter Mapping ---")
-    # for k, v in param_mapping.items():
-    #     print(f"  {k}: {v}")
-    # --- 参数分类和状态初始化 ---
+    
     m_param_names = {name for name in param_mapping.keys() if name.endswith('_m')}
     other_param_names = {name for name in param_mapping.keys() if not name.endswith('_m')}
-    # --- DEBUG: 打印参数分类结果 ---
-    # print("\n--- DEBUG: Parameter Categorization ---")
-    # print(f"M-Params ({len(m_param_names)}): {sorted(list(m_param_names))}")
-    # print(f"Other-Params ({len(other_param_names)}): {sorted(list(other_param_names))}")
+    
+    # --- [修改] 思路二：动态预算分配 ---
+    stage1_sim_budget = len(m_param_names) * 6
+    print(f"--- Dynamic Budget: Stage 1 budget set to {stage1_sim_budget} simulations ({len(m_param_names)} 'm' params * 4) ---")
+
+
+    # --- 状态初始化 ---
     frozen_params = set()
-    last_success_direction = {name: None for name in param_mapping.keys()}  # 记录上次成功的方向
+    last_success_direction = {name: None for name in param_mapping.keys()}
+    
+    # [修改] 从传入的参数初始化
+    simulation_count = start_sim_count 
+    X_current_params = copy.deepcopy(initial_parameters)
+    
+    # --- 全局最优解追踪器 (在这一遍优化内的最优解) ---
+    # 评估起点参数
+    platform.only_set_params(X_current_params)
+    platform.calc_area()
+    start_scores = platform.evaluate()
+    simulation_count +=1
 
-    simulation_count = 1  # Baseline simulation is the first one
-
+    tracking_info = {
+        'best_params': X_current_params,
+        'best_score': get_score_func(start_scores, initial_ugb_val, initial_area_val),
+        'best_sim_num': start_sim_count,
+        'best_metrics': start_scores
+    }
+    
     output_dir = platform.output_path
     optimization_log_file = os.path.join(output_dir, "optimization_log.txt")
     best_params_filepath = os.path.join(output_dir, "best_params_so_far.txt")
 
-    # --- 全局最优解追踪器 ---
-    tracking_info = {
-        'best_params': copy.deepcopy(initial_parameters),
-        'best_score': get_score(baseline_scores, initial_ugb_val, initial_area_val),
-        'best_sim_num': 1,
-        'best_metrics': baseline_scores
-    }
-    # 初始时就写入一次最优参数
     write_params_to_file(tracking_info['best_params'], best_params_filepath)
 
-    X_current_params = copy.deepcopy(initial_parameters)
-
-    log_f = open(optimization_log_file, 'w', encoding='utf-8')
-    log_f.write(f"--- Iteration 1 (Baseline) ---\n")
-    log_f.write(f"Score: {tracking_info['best_score']:.4f}\n")
-    for key, value in baseline_scores.items():
-        log_f.write(f"  {key:<15}: {value}\n")
+    log_f = open(optimization_log_file, 'a', encoding='utf-8') # Use 'a' to append
+    log_f.write(f"\n--- Starting {pass_name} at Sim Count {start_sim_count} ---\n")
+    log_f.write(f"Initial Score: {tracking_info['best_score']:.4f}\n")
+    if start_scores:
+        for key, value in start_scores.items():
+            log_f.write(f"  {key:<15}: {value}\n")
     log_f.write("\n")
     log_f.flush()
 
@@ -226,16 +282,16 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
     log_f.write(f"\n{'#'*25} Starting Stage 1: 'm' Parameter Tuning {'#'*25}\n\n")
     log_f.flush()
     stage1_iter_count = 0
-    # 新增：阶段一仿真预算（到达后退出到阶段二，而非整体停止）
-    stage1_sim_budget = 200
     stage1_budget_exhausted = False
     while True:
         stage1_iter_count += 1
         active_m_params = list(m_param_names - frozen_params)
 
-        # 如果阶段一预算已经耗尽，跳出到阶段二
-        if stage1_budget_exhausted:
-            message = f"\n--- Stage 1 exiting early: stage1_sim_budget ({stage1_sim_budget}) reached. Moving to Stage 2. ---"
+        if (simulation_count - start_sim_count) >= stage1_sim_budget:
+            stage1_budget_exhausted = True
+
+        if stage1_budget_exhausted or simulation_count >= max_sim_count:
+            message = f"\n--- Stage 1 exiting: Budget exhausted or max simulations reached. Moving to Stage 2. ---"
             print(message)
             log_f.write(message + "\n\n")
             log_f.flush()
@@ -250,17 +306,11 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
 
         print(f"\n--- Stage 1 Iteration {stage1_iter_count} (Active 'm' params: {len(active_m_params)}) ---")
         
-        # 替换重复的 set+eval+count 模式
         eval_results, simulation_count = evaluate_and_count(platform, X_current_params, simulation_count)
-        # 检查阶段一预算
-        if simulation_count >= stage1_sim_budget:
-            message = f"  - Stage1 simulation budget reached ({simulation_count} / {stage1_sim_budget}). Exiting Stage 1 to Stage 2."
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
+        if (simulation_count - start_sim_count) >= stage1_sim_budget:
             stage1_budget_exhausted = True
-            break
-        score_current = get_score(eval_results, initial_ugb_val, initial_area_val)
+
+        score_current = get_score_func(eval_results, initial_ugb_val, initial_area_val)
         print(f"  - Current score: {score_current:.4f} (Sim count: {simulation_count})")
         log_f.write(f"--- Stage 1 Iteration {stage1_iter_count} (Current) ---\n")
         log_f.write(f"Score: {score_current:.4f}\n")
@@ -277,7 +327,6 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
 
         for name in shuffled_param_names:
             found_improvement_for_this_param = False
-            # 优先尝试上次成功的方向
             directions = [1, -1]
             if last_success_direction[name] is not None:
                 directions = [last_success_direction[name]] + [d for d in directions if d != last_success_direction[name]]
@@ -294,19 +343,17 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                 for actual_param_to_update in param_mapping[name]:
                     params_probe[actual_param_to_update].value = new_value
                 
-                # 使用工具函数运行仿真并计数
                 probe_eval_results, simulation_count = evaluate_and_count(platform, params_probe, simulation_count)
-                # 检查阶段一预算（在内层也要及时退出）
-                if simulation_count >= stage1_sim_budget:
-                    message = f"  - Stage1 simulation budget reached during probing ({simulation_count} / {stage1_sim_budget}). Will exit to Stage 2 after this iteration."
-                    print(message)
-                    log_f.write(message + "\n")
-                    log_f.flush()
+                if (simulation_count - start_sim_count) >= stage1_sim_budget:
                     stage1_budget_exhausted = True
-                score_probe = get_score(probe_eval_results, initial_ugb_val, initial_area_val)
+
+                score_probe = get_score_func(probe_eval_results, initial_ugb_val, initial_area_val)
                 
-                # 用通用更新函数处理全局最优更新
                 update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count, best_params_filepath)
+
+                # [新增] 每次都检查是否为合格候选解
+                if candidate_info is not None:
+                    update_candidate_if_eligible(probe_eval_results, score_probe, params_probe, candidate_info)
 
                 log_f.write(f"--- Iteration {simulation_count} (Probe) ---\n")
                 log_f.write(f"Action: Perturbed '{name}' with sign {sign}, new value ~{new_value}\n")
@@ -329,7 +376,7 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                 if improvement > threshold:
                     print(f"  >>> GREEDY JUMP on '{name}'! Moving immediately.")
                     X_current_params = params_probe
-                    last_success_direction[name] = sign  # 记录成功方向
+                    last_success_direction[name] = sign
                     found_immediate_jump = True
                     break
             
@@ -350,22 +397,15 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
             log_f.write(message + "\n\n")
             log_f.flush()
         
-        # 如果阶段一预算耗尽，则退出到阶段二
         if stage1_budget_exhausted:
-            message = f"\n--- Stage 1 halted due to stage1_sim_budget ({stage1_sim_budget}). Proceeding to Stage 2. ---"
-            print(message)
-            log_f.write(message + "\n\n")
-            log_f.flush()
             break
 
-    # ======================== 阶段二: 'fw/l/r/c' 参数优化 (带参数冻结) ========================
+    # ======================== 阶段二: 'fw/l/r/c' 参数优化 ========================
     print(f"\n{'#'*25} Starting Stage 2: Continuous Parameter Tuning {'#'*25}")
     log_f.write(f"\n{'#'*25} Starting Stage 2: Continuous Parameter Tuning {'#'*25}\n\n")
     log_f.flush()
     stage2_iter_count = 0
-    perturb_ratio = 0.1  # 对于fw/l/r/c参数使用10%的相对步长
     
-    # 为stage2引入独立的参数冻结机制
     frozen_params_stage2 = set()
 
     while simulation_count < max_sim_count:
@@ -381,9 +421,8 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
 
         print(f"\n--- Stage 2 Iteration {stage2_iter_count} (Active 'other' params: {len(active_other_params)}) ---")
         
-        # 替换重复的 set+eval+count 模式
         eval_results, simulation_count = evaluate_and_count(platform, X_current_params, simulation_count)
-        score_current = get_score(eval_results, initial_ugb_val, initial_area_val)
+        score_current = get_score_func(eval_results, initial_ugb_val, initial_area_val)
         print(f"  - Current score: {score_current:.4f} (Sim count: {simulation_count})")
         log_f.write(f"--- Stage 2 Iteration {stage2_iter_count} (Current) ---\n")
         log_f.write(f"Score: {score_current:.4f}\n")
@@ -395,11 +434,9 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
         log_f.write("\n")
         log_f.flush()
 
-        best_neighbor_so_far = {'params': None, 'score': score_current}
+        found_immediate_jump = False
         shuffled_param_names = random.sample(active_other_params, len(active_other_params))
         
-        any_improvement_in_iteration = False
-
         for name in shuffled_param_names:
             found_improvement_for_this_param = False
             
@@ -421,9 +458,12 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                     params_probe[actual_param_to_update].value = new_value
 
                 probe_eval_results, simulation_count = evaluate_and_count(platform, params_probe, simulation_count)
-                score_probe = get_score(probe_eval_results, initial_ugb_val, initial_area_val)
+                score_probe = get_score_func(probe_eval_results, initial_ugb_val, initial_area_val)
 
                 update_tracking_if_better(tracking_info, score_probe, params_probe, probe_eval_results, simulation_count, best_params_filepath)
+
+                if candidate_info is not None:
+                    update_candidate_if_eligible(probe_eval_results, score_probe, params_probe, candidate_info)
 
                 log_f.write(f"--- Iteration {simulation_count} (Probe) ---\n")
                 log_f.write(f"Action: Stage 2 perturb '{name}' with sign {sign}, new value ~{new_value}\n")
@@ -437,30 +477,32 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
                 log_f.write("\n")
                 log_f.flush()
 
-                if score_probe < best_neighbor_so_far['score']:
-                    best_neighbor_so_far = {'params': params_probe, 'score': score_probe}
-                    last_success_direction[name] = sign
+                if score_probe < score_current:
                     found_improvement_for_this_param = True
-                else:
-                    # 只有当两个方向都尝试过且都没有改善时，才重置方向
-                    if sign == -1 or (last_success_direction[name] is not None and sign != last_success_direction[name]):
-                         last_success_direction[name] = None
+                
+                improvement = score_current - score_probe
+                threshold = (score_current - 1e9) * (greedy_threshold_pct / 100.0) if score_current >= 1e9 else 0
 
-            if found_improvement_for_this_param:
-                any_improvement_in_iteration = True
-            else:
+                if improvement > threshold:
+                    print(f"  >>> GREEDY JUMP on '{name}'! Moving immediately.")
+                    X_current_params = params_probe
+                    last_success_direction[name] = sign
+                    found_immediate_jump = True
+                    break
+            
+            if not found_improvement_for_this_param:
                 message = f"  - Parameter '{name}' hit a local optimum. Freezing for Stage 2."
                 print(message)
                 log_f.write(message + "\n\n")
                 log_f.flush()
                 frozen_params_stage2.add(name)
+                last_success_direction[name] = None
 
-        if best_neighbor_so_far['score'] < score_current:
-            print(f"  - Found improvement in iteration. Moving to best neighbor with score {best_neighbor_so_far['score']:.4f}")
-            X_current_params = best_neighbor_so_far['params']
-        
-        if not any_improvement_in_iteration:
-            message = "\n--- Stage 2 CONVERGENCE: No improvement found in a full iteration. ---"
+            if found_immediate_jump:
+                break
+
+        if not found_immediate_jump:
+            message = "\n--- Stage 2 CONVERGENCE: No greedy jump found in a full iteration. ---"
             print(message)
             log_f.write(message + "\n\n")
             log_f.flush()
@@ -475,42 +517,131 @@ def run_dynamic_optimization_v1_0_0(platform: SimulatePlatform, initial_paramete
 
     log_f.close()
 
-    # ======================== 结束和保存 ========================
-    # 将输出与保存步骤委托给独立函数，保持行为不变
-    finalize_and_save_results(
-        tracking_info=tracking_info,
-        platform=platform,
-        simulation_count=simulation_count,
-        frozen_params=frozen_params,
-        m_param_names=m_param_names,
-        other_param_names=other_param_names,
-        filename="dynamic_v1.0.0_final_solution.txt"
-    )
+    # --- [修改] 函数的返回值 ---
+    print(f"\n--- {pass_name.upper()} COMPLETED ---")
+    print(f"Best score in this pass: {tracking_info['best_score']:.4f}")
+    # [修改] 同时返回 tracking_info, 最终仿真数, 和 walker 的最终参数状态
+    return tracking_info, simulation_count, X_current_params
 
-    print("\n=======================================================")
-    print("===      STARTING FINAL VERIFICATION                ===")
-    print("=======================================================")
-    print(f"Loading best parameters from: {best_params_filepath}")
 
+def run_full_optimization_flow(platform: SimulatePlatform, initial_parameters: dict, circuit_graph: CircuitGraph, max_sim_count: int, args):
+    """
+    [MODIFIED FOR EFFICIENCY & ROBUSTNESS]
+    Manages the setup and teardown of parallel views for the entire flow.
+    """
+    
+    # [修改] 使用 try...finally 确保清理工作总能执行
     try:
-        best_params_from_file = read_parameters(best_params_filepath)
-        print("Setting best parameters on the schematic...")
-        platform.only_set_params(best_params_from_file)
+        # 1. 在所有优化开始前，准备一次并行视图
+        print("\n--- Preparing parallel MDE views for the entire optimization run... ---")
+        parallel_utils.prepare_parallel_views(platform.ae_lib, platform.mde_cell, platform.mde_view)
+
+        # --- 基准评估 (这段代码从 try 块外部移到内部) ---
+        print("\n--- Performing Baseline Evaluation ---")
+        platform.only_set_params(initial_parameters)
         platform.calc_area()
+        baseline_scores = platform.evaluate()
+        if not baseline_scores:
+            print("FATAL: Baseline simulation failed. Exiting.")
+            return # 使用 return 提前退出，finally 仍然会执行
 
-        print("Running final verification simulation...")
-        verification_scores = platform.evaluate()
+        simulation_count = 1
+        
+        # [新增] 初始化“最佳候选解”追踪器
+        candidate_info = {
+            'best_score': float('inf'), # 我们要找惩罚分最低的
+            'best_params': None,
+            'best_metrics': None
+        }
+        
+        # ======================== Pass 1: 严格约束优化 ========================
+        # [修改] 捕获第三个返回值：pass1_final_params，即阶段一结束时 walker 的最终位置
+        pass1_tracking_info, simulation_count, pass1_final_params = run_optimization_pass(
+            platform=platform,
+            initial_parameters=initial_parameters,
+            circuit_graph=circuit_graph,
+            get_score_func=lambda scores, ugb, area: get_score(scores, ugb, area), # 使用原始 get_score
+            start_sim_count=simulation_count,
+            max_sim_count=max_sim_count,
+            initial_metrics=baseline_scores,
+            pass_name="Pass 1 (Strict)",
+            greedy_threshold_pct=args.greedy_alpha,
+            candidate_info=candidate_info # [修改] 传入追踪器
+        )
 
-        if verification_scores:
-            print("\n========== FINAL VERIFICATION RESULT ==========")
-            for key, value in verification_scores.items():
-                print(f"====== {key:<15} : {value}")
-            print("==============================================")
+        # ======================== 中场检查与决策 (重构此部分) ========================
+        final_tracking_info = pass1_tracking_info # 默认最终结果是 Pass 1 找到的最优解
+        
+        print("\n--- INTERMISSION CHECK ---")
+
+        # 1. 检查 Pass 1 找到的全局最优解是否已经满足所有4个约束
+        best_metrics_pass1 = pass1_tracking_info['best_metrics']
+        constraints_met = 0
+        if best_metrics_pass1: # 确保仿真成功
+            if best_metrics_pass1.get('Phase_Margin', 0) >= 50.0: constraints_met += 1
+            if best_metrics_pass1.get('Gain_Margin', 0) <= -10.0: constraints_met += 1
+            if best_metrics_pass1.get('Gain_db', 0) >= 80.0: constraints_met += 1
+            if best_metrics_pass1.get('I_OPA', float('inf')) * 1000.0 <= 3.0: constraints_met += 1
+        
+        print(f"Global best from Pass 1 meets {constraints_met} out of 4 hard constraints.")
+
+        # 决策逻辑
+        if constraints_met == 4 or simulation_count >= max_sim_count:
+            # 情况 A: 已经完美解决，或仿真预算耗尽，直接结束
+            print("All constraints met or simulation budget exhausted. Finalizing with Pass 1 results.")
+            # final_tracking_info 已经设置为 pass1_tracking_info，无需额外操作
+
+        elif candidate_info['best_params'] is not None:
+            # 情况 B: 未完全解决，但“侦察兵”找到了一个合格的3约束候选解。启用备用策略！
+            print(f"A special candidate meeting 3 constraints was found (Score: {candidate_info['best_score']:.2f}).")
+            print("Proceeding to Pass 2 with relaxed constraints, starting from this candidate.")
+            
+            starting_params_for_pass2 = candidate_info['best_params']
+            gain_db_of_candidate = candidate_info['best_metrics'].get('Gain_db', 0)
+            
+            # 动态设定新的、更宽松的增益目标
+            new_gain_target = round(gain_db_of_candidate / 10.0) * 10.0
+            print(f"Original Gain_db from candidate was {gain_db_of_candidate:.2f}. New target for Pass 2: {new_gain_target:.2f} dB")
+
+            # 从“候选解”开始，执行 Pass 2
+            pass2_tracking_info, simulation_count, _ = run_optimization_pass(
+                platform=platform,
+                initial_parameters=starting_params_for_pass2, # <-- 从候选解开始
+                circuit_graph=circuit_graph,
+                get_score_func=lambda scores, ugb, area: get_score_flexible(scores, ugb, area, gain_db_target=new_gain_target),
+                start_sim_count=simulation_count,
+                max_sim_count=max_sim_count,
+                initial_metrics=baseline_scores,
+                pass_name=f"Pass 2 (Relaxed, from Candidate)",
+                greedy_threshold_pct=args.greedy_alpha
+            )
+            # Pass 2 的结果成为最终结果
+            final_tracking_info = pass2_tracking_info
+
         else:
-            print("\n--- FINAL VERIFICATION FAILED ---")
+            # 情况 C: 未完全解决，也找不到合格的3约束候选解。说明优化陷入困境，此时停止。
+            print("Fewer than 4 constraints met and no suitable candidate for Pass 2 was found. Optimization halted.")
+            # final_tracking_info 依然是 Pass 1 找到的最好结果
 
-    except Exception as e:
-        print(f"\nAn error occurred during final verification: {e}")
+        # ======================== 结束、保存和最终验证 ========================
+        # 这里的参数名需要从 circuit_graph 和 param_mapping 中获取
+        m_param_names = {name for name in pass1_tracking_info['best_params'].keys() if name.endswith('_m')} # 简化获取
+        other_param_names = {name for name in pass1_tracking_info['best_params'].keys() if not name.endswith('_m')}
+        
+        finalize_and_save_results(
+            tracking_info=final_tracking_info,
+            platform=platform,
+            simulation_count=simulation_count,
+            frozen_params=set(), # 最终报告不关心冻结状态
+            m_param_names=m_param_names,
+            other_param_names=other_param_names,
+            filename="dynamic_final_solution.txt"
+        )
+
+    finally:
+        # 2. 无论程序是正常结束还是异常中断，都执行清理
+        print("\n--- Cleaning up parallel MDE views... ---")
+        parallel_utils.cleanup_parallel_views(platform.ae_lib, platform.mde_cell, platform.mde_view)
 
 if __name__ == "__main__":
     
@@ -576,10 +707,14 @@ if __name__ == "__main__":
             print("Error: Failed to read initial parameters for GD. Exiting.")
             exit(1)
         
-        run_dynamic_optimization_v1_0_0(platform, initial_parameters, circuit_graph,
-                                    perturb_ratio=0.10,
-                                    greedy_threshold_pct=args.greedy_alpha,
-                                    max_sim_count = 1000)
+        # [修改] 调用新的顶层控制器
+        run_full_optimization_flow(
+            platform=platform,
+            initial_parameters=initial_parameters,
+            circuit_graph=circuit_graph,
+            max_sim_count=1000, # 可以从 args 获取
+            args=args
+        )
 
     else:
         print("\nNo specific mode selected. Use --set_params, --evaluate, or --run_gd.")

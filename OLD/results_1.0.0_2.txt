@@ -1,0 +1,2663 @@
+========== Evaluation result of iter 1 ==========
+====== UGB             : 5576480.0000 Hz
+====== Phase_Margin : 89.7714 deg
+====== Gain_db      : 56.0180 db
+====== Gain_Margin  : 0.2528 db
+====== I_OPA         : 0.256636 mA
+====== Total_Area   : 3040.9200000000 um^2
+
+========== Evaluation result of iter 2 ==========
+====== UGB             : 5576480.0000 Hz
+====== Phase_Margin : 89.7714 deg
+====== Gain_db      : 56.0180 db
+====== Gain_Margin  : 0.2528 db
+====== I_OPA         : 0.256636 mA
+====== Total_Area   : 3040.9200000000 um^2
+
+========== Evaluation result of iter 3 ==========
+====== UGB             : 21721400.0000 Hz
+====== Phase_Margin : 91.0922 deg
+====== Gain_db      : 61.5351 db
+====== Gain_Margin  : -1.5285 db
+====== I_OPA         : 0.492912 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 4 ==========
+====== UGB             : 21721400.0000 Hz
+====== Phase_Margin : 91.0922 deg
+====== Gain_db      : 61.5351 db
+====== Gain_Margin  : -1.5285 db
+====== I_OPA         : 0.492912 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 5 ==========
+====== UGB             : 46353700.0000 Hz
+====== Phase_Margin : 86.8745 deg
+====== Gain_db      : 60.9331 db
+====== Gain_Margin  : -2.6769 db
+====== I_OPA         : 0.745623 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 6 ==========
+====== UGB             : 46353700.0000 Hz
+====== Phase_Margin : 86.8745 deg
+====== Gain_db      : 60.9331 db
+====== Gain_Margin  : -2.6769 db
+====== I_OPA         : 0.745623 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 7 ==========
+====== UGB             : 51442000.0000 Hz
+====== Phase_Margin : 85.0978 deg
+====== Gain_db      : 61.5746 db
+====== Gain_Margin  : -1.3877 db
+====== I_OPA         : 0.746764 mA
+====== Total_Area   : 3067.3200000000 um^2
+
+========== Evaluation result of iter 8 ==========
+====== UGB             : 37416400.0000 Hz
+====== Phase_Margin : 88.4671 deg
+====== Gain_db      : 59.9236 db
+====== Gain_Margin  : -4.3343 db
+====== I_OPA         : 0.743790 mA
+====== Total_Area   : 3043.3200000000 um^2
+
+========== Evaluation result of iter 9 ==========
+====== UGB             : 37416400.0000 Hz
+====== Phase_Margin : 88.4671 deg
+====== Gain_db      : 59.9236 db
+====== Gain_Margin  : -4.3343 db
+====== I_OPA         : 0.743790 mA
+====== Total_Area   : 3043.3200000000 um^2
+
+========== Evaluation result of iter 10 ==========
+====== UGB             : 35363600.0000 Hz
+====== Phase_Margin : 77.4064 deg
+====== Gain_db      : 55.5086 db
+====== Gain_Margin  : -4.3369 db
+====== I_OPA         : 0.754067 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 11 ==========
+====== UGB             : 38754500.0000 Hz
+====== Phase_Margin : 90.7438 deg
+====== Gain_db      : 61.5303 db
+====== Gain_Margin  : -4.4146 db
+====== I_OPA         : 0.730327 mA
+====== Total_Area   : 3037.3200000000 um^2
+
+========== Evaluation result of iter 12 ==========
+====== UGB             : 37331900.0000 Hz
+====== Phase_Margin : 88.2787 deg
+====== Gain_db      : 59.8676 db
+====== Gain_Margin  : -4.8156 db
+====== I_OPA         : 0.740621 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 13 ==========
+====== UGB             : 37331900.0000 Hz
+====== Phase_Margin : 88.2787 deg
+====== Gain_db      : 59.8676 db
+====== Gain_Margin  : -4.8156 db
+====== I_OPA         : 0.740621 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 14 ==========
+====== UGB             : 37331900.0000 Hz
+====== Phase_Margin : 88.2812 deg
+====== Gain_db      : 59.8703 db
+====== Gain_Margin  : -4.8156 db
+====== I_OPA         : 0.740547 mA
+====== Total_Area   : 3055.4400000000 um^2
+
+========== Evaluation result of iter 15 ==========
+====== UGB             : 16940700.0000 Hz
+====== Phase_Margin : 90.9773 deg
+====== Gain_db      : 60.2243 db
+====== Gain_Margin  : -2.1141 db
+====== I_OPA         : 0.415482 mA
+====== Total_Area   : 3062.5200000000 um^2
+
+========== Evaluation result of iter 16 ==========
+====== UGB             : 37331900.0000 Hz
+====== Phase_Margin : 88.2787 deg
+====== Gain_db      : 59.8676 db
+====== Gain_Margin  : -4.8156 db
+====== I_OPA         : 0.740622 mA
+====== Total_Area   : 3055.5600000000 um^2
+
+========== Evaluation result of iter 17 ==========
+====== UGB             : 37261800.0000 Hz
+====== Phase_Margin : 87.0415 deg
+====== Gain_db      : 59.2420 db
+====== Gain_Margin  : -4.8164 db
+====== I_OPA         : 0.741960 mA
+====== Total_Area   : 3061.3200000000 um^2
+
+========== Evaluation result of iter 18 ==========
+====== UGB             : 37420800.0000 Hz
+====== Phase_Margin : 89.7765 deg
+====== Gain_db      : 60.7343 db
+====== Gain_Margin  : -4.8125 db
+====== I_OPA         : 0.738561 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 19 ==========
+====== UGB             : 37554900.0000 Hz
+====== Phase_Margin : 86.8883 deg
+====== Gain_db      : 58.5869 db
+====== Gain_Margin  : -3.6089 db
+====== I_OPA         : 0.740672 mA
+====== Total_Area   : 3067.3200000000 um^2
+
+========== Evaluation result of iter 20 ==========
+====== UGB             : 36273500.0000 Hz
+====== Phase_Margin : 86.8435 deg
+====== Gain_db      : 56.6534 db
+====== Gain_Margin  : -4.8792 db
+====== I_OPA         : 0.740558 mA
+====== Total_Area   : 3043.3200000000 um^2
+
+========== Evaluation result of iter 21 ==========
+====== UGB             : 36999600.0000 Hz
+====== Phase_Margin : 88.0237 deg
+====== Gain_db      : 59.3656 db
+====== Gain_Margin  : -4.9284 db
+====== I_OPA         : 0.745563 mA
+====== Total_Area   : 3067.3200000000 um^2
+
+========== Evaluation result of iter 22 ==========
+====== UGB             : 37949100.0000 Hz
+====== Phase_Margin : 88.7127 deg
+====== Gain_db      : 60.5450 db
+====== Gain_Margin  : -4.4471 db
+====== I_OPA         : 0.726981 mA
+====== Total_Area   : 3043.3200000000 um^2
+
+========== Evaluation result of iter 23 ==========
+====== UGB             : 37331800.0000 Hz
+====== Phase_Margin : 88.2791 deg
+====== Gain_db      : 59.8681 db
+====== Gain_Margin  : -4.8156 db
+====== I_OPA         : 0.740607 mA
+====== Total_Area   : 3055.5600000000 um^2
+
+========== Evaluation result of iter 24 ==========
+====== UGB             : 37331900.0000 Hz
+====== Phase_Margin : 88.2787 deg
+====== Gain_db      : 59.8676 db
+====== Gain_Margin  : -4.8156 db
+====== I_OPA         : 0.740621 mA
+====== Total_Area   : 3055.4400000000 um^2
+
+========== Evaluation result of iter 25 ==========
+====== UGB             : 40182900.0000 Hz
+====== Phase_Margin : 84.8740 deg
+====== Gain_db      : 53.7085 db
+====== Gain_Margin  : -6.9114 db
+====== I_OPA         : 1.036580 mA
+====== Total_Area   : 3072.1200000000 um^2
+
+========== Evaluation result of iter 26 ==========
+====== UGB             : 40182900.0000 Hz
+====== Phase_Margin : 84.8740 deg
+====== Gain_db      : 53.7085 db
+====== Gain_Margin  : -6.9114 db
+====== I_OPA         : 1.036580 mA
+====== Total_Area   : 3072.1200000000 um^2
+
+========== Evaluation result of iter 27 ==========
+====== UGB             : 39994900.0000 Hz
+====== Phase_Margin : 84.0465 deg
+====== Gain_db      : 53.8827 db
+====== Gain_Margin  : -6.8681 db
+====== I_OPA         : 1.036860 mA
+====== Total_Area   : 3084.1200000000 um^2
+
+========== Evaluation result of iter 28 ==========
+====== UGB             : 40338800.0000 Hz
+====== Phase_Margin : 85.7149 deg
+====== Gain_db      : 53.4682 db
+====== Gain_Margin  : -6.9848 db
+====== I_OPA         : 1.036260 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 29 ==========
+====== UGB             : 39475800.0000 Hz
+====== Phase_Margin : 80.6699 deg
+====== Gain_db      : 53.1864 db
+====== Gain_Margin  : -6.9201 db
+====== I_OPA         : 1.041680 mA
+====== Total_Area   : 3078.1200000000 um^2
+
+========== Evaluation result of iter 30 ==========
+====== UGB             : 42731700.0000 Hz
+====== Phase_Margin : 71.0101 deg
+====== Gain_db      : 53.0112 db
+====== Gain_Margin  : -8.7236 db
+====== I_OPA         : 1.031760 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 31 ==========
+====== UGB             : 42731700.0000 Hz
+====== Phase_Margin : 71.0101 deg
+====== Gain_db      : 53.0112 db
+====== Gain_Margin  : -8.7236 db
+====== I_OPA         : 1.031760 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 32 ==========
+====== UGB             : 42641700.0000 Hz
+====== Phase_Margin : 71.3437 deg
+====== Gain_db      : 52.8047 db
+====== Gain_Margin  : -8.7002 db
+====== I_OPA         : 1.046350 mA
+====== Total_Area   : 3078.1200000000 um^2
+
+========== Evaluation result of iter 33 ==========
+====== UGB             : 42831800.0000 Hz
+====== Phase_Margin : 70.6253 deg
+====== Gain_db      : 53.1916 db
+====== Gain_Margin  : -8.7494 db
+====== I_OPA         : 1.016050 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 34 ==========
+====== UGB             : 42835000.0000 Hz
+====== Phase_Margin : 68.4769 deg
+====== Gain_db      : 52.5155 db
+====== Gain_Margin  : -8.9151 db
+====== I_OPA         : 1.054890 mA
+====== Total_Area   : 3072.1200000000 um^2
+
+========== Evaluation result of iter 35 ==========
+====== UGB             : 42636400.0000 Hz
+====== Phase_Margin : 73.7944 deg
+====== Gain_db      : 53.6044 db
+====== Gain_Margin  : -8.4505 db
+====== I_OPA         : 1.005650 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 36 ==========
+====== UGB             : 42490300.0000 Hz
+====== Phase_Margin : 70.0893 deg
+====== Gain_db      : 53.1855 db
+====== Gain_Margin  : -8.6612 db
+====== I_OPA         : 1.032030 mA
+====== Total_Area   : 3078.1200000000 um^2
+
+========== Evaluation result of iter 37 ==========
+====== UGB             : 42937900.0000 Hz
+====== Phase_Margin : 71.9861 deg
+====== Gain_db      : 52.7725 db
+====== Gain_Margin  : -8.7922 db
+====== I_OPA         : 1.031440 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 38 ==========
+====== UGB             : 30159100.0000 Hz
+====== Phase_Margin : 79.3139 deg
+====== Gain_db      : 52.8417 db
+====== Gain_Margin  : -11.1203 db
+====== I_OPA         : 1.002130 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 39 ==========
+====== UGB             : 30159100.0000 Hz
+====== Phase_Margin : 79.3139 deg
+====== Gain_db      : 52.8417 db
+====== Gain_Margin  : -11.1203 db
+====== I_OPA         : 1.002130 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 40 ==========
+====== UGB             : 30851900.0000 Hz
+====== Phase_Margin : 79.8382 deg
+====== Gain_db      : 52.7930 db
+====== Gain_Margin  : -10.0244 db
+====== I_OPA         : 1.032160 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 41 ==========
+====== UGB             : 30159100.0000 Hz
+====== Phase_Margin : 79.3139 deg
+====== Gain_db      : 52.8421 db
+====== Gain_Margin  : -11.1203 db
+====== I_OPA         : 1.002130 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 42 ==========
+====== UGB             : 16361200.0000 Hz
+====== Phase_Margin : 88.3145 deg
+====== Gain_db      : 53.4728 db
+====== Gain_Margin  : -14.6572 db
+====== I_OPA         : 0.906985 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 43 ==========
+====== UGB             : 42731700.0000 Hz
+====== Phase_Margin : 71.0101 deg
+====== Gain_db      : 53.0112 db
+====== Gain_Margin  : -8.7236 db
+====== I_OPA         : 1.031760 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 44 ==========
+====== UGB             : 29966400.0000 Hz
+====== Phase_Margin : 79.8857 deg
+====== Gain_db      : 53.1436 db
+====== Gain_Margin  : -11.0039 db
+====== I_OPA         : 0.994269 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 45 ==========
+====== UGB             : 30524600.0000 Hz
+====== Phase_Margin : 78.7427 deg
+====== Gain_db      : 52.5225 db
+====== Gain_Margin  : -11.2210 db
+====== I_OPA         : 1.011380 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 46 ==========
+====== UGB             : 30159200.0000 Hz
+====== Phase_Margin : 79.3139 deg
+====== Gain_db      : 52.8423 db
+====== Gain_Margin  : -11.1203 db
+====== I_OPA         : 1.002130 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 47 ==========
+====== UGB             : 29211400.0000 Hz
+====== Phase_Margin : 84.9451 deg
+====== Gain_db      : 55.5474 db
+====== Gain_Margin  : -11.1190 db
+====== I_OPA         : 0.996408 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 48 ==========
+====== UGB             : 29211400.0000 Hz
+====== Phase_Margin : 84.9451 deg
+====== Gain_db      : 55.5474 db
+====== Gain_Margin  : -11.1190 db
+====== I_OPA         : 0.996408 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 49 ==========
+====== UGB             : 29160700.0000 Hz
+====== Phase_Margin : 83.7591 deg
+====== Gain_db      : 53.6881 db
+====== Gain_Margin  : -11.5759 db
+====== I_OPA         : 1.022860 mA
+====== Total_Area   : 3078.1200000000 um^2
+
+========== Evaluation result of iter 50 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 51 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 52 ==========
+====== UGB             : 29629100.0000 Hz
+====== Phase_Margin : 81.7151 deg
+====== Gain_db      : 53.9593 db
+====== Gain_Margin  : -14.1393 db
+====== I_OPA         : 1.146340 mA
+====== Total_Area   : 3061.3200000000 um^2
+
+========== Evaluation result of iter 53 ==========
+====== UGB             : 28517800.0000 Hz
+====== Phase_Margin : 90.6487 deg
+====== Gain_db      : 61.1000 db
+====== Gain_Margin  : -5.8643 db
+====== I_OPA         : 0.563194 mA
+====== Total_Area   : 3046.9200000000 um^2
+
+========== Evaluation result of iter 54 ==========
+====== UGB             : 29028400.0000 Hz
+====== Phase_Margin : 86.3702 deg
+====== Gain_db      : 57.6253 db
+====== Gain_Margin  : -9.3698 db
+====== I_OPA         : 0.943905 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 55 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 56 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 57 ==========
+====== UGB             : 29156400.0000 Hz
+====== Phase_Margin : 88.3633 deg
+====== Gain_db      : 60.0281 db
+====== Gain_Margin  : -9.6382 db
+====== I_OPA         : 0.836768 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 58 ==========
+====== UGB             : 29728500.0000 Hz
+====== Phase_Margin : 83.5088 deg
+====== Gain_db      : 54.9507 db
+====== Gain_Margin  : -10.8067 db
+====== I_OPA         : 1.079530 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 59 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 60 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 61 ==========
+====== UGB             : 16220500.0000 Hz
+====== Phase_Margin : 90.7700 deg
+====== Gain_db      : 56.9685 db
+====== Gain_Margin  : -12.8384 db
+====== I_OPA         : 0.836240 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 62 ==========
+====== UGB             : 40571700.0000 Hz
+====== Phase_Margin : 83.4393 deg
+====== Gain_db      : 58.1987 db
+====== Gain_Margin  : -7.9512 db
+====== I_OPA         : 0.964726 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 63 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 64 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 65 ==========
+====== UGB             : 30728800.0000 Hz
+====== Phase_Margin : 72.3282 deg
+====== Gain_db      : 52.6262 db
+====== Gain_Margin  : -13.4993 db
+====== I_OPA         : 1.049940 mA
+====== Total_Area   : 3070.9200000000 um^2
+
+========== Evaluation result of iter 66 ==========
+====== UGB             : 27696300.0000 Hz
+====== Phase_Margin : 92.0152 deg
+====== Gain_db      : 61.9303 db
+====== Gain_Margin  : -6.9958 db
+====== I_OPA         : 0.710945 mA
+====== Total_Area   : 3037.3200000000 um^2
+
+========== Evaluation result of iter 67 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 68 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 69 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 70 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 71 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 72 ==========
+====== UGB             : 28516100.0000 Hz
+====== Phase_Margin : 89.7733 deg
+====== Gain_db      : 62.1551 db
+====== Gain_Margin  : -7.8648 db
+====== I_OPA         : 0.709121 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 73 ==========
+====== UGB             : 30379400.0000 Hz
+====== Phase_Margin : 81.6845 deg
+====== Gain_db      : 53.3594 db
+====== Gain_Margin  : -14.6796 db
+====== I_OPA         : 1.176200 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 74 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 75 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 76 ==========
+====== UGB             : 30162100.0000 Hz
+====== Phase_Margin : 86.2588 deg
+====== Gain_db      : 58.2900 db
+====== Gain_Margin  : -10.2877 db
+====== I_OPA         : 0.962520 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 77 ==========
+====== UGB             : 28455000.0000 Hz
+====== Phase_Margin : 88.6374 deg
+====== Gain_db      : 59.1762 db
+====== Gain_Margin  : -9.5123 db
+====== I_OPA         : 0.901927 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 78 ==========
+====== UGB             : 29324800.0000 Hz
+====== Phase_Margin : 88.6295 deg
+====== Gain_db      : 59.1357 db
+====== Gain_Margin  : -9.4652 db
+====== I_OPA         : 0.935731 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 79 ==========
+====== UGB             : 29537000.0000 Hz
+====== Phase_Margin : 85.0805 deg
+====== Gain_db      : 57.6600 db
+====== Gain_Margin  : -10.5597 db
+====== I_OPA         : 0.932420 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 80 ==========
+====== UGB             : 27696200.0000 Hz
+====== Phase_Margin : 92.0153 deg
+====== Gain_db      : 61.9307 db
+====== Gain_Margin  : -6.9958 db
+====== I_OPA         : 0.722652 mA
+====== Total_Area   : 3061.3200000000 um^2
+
+========== Evaluation result of iter 81 ==========
+====== UGB             : 36487200.0000 Hz
+====== Phase_Margin : 47.2599 deg
+====== Gain_db      : 52.3685 db
+====== Gain_Margin  : -9.3650 db
+====== I_OPA         : 0.938021 mA
+====== Total_Area   : 3069.1200000000 um^2
+
+========== Evaluation result of iter 82 ==========
+====== UGB             : 29352700.0000 Hz
+====== Phase_Margin : 88.2346 deg
+====== Gain_db      : 59.1201 db
+====== Gain_Margin  : -9.6105 db
+====== I_OPA         : 0.922001 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 83 ==========
+====== UGB             : 29499400.0000 Hz
+====== Phase_Margin : 86.3518 deg
+====== Gain_db      : 57.7651 db
+====== Gain_Margin  : -10.2870 db
+====== I_OPA         : 0.949812 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 84 ==========
+====== UGB             : 29418000.0000 Hz
+====== Phase_Margin : 87.9630 deg
+====== Gain_db      : 59.1624 db
+====== Gain_Margin  : -9.6336 db
+====== I_OPA         : 0.957198 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 85 ==========
+====== UGB             : 29367900.0000 Hz
+====== Phase_Margin : 86.7009 deg
+====== Gain_db      : 58.2256 db
+====== Gain_Margin  : -10.3003 db
+====== I_OPA         : 0.901275 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 86 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 87 ==========
+====== UGB             : 29211400.0000 Hz
+====== Phase_Margin : 84.9451 deg
+====== Gain_db      : 55.5474 db
+====== Gain_Margin  : -11.1190 db
+====== I_OPA         : 0.996408 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 88 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 89 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 90 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 91 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 92 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 93 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 94 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 95 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 96 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 97 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 98 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 99 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 100 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 101 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 102 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 103 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 104 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 105 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 106 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 107 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 108 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 109 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 110 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 111 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 112 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 113 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 114 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 115 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 116 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 117 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 118 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 119 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 120 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 121 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 122 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 123 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 124 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 125 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 126 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 127 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 128 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 129 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 130 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 131 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 132 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 133 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 134 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 135 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 136 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 137 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 138 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 139 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 140 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 141 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 142 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 143 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 144 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 145 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 146 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 147 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 148 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 149 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 150 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 151 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 152 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 153 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 154 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 155 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 156 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 157 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 158 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 159 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 160 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 161 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 162 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 163 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 164 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 165 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 166 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 167 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 168 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 169 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 170 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 171 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 172 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 173 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 174 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 175 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 176 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 177 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 178 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 179 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 180 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 181 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 182 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 183 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 184 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 185 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 186 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 187 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 188 ==========
+====== UGB             : 29348600.0000 Hz
+====== Phase_Margin : 87.5615 deg
+====== Gain_db      : 58.5020 db
+====== Gain_Margin  : -9.8027 db
+====== I_OPA         : 0.948674 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 189 ==========
+====== UGB             : 29443600.0000 Hz
+====== Phase_Margin : 87.2705 deg
+====== Gain_db      : 59.4017 db
+====== Gain_Margin  : -10.0595 db
+====== I_OPA         : 0.918815 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 190 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.3600000000 um^2
+
+========== Evaluation result of iter 191 ==========
+====== UGB             : 29008900.0000 Hz
+====== Phase_Margin : 87.9160 deg
+====== Gain_db      : 59.2514 db
+====== Gain_Margin  : -9.9060 db
+====== I_OPA         : 0.931642 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 192 ==========
+====== UGB             : 30164700.0000 Hz
+====== Phase_Margin : 83.6684 deg
+====== Gain_db      : 55.9144 db
+====== Gain_Margin  : -10.1971 db
+====== I_OPA         : 0.941099 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 193 ==========
+====== UGB             : 29378200.0000 Hz
+====== Phase_Margin : 87.0326 deg
+====== Gain_db      : 58.6998 db
+====== Gain_Margin  : -10.1316 db
+====== I_OPA         : 0.943935 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 194 ==========
+====== UGB             : 29414900.0000 Hz
+====== Phase_Margin : 87.8946 deg
+====== Gain_db      : 59.1916 db
+====== Gain_Margin  : -9.6692 db
+====== I_OPA         : 0.922645 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 195 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0272 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.2400000000 um^2
+
+========== Evaluation result of iter 196 ==========
+====== UGB             : 29414700.0000 Hz
+====== Phase_Margin : 87.1872 deg
+====== Gain_db      : 59.0858 db
+====== Gain_Margin  : -10.0856 db
+====== I_OPA         : 0.932825 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 197 ==========
+====== UGB             : 29350800.0000 Hz
+====== Phase_Margin : 87.6645 deg
+====== Gain_db      : 58.6096 db
+====== Gain_Margin  : -9.9226 db
+====== I_OPA         : 0.937408 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 198 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0276 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934295 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 199 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0264 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934310 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 200 ==========
+====== UGB             : 29331200.0000 Hz
+====== Phase_Margin : 87.0048 deg
+====== Gain_db      : 58.9799 db
+====== Gain_Margin  : -10.0909 db
+====== I_OPA         : 0.934685 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 201 ==========
+====== UGB             : 29443800.0000 Hz
+====== Phase_Margin : 87.8588 deg
+====== Gain_db      : 58.9455 db
+====== Gain_Margin  : -9.7373 db
+====== I_OPA         : 0.933852 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 202 ==========
+====== UGB             : 29394800.0000 Hz
+====== Phase_Margin : 87.5360 deg
+====== Gain_db      : 59.0482 db
+====== Gain_Margin  : -9.8666 db
+====== I_OPA         : 0.939050 mA
+====== Total_Area   : 3060.1200000000 um^2
+
+========== Evaluation result of iter 203 ==========
+====== UGB             : 29392300.0000 Hz
+====== Phase_Margin : 87.0809 deg
+====== Gain_db      : 58.8280 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 0.918835 mA
+====== Total_Area   : 3048.1200000000 um^2
+
+========== Evaluation result of iter 204 ==========
+====== UGB             : 29387700.0000 Hz
+====== Phase_Margin : 87.4798 deg
+====== Gain_db      : 58.8682 db
+====== Gain_Margin  : -9.8766 db
+====== I_OPA         : 0.941169 mA
+====== Total_Area   : 3066.1200000000 um^2
+
+========== Evaluation result of iter 205 ==========
+====== UGB             : 29401300.0000 Hz
+====== Phase_Margin : 87.3698 deg
+====== Gain_db      : 59.1498 db
+====== Gain_Margin  : -9.9764 db
+====== I_OPA         : 0.927157 mA
+====== Total_Area   : 3042.1200000000 um^2
+
+========== Evaluation result of iter 206 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1200000000 um^2
+
+========== Evaluation result of iter 207 ==========
+====== UGB             : 29398800.0000 Hz
+====== Phase_Margin : 87.5437 deg
+====== Gain_db      : 59.0780 db
+====== Gain_Margin  : -9.8625 db
+====== I_OPA         : 0.939382 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 208 ==========
+====== UGB             : 29389600.0000 Hz
+====== Phase_Margin : 87.3040 deg
+====== Gain_db      : 58.9570 db
+====== Gain_Margin  : -9.9900 db
+====== I_OPA         : 0.928852 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 209 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1320000000 um^2
+
+========== Evaluation result of iter 210 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1080000000 um^2
+
+========== Evaluation result of iter 211 ==========
+====== UGB             : 26795100.0000 Hz
+====== Phase_Margin : 88.8895 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9425 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3250.3200000000 um^2
+
+========== Evaluation result of iter 212 ==========
+====== UGB             : 32381000.0000 Hz
+====== Phase_Margin : 85.6097 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.8507 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 2857.9200000000 um^2
+
+========== Evaluation result of iter 213 ==========
+====== UGB             : 29543300.0000 Hz
+====== Phase_Margin : 86.6635 deg
+====== Gain_db      : 57.6790 db
+====== Gain_Margin  : -10.0028 db
+====== I_OPA         : 0.976983 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 214 ==========
+====== UGB             : 29219300.0000 Hz
+====== Phase_Margin : 87.8721 deg
+====== Gain_db      : 59.6369 db
+====== Gain_Margin  : -9.8440 db
+====== I_OPA         : 0.883800 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 215 ==========
+====== UGB             : 29269700.0000 Hz
+====== Phase_Margin : 87.4780 deg
+====== Gain_db      : 58.3883 db
+====== Gain_Margin  : -9.6384 db
+====== I_OPA         : 0.972154 mA
+====== Total_Area   : 3054.8400000000 um^2
+
+========== Evaluation result of iter 216 ==========
+====== UGB             : 29535600.0000 Hz
+====== Phase_Margin : 86.6976 deg
+====== Gain_db      : 59.4207 db
+====== Gain_Margin  : -10.2680 db
+====== I_OPA         : 0.894464 mA
+====== Total_Area   : 3053.4000000000 um^2
+
+========== Evaluation result of iter 217 ==========
+====== UGB             : 30009100.0000 Hz
+====== Phase_Margin : 86.5130 deg
+====== Gain_db      : 58.4542 db
+====== Gain_Margin  : -10.2118 db
+====== I_OPA         : 0.956582 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 218 ==========
+====== UGB             : 28674100.0000 Hz
+====== Phase_Margin : 88.3671 deg
+====== Gain_db      : 59.1633 db
+====== Gain_Margin  : -9.6073 db
+====== I_OPA         : 0.909512 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 219 ==========
+====== UGB             : 29407100.0000 Hz
+====== Phase_Margin : 87.7318 deg
+====== Gain_db      : 59.1651 db
+====== Gain_Margin  : -9.7595 db
+====== I_OPA         : 0.926739 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 220 ==========
+====== UGB             : 29381300.0000 Hz
+====== Phase_Margin : 87.1030 deg
+====== Gain_db      : 58.7666 db
+====== Gain_Margin  : -10.0952 db
+====== I_OPA         : 0.942230 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 221 ==========
+====== UGB             : 29442300.0000 Hz
+====== Phase_Margin : 87.2681 deg
+====== Gain_db      : 59.4061 db
+====== Gain_Margin  : -10.0621 db
+====== I_OPA         : 0.918652 mA
+====== Total_Area   : 3068.5200000000 um^2
+
+========== Evaluation result of iter 222 ==========
+====== UGB             : 29341100.0000 Hz
+====== Phase_Margin : 87.5889 deg
+====== Gain_db      : 58.3961 db
+====== Gain_Margin  : -9.7762 db
+====== I_OPA         : 0.951675 mA
+====== Total_Area   : 3039.7200000000 um^2
+
+========== Evaluation result of iter 223 ==========
+====== UGB             : 29677300.0000 Hz
+====== Phase_Margin : 85.0406 deg
+====== Gain_db      : 56.6964 db
+====== Gain_Margin  : -10.5865 db
+====== I_OPA         : 0.972957 mA
+====== Total_Area   : 3057.4800000000 um^2
+
+========== Evaluation result of iter 224 ==========
+====== UGB             : 29092000.0000 Hz
+====== Phase_Margin : 89.1630 deg
+====== Gain_db      : 59.2311 db
+====== Gain_Margin  : -9.2442 db
+====== I_OPA         : 0.888507 mA
+====== Total_Area   : 3050.7600000000 um^2
+
+========== Evaluation result of iter 225 ==========
+====== UGB             : 29340800.0000 Hz
+====== Phase_Margin : 87.5822 deg
+====== Gain_db      : 58.4133 db
+====== Gain_Margin  : -9.7833 db
+====== I_OPA         : 0.950993 mA
+====== Total_Area   : 3068.5200000000 um^2
+
+========== Evaluation result of iter 226 ==========
+====== UGB             : 29452800.0000 Hz
+====== Phase_Margin : 87.2415 deg
+====== Gain_db      : 59.4506 db
+====== Gain_Margin  : -10.0835 db
+====== I_OPA         : 0.916089 mA
+====== Total_Area   : 3039.7200000000 um^2
+
+========== Evaluation result of iter 227 ==========
+====== UGB             : 29681200.0000 Hz
+====== Phase_Margin : 87.2770 deg
+====== Gain_db      : 58.3822 db
+====== Gain_Margin  : -9.5025 db
+====== I_OPA         : 0.935666 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 228 ==========
+====== UGB             : 29120800.0000 Hz
+====== Phase_Margin : 87.4139 deg
+====== Gain_db      : 59.1491 db
+====== Gain_Margin  : -10.4638 db
+====== I_OPA         : 0.933112 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 229 ==========
+====== UGB             : 29587900.0000 Hz
+====== Phase_Margin : 86.5148 deg
+====== Gain_db      : 59.4162 db
+====== Gain_Margin  : -10.3442 db
+====== I_OPA         : 0.884970 mA
+====== Total_Area   : 3054.8400000000 um^2
+
+========== Evaluation result of iter 230 ==========
+====== UGB             : 29198400.0000 Hz
+====== Phase_Margin : 87.1674 deg
+====== Gain_db      : 57.9342 db
+====== Gain_Margin  : -9.7000 db
+====== I_OPA         : 0.990191 mA
+====== Total_Area   : 3053.4000000000 um^2
+
+========== Evaluation result of iter 231 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1320000000 um^2
+
+========== Evaluation result of iter 232 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1080000000 um^2
+
+========== Evaluation result of iter 233 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1320000000 um^2
+
+========== Evaluation result of iter 234 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1080000000 um^2
+
+========== Evaluation result of iter 235 ==========
+====== UGB             : 29217300.0000 Hz
+====== Phase_Margin : 87.8944 deg
+====== Gain_db      : 59.1818 db
+====== Gain_Margin  : -9.8510 db
+====== I_OPA         : 0.933026 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 236 ==========
+====== UGB             : 29623900.0000 Hz
+====== Phase_Margin : 86.6070 deg
+====== Gain_db      : 57.9805 db
+====== Gain_Margin  : -10.0300 db
+====== I_OPA         : 0.936118 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 237 ==========
+====== UGB             : 29381400.0000 Hz
+====== Phase_Margin : 87.1146 deg
+====== Gain_db      : 58.7796 db
+====== Gain_Margin  : -10.0893 db
+====== I_OPA         : 0.941949 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 238 ==========
+====== UGB             : 29410000.0000 Hz
+====== Phase_Margin : 87.7839 deg
+====== Gain_db      : 59.1739 db
+====== Gain_Margin  : -9.7308 db
+====== I_OPA         : 0.925435 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 239 ==========
+====== UGB             : 29394400.0000 Hz
+====== Phase_Margin : 87.3780 deg
+====== Gain_db      : 58.9975 db
+====== Gain_Margin  : -9.9609 db
+====== I_OPA         : 0.934650 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 240 ==========
+====== UGB             : 29394000.0000 Hz
+====== Phase_Margin : 87.4762 deg
+====== Gain_db      : 59.0546 db
+====== Gain_Margin  : -9.8877 db
+====== I_OPA         : 0.933935 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 241 ==========
+====== UGB             : 29316800.0000 Hz
+====== Phase_Margin : 86.9170 deg
+====== Gain_db      : 58.9692 db
+====== Gain_Margin  : -10.1228 db
+====== I_OPA         : 0.934740 mA
+====== Total_Area   : 3068.5200000000 um^2
+
+========== Evaluation result of iter 242 ==========
+====== UGB             : 29452600.0000 Hz
+====== Phase_Margin : 87.9514 deg
+====== Gain_db      : 58.9121 db
+====== Gain_Margin  : -9.6945 db
+====== I_OPA         : 0.933772 mA
+====== Total_Area   : 3039.7200000000 um^2
+
+========== Evaluation result of iter 243 ==========
+====== UGB             : 27271800.0000 Hz
+====== Phase_Margin : 87.6314 deg
+====== Gain_db      : 58.9448 db
+====== Gain_Margin  : -10.2342 db
+====== I_OPA         : 0.924286 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 244 ==========
+====== UGB             : 31688900.0000 Hz
+====== Phase_Margin : 87.1681 deg
+====== Gain_db      : 58.8024 db
+====== Gain_Margin  : -9.5439 db
+====== I_OPA         : 0.943888 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 245 ==========
+====== UGB             : 29391300.0000 Hz
+====== Phase_Margin : 87.3317 deg
+====== Gain_db      : 58.9856 db
+====== Gain_Margin  : -9.9753 db
+====== I_OPA         : 0.930085 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 246 ==========
+====== UGB             : 29397600.0000 Hz
+====== Phase_Margin : 87.5358 deg
+====== Gain_db      : 59.0716 db
+====== Gain_Margin  : -9.8667 db
+====== I_OPA         : 0.939039 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 247 ==========
+====== UGB             : 29402300.0000 Hz
+====== Phase_Margin : 87.1887 deg
+====== Gain_db      : 58.6535 db
+====== Gain_Margin  : -9.9470 db
+====== I_OPA         : 0.938635 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 248 ==========
+====== UGB             : 29393000.0000 Hz
+====== Phase_Margin : 87.6894 deg
+====== Gain_db      : 59.0982 db
+====== Gain_Margin  : -9.8828 db
+====== I_OPA         : 0.929604 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 249 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0267 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934306 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 250 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0275 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934297 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 251 ==========
+====== UGB             : 29135000.0000 Hz
+====== Phase_Margin : 88.9812 deg
+====== Gain_db      : 59.2109 db
+====== Gain_Margin  : -9.3191 db
+====== I_OPA         : 0.893893 mA
+====== Total_Area   : 3057.4800000000 um^2
+
+========== Evaluation result of iter 252 ==========
+====== UGB             : 29685500.0000 Hz
+====== Phase_Margin : 84.8960 deg
+====== Gain_db      : 56.6019 db
+====== Gain_Margin  : -10.6303 db
+====== I_OPA         : 0.975301 mA
+====== Total_Area   : 3050.7600000000 um^2
+
+========== Evaluation result of iter 253 ==========
+====== UGB             : 29479300.0000 Hz
+====== Phase_Margin : 86.7718 deg
+====== Gain_db      : 57.7898 db
+====== Gain_Margin  : -9.9958 db
+====== I_OPA         : 0.973800 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 254 ==========
+====== UGB             : 29305100.0000 Hz
+====== Phase_Margin : 87.7768 deg
+====== Gain_db      : 59.4467 db
+====== Gain_Margin  : -9.8604 db
+====== I_OPA         : 0.893778 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 255 ==========
+====== UGB             : 29233300.0000 Hz
+====== Phase_Margin : 87.3993 deg
+====== Gain_db      : 58.7743 db
+====== Gain_Margin  : -9.9304 db
+====== I_OPA         : 0.930316 mA
+====== Total_Area   : 3054.7200000000 um^2
+
+========== Evaluation result of iter 256 ==========
+====== UGB             : 29555500.0000 Hz
+====== Phase_Margin : 87.4559 deg
+====== Gain_db      : 59.0161 db
+====== Gain_Margin  : -9.9259 db
+====== I_OPA         : 0.938328 mA
+====== Total_Area   : 3053.5200000000 um^2
+
+========== Evaluation result of iter 257 ==========
+====== UGB             : 29305900.0000 Hz
+====== Phase_Margin : 88.4402 deg
+====== Gain_db      : 59.1357 db
+====== Gain_Margin  : -9.5443 db
+====== I_OPA         : 0.935471 mA
+====== Total_Area   : 3054.7200000000 um^2
+
+========== Evaluation result of iter 258 ==========
+====== UGB             : 29534600.0000 Hz
+====== Phase_Margin : 86.0247 deg
+====== Gain_db      : 58.2185 db
+====== Gain_Margin  : -10.3429 db
+====== I_OPA         : 0.933073 mA
+====== Total_Area   : 3053.5200000000 um^2
+
+========== Evaluation result of iter 259 ==========
+====== UGB             : 31528400.0000 Hz
+====== Phase_Margin : 86.7111 deg
+====== Gain_db      : 58.8379 db
+====== Gain_Margin  : -9.4939 db
+====== I_OPA         : 0.943508 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 260 ==========
+====== UGB             : 26978200.0000 Hz
+====== Phase_Margin : 88.1569 deg
+====== Gain_db      : 58.8361 db
+====== Gain_Margin  : -10.3814 db
+====== I_OPA         : 0.922636 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 261 ==========
+====== UGB             : 29422600.0000 Hz
+====== Phase_Margin : 86.8878 deg
+====== Gain_db      : 58.7418 db
+====== Gain_Margin  : -10.0995 db
+====== I_OPA         : 0.933787 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 262 ==========
+====== UGB             : 29367500.0000 Hz
+====== Phase_Margin : 87.9410 deg
+====== Gain_db      : 59.1285 db
+====== Gain_Margin  : -9.7406 db
+====== I_OPA         : 0.934855 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 263 ==========
+====== UGB             : 29244800.0000 Hz
+====== Phase_Margin : 86.5256 deg
+====== Gain_db      : 58.2798 db
+====== Gain_Margin  : -10.5622 db
+====== I_OPA         : 0.934254 mA
+====== Total_Area   : 3057.7200000000 um^2
+
+========== Evaluation result of iter 264 ==========
+====== UGB             : 29539000.0000 Hz
+====== Phase_Margin : 88.2913 deg
+====== Gain_db      : 59.3357 db
+====== Gain_Margin  : -9.7286 db
+====== I_OPA         : 0.934352 mA
+====== Total_Area   : 3050.5200000000 um^2
+
+========== Evaluation result of iter 265 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4274 deg
+====== Gain_db      : 59.0275 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934296 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 266 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4272 deg
+====== Gain_db      : 59.0266 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934308 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 267 ==========
+====== UGB             : 29560400.0000 Hz
+====== Phase_Margin : 87.4556 deg
+====== Gain_db      : 59.0155 db
+====== Gain_Margin  : -9.9259 db
+====== I_OPA         : 0.938288 mA
+====== Total_Area   : 3054.7200000000 um^2
+
+========== Evaluation result of iter 268 ==========
+====== UGB             : 29193300.0000 Hz
+====== Phase_Margin : 87.3913 deg
+====== Gain_db      : 58.7089 db
+====== Gain_Margin  : -9.9323 db
+====== I_OPA         : 0.929538 mA
+====== Total_Area   : 3053.5200000000 um^2
+
+========== Evaluation result of iter 269 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1320000000 um^2
+
+========== Evaluation result of iter 270 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1080000000 um^2
+
+========== Evaluation result of iter 271 ==========
+====== UGB             : 29525900.0000 Hz
+====== Phase_Margin : 87.3129 deg
+====== Gain_db      : 59.4467 db
+====== Gain_Margin  : -9.9611 db
+====== I_OPA         : 0.934354 mA
+====== Total_Area   : 3057.7200000000 um^2
+
+========== Evaluation result of iter 272 ==========
+====== UGB             : 29231900.0000 Hz
+====== Phase_Margin : 87.3210 deg
+====== Gain_db      : 57.9138 db
+====== Gain_Margin  : -9.9174 db
+====== I_OPA         : 0.934242 mA
+====== Total_Area   : 3050.5200000000 um^2
+
+========== Evaluation result of iter 273 ==========
+====== UGB             : 29291000.0000 Hz
+====== Phase_Margin : 88.7070 deg
+====== Gain_db      : 59.1322 db
+====== Gain_Margin  : -9.3934 db
+====== I_OPA         : 0.934250 mA
+====== Total_Area   : 3055.6200000000 um^2
+
+========== Evaluation result of iter 274 ==========
+====== UGB             : 29563300.0000 Hz
+====== Phase_Margin : 85.3586 deg
+====== Gain_db      : 57.8638 db
+====== Gain_Margin  : -10.5003 db
+====== I_OPA         : 0.934384 mA
+====== Total_Area   : 3052.6200000000 um^2
+
+========== Evaluation result of iter 275 ==========
+====== UGB             : 29361700.0000 Hz
+====== Phase_Margin : 87.9735 deg
+====== Gain_db      : 59.1299 db
+====== Gain_Margin  : -9.7284 db
+====== I_OPA         : 0.934893 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 276 ==========
+====== UGB             : 29437000.0000 Hz
+====== Phase_Margin : 86.7265 deg
+====== Gain_db      : 58.6171 db
+====== Gain_Margin  : -10.1482 db
+====== I_OPA         : 0.933645 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 277 ==========
+====== UGB             : 29562500.0000 Hz
+====== Phase_Margin : 85.5220 deg
+====== Gain_db      : 57.9232 db
+====== Gain_Margin  : -10.4639 db
+====== I_OPA         : 0.934377 mA
+====== Total_Area   : 3055.6200000000 um^2
+
+========== Evaluation result of iter 278 ==========
+====== UGB             : 29274500.0000 Hz
+====== Phase_Margin : 88.7780 deg
+====== Gain_db      : 59.1274 db
+====== Gain_Margin  : -9.3828 db
+====== I_OPA         : 0.934244 mA
+====== Total_Area   : 3052.6200000000 um^2
+
+========== Evaluation result of iter 279 ==========
+====== UGB             : 29218800.0000 Hz
+====== Phase_Margin : 87.8538 deg
+====== Gain_db      : 59.6220 db
+====== Gain_Margin  : -9.8471 db
+====== I_OPA         : 0.885685 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 280 ==========
+====== UGB             : 29573300.0000 Hz
+====== Phase_Margin : 86.4426 deg
+====== Gain_db      : 57.4582 db
+====== Gain_Margin  : -10.0183 db
+====== I_OPA         : 0.983634 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 281 ==========
+====== UGB             : 29233600.0000 Hz
+====== Phase_Margin : 86.0483 deg
+====== Gain_db      : 58.9086 db
+====== Gain_Margin  : -10.3432 db
+====== I_OPA         : 0.933872 mA
+====== Total_Area   : 3068.5200000000 um^2
+
+========== Evaluation result of iter 282 ==========
+====== UGB             : 29547500.0000 Hz
+====== Phase_Margin : 88.7573 deg
+====== Gain_db      : 59.0423 db
+====== Gain_Margin  : -9.7828 db
+====== I_OPA         : 0.934731 mA
+====== Total_Area   : 3039.7200000000 um^2
+
+========== Evaluation result of iter 283 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1440000000 um^2
+
+========== Evaluation result of iter 284 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9247 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.0960000000 um^2
+
+========== Evaluation result of iter 285 ==========
+====== UGB             : 29505300.0000 Hz
+====== Phase_Margin : 86.2445 deg
+====== Gain_db      : 58.3455 db
+====== Gain_Margin  : -10.2849 db
+====== I_OPA         : 0.933244 mA
+====== Total_Area   : 3054.7200000000 um^2
+
+========== Evaluation result of iter 286 ==========
+====== UGB             : 29306200.0000 Hz
+====== Phase_Margin : 88.4753 deg
+====== Gain_db      : 59.1356 db
+====== Gain_Margin  : -9.5298 db
+====== I_OPA         : 0.935519 mA
+====== Total_Area   : 3053.5200000000 um^2
+
+========== Evaluation result of iter 287 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1440000000 um^2
+
+========== Evaluation result of iter 288 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.0960000000 um^2
+
+========== Evaluation result of iter 289 ==========
+====== UGB             : 29484300.0000 Hz
+====== Phase_Margin : 84.8032 deg
+====== Gain_db      : 56.1811 db
+====== Gain_Margin  : -10.1952 db
+====== I_OPA         : 1.016390 mA
+====== Total_Area   : 3056.2800000000 um^2
+
+========== Evaluation result of iter 290 ==========
+====== UGB             : 29271000.0000 Hz
+====== Phase_Margin : 88.3777 deg
+====== Gain_db      : 60.1389 db
+====== Gain_Margin  : -9.5988 db
+====== I_OPA         : 0.835448 mA
+====== Total_Area   : 3051.9600000000 um^2
+
+========== Evaluation result of iter 291 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1440000000 um^2
+
+========== Evaluation result of iter 292 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.0960000000 um^2
+
+========== Evaluation result of iter 293 ==========
+====== UGB             : 29411800.0000 Hz
+====== Phase_Margin : 87.2906 deg
+====== Gain_db      : 59.2392 db
+====== Gain_Margin  : -10.0437 db
+====== I_OPA         : 0.920718 mA
+====== Total_Area   : 3082.9200000000 um^2
+
+========== Evaluation result of iter 294 ==========
+====== UGB             : 29376300.0000 Hz
+====== Phase_Margin : 87.5656 deg
+====== Gain_db      : 58.6470 db
+====== Gain_Margin  : -9.7973 db
+====== I_OPA         : 0.949140 mA
+====== Total_Area   : 3025.3200000000 um^2
+
+========== Evaluation result of iter 295 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.1440000000 um^2
+
+========== Evaluation result of iter 296 ==========
+====== UGB             : 29394200.0000 Hz
+====== Phase_Margin : 87.4273 deg
+====== Gain_db      : 59.0271 db
+====== Gain_Margin  : -9.9246 db
+====== I_OPA         : 0.934302 mA
+====== Total_Area   : 3054.0960000000 um^2
+
+========== Evaluation result of iter 297 ==========
+====== UGB             : 29291300.0000 Hz
+====== Phase_Margin : 87.7943 deg
+====== Gain_db      : 59.4831 db
+====== Gain_Margin  : -9.8574 db
+====== I_OPA         : 0.891908 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 298 ==========
+====== UGB             : 29511800.0000 Hz
+====== Phase_Margin : 86.3876 deg
+====== Gain_db      : 57.4042 db
+====== Gain_Margin  : -10.0187 db
+====== I_OPA         : 0.983833 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 299 ==========
+====== UGB             : 29365100.0000 Hz
+====== Phase_Margin : 87.0938 deg
+====== Gain_db      : 58.6192 db
+====== Gain_Margin  : -10.1021 db
+====== I_OPA         : 0.943030 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 300 ==========
+====== UGB             : 29427000.0000 Hz
+====== Phase_Margin : 87.7855 deg
+====== Gain_db      : 59.2552 db
+====== Gain_Margin  : -9.7281 db
+====== I_OPA         : 0.924767 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 301 ==========
+====== UGB             : 29372700.0000 Hz
+====== Phase_Margin : 87.7810 deg
+====== Gain_db      : 59.1258 db
+====== Gain_Margin  : -9.7910 db
+====== I_OPA         : 0.929219 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 302 ==========
+====== UGB             : 29425200.0000 Hz
+====== Phase_Margin : 87.0305 deg
+====== Gain_db      : 58.5937 db
+====== Gain_Margin  : -10.0664 db
+====== I_OPA         : 0.939869 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 303 ==========
+====== UGB             : 29394400.0000 Hz
+====== Phase_Margin : 87.4576 deg
+====== Gain_db      : 59.0334 db
+====== Gain_Margin  : -9.9085 db
+====== I_OPA         : 0.935628 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 304 ==========
+====== UGB             : 29394000.0000 Hz
+====== Phase_Margin : 87.3897 deg
+====== Gain_db      : 59.0187 db
+====== Gain_Margin  : -9.9447 db
+====== I_OPA         : 0.932644 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 305 ==========
+====== UGB             : 29590200.0000 Hz
+====== Phase_Margin : 85.9049 deg
+====== Gain_db      : 57.3018 db
+====== Gain_Margin  : -10.4255 db
+====== I_OPA         : 0.963285 mA
+====== Total_Area   : 3054.8400000000 um^2
+
+========== Evaluation result of iter 306 ==========
+====== UGB             : 29183800.0000 Hz
+====== Phase_Margin : 88.7798 deg
+====== Gain_db      : 59.1907 db
+====== Gain_Margin  : -9.4011 db
+====== I_OPA         : 0.900634 mA
+====== Total_Area   : 3053.4000000000 um^2
+
+========== Evaluation result of iter 307 ==========
+====== UGB             : 29394100.0000 Hz
+====== Phase_Margin : 87.3985 deg
+====== Gain_db      : 59.0212 db
+====== Gain_Margin  : -9.9400 db
+====== I_OPA         : 0.933034 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 308 ==========
+====== UGB             : 29394300.0000 Hz
+====== Phase_Margin : 87.4555 deg
+====== Gain_db      : 59.0326 db
+====== Gain_Margin  : -9.9096 db
+====== I_OPA         : 0.935538 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 309 ==========
+====== UGB             : 29319500.0000 Hz
+====== Phase_Margin : 88.0288 deg
+====== Gain_db      : 59.7021 db
+====== Gain_Margin  : -9.8402 db
+====== I_OPA         : 0.868950 mA
+====== Total_Area   : 3056.2800000000 um^2
+
+========== Evaluation result of iter 310 ==========
+====== UGB             : 29465800.0000 Hz
+====== Phase_Margin : 85.5551 deg
+====== Gain_db      : 56.7797 db
+====== Gain_Margin  : -10.1065 db
+====== I_OPA         : 1.000110 mA
+====== Total_Area   : 3051.9600000000 um^2
+
+========== Evaluation result of iter 311 ==========
+====== UGB             : 29399200.0000 Hz
+====== Phase_Margin : 87.3793 deg
+====== Gain_db      : 59.0550 db
+====== Gain_Margin  : -9.9597 db
+====== I_OPA         : 0.933945 mA
+====== Total_Area   : 3056.5200000000 um^2
+
+========== Evaluation result of iter 312 ==========
+====== UGB             : 29388600.0000 Hz
+====== Phase_Margin : 87.4754 deg
+====== Gain_db      : 58.9903 db
+====== Gain_Margin  : -9.8887 db
+====== I_OPA         : 0.934710 mA
+====== Total_Area   : 3051.7200000000 um^2
+
+========== Evaluation result of iter 313 ==========
+====== UGB             : 28804800.0000 Hz
+====== Phase_Margin : 88.2361 deg
+====== Gain_db      : 59.1565 db
+====== Gain_Margin  : -9.6527 db
+====== I_OPA         : 0.913105 mA
+====== Total_Area   : 3058.9200000000 um^2
+
+========== Evaluation result of iter 314 ==========
+====== UGB             : 30008400.0000 Hz
+====== Phase_Margin : 86.4798 deg
+====== Gain_db      : 58.4284 db
+====== Gain_Margin  : -10.2218 db
+====== I_OPA         : 0.957365 mA
+====== Total_Area   : 3049.3200000000 um^2
+
+========== Evaluation result of iter 315 ==========
+====== UGB             : 29379800.0000 Hz
+====== Phase_Margin : 87.5410 deg
+====== Gain_db      : 58.6637 db
+====== Gain_Margin  : -9.8196 db
+====== I_OPA         : 0.949754 mA
+====== Total_Area   : 3082.9200000000 um^2
+
+========== Evaluation result of iter 316 ==========
+====== UGB             : 29412300.0000 Hz
+====== Phase_Margin : 87.2866 deg
+====== Gain_db      : 59.2081 db
+====== Gain_Margin  : -10.0494 db
+====== I_OPA         : 0.917353 mA
+====== Total_Area   : 3025.3200000000 um^2
+
+========== Evaluation result of iter 317 ==========
+====== UGB             : 29124400.0000 Hz
+====== Phase_Margin : 88.9816 deg
+====== Gain_db      : 59.2135 db
+====== Gain_Margin  : -9.3189 db
+====== I_OPA         : 0.895001 mA
+====== Total_Area   : 3054.8400000000 um^2
+
+========== Evaluation result of iter 318 ==========
+====== UGB             : 29701200.0000 Hz
+====== Phase_Margin : 84.8020 deg
+====== Gain_db      : 56.5415 db
+====== Gain_Margin  : -10.6349 db
+====== I_OPA         : 0.974424 mA
+====== Total_Area   : 3053.4000000000 um^2
+
+========== Evaluation result of iter 319 ==========
+====== UGB             : 29421400.0000 Hz
+====== Phase_Margin : 87.7349 deg
+====== Gain_db      : 59.2563 db
+====== Gain_Margin  : -9.7561 db
+====== I_OPA         : 0.925998 mA
+====== Total_Area   : 3055.3200000000 um^2
+
+========== Evaluation result of iter 320 ==========
+====== UGB             : 29364700.0000 Hz
+====== Phase_Margin : 87.0822 deg
+====== Gain_db      : 58.5846 db
+====== Gain_Margin  : -10.1085 db
+====== I_OPA         : 0.943482 mA
+====== Total_Area   : 3052.9200000000 um^2
+
+========== Evaluation result of iter 321 ==========
+====== UGB             : 29452800.0000 Hz
+====== Phase_Margin : 87.2415 deg
+====== Gain_db      : 59.4506 db
+====== Gain_Margin  : -10.0835 db
+====== I_OPA         : 0.916089 mA
+====== Total_Area   : 3039.7200000000 um^2
+
+========== Evaluation result of iter 322 ==========
+====== UGB             : 29511000.0000 Hz
+====== Phase_Margin : 87.0394 deg
+====== Gain_db      : 59.7048 db
+====== Gain_Margin  : -10.2421 db
+====== I_OPA         : 0.898207 mA
+====== Total_Area   : 3026.7600000000 um^2
+
+========== Evaluation result of iter 323 ==========
+====== UGB             : 29399800.0000 Hz
+====== Phase_Margin : 87.4103 deg
+====== Gain_db      : 59.0920 db
+====== Gain_Margin  : -9.9397 db
+====== I_OPA         : 0.932552 mA
+====== Total_Area   : 3052.6800000000 um^2
+
+========== Evaluation result of iter 324 ==========
+====== UGB             : 29594200.0000 Hz
+====== Phase_Margin : 86.4945 deg
+====== Gain_db      : 59.6189 db
+====== Gain_Margin  : -10.4034 db
+====== I_OPA         : 0.877456 mA
+====== Total_Area   : 3039.0000000000 um^2
+
+========== Evaluation result of iter 325 ==========
+====== UGB             : 29328400.0000 Hz
+====== Phase_Margin : 87.5126 deg
+====== Gain_db      : 58.8786 db
+====== Gain_Margin  : -9.7625 db
+====== I_OPA         : 0.952745 mA
+====== Total_Area   : 3040.4400000000 um^2
+
+========== Evaluation result of iter 326 ==========
+====== UGB             : 29448400.0000 Hz
+====== Phase_Margin : 87.1164 deg
+====== Gain_db      : 59.3074 db
+====== Gain_Margin  : -10.1471 db
+====== I_OPA         : 0.910676 mA
+====== Total_Area   : 3038.5200000000 um^2
+
+========== Evaluation result of iter 327 ==========
+====== UGB             : 29457200.0000 Hz
+====== Phase_Margin : 87.3594 deg
+====== Gain_db      : 59.5814 db
+====== Gain_Margin  : -10.0229 db
+====== I_OPA         : 0.921135 mA
+====== Total_Area   : 3040.9200000000 um^2
+
+========== Evaluation result of iter 328 ==========
+====== UGB             : 29511000.0000 Hz
+====== Phase_Margin : 87.0394 deg
+====== Gain_db      : 59.7048 db
+====== Gain_Margin  : -10.2421 db
+====== I_OPA         : 0.898207 mA
+====== Total_Area   : 3026.7600000000 um^2
+
+========== Evaluation result of iter 329 ==========
+====== UGB             : 29458200.0000 Hz
+====== Phase_Margin : 87.2234 deg
+====== Gain_db      : 59.4789 db
+====== Gain_Margin  : -10.0982 db
+====== I_OPA         : 0.914415 mA
+====== Total_Area   : 3038.4600000000 um^2
+
+========== Evaluation result of iter 330 ==========
+====== UGB             : 29569000.0000 Hz
+====== Phase_Margin : 86.8193 deg
+====== Gain_db      : 59.8366 db
+====== Gain_Margin  : -10.3976 db
+====== I_OPA         : 0.880676 mA
+====== Total_Area   : 3015.0600000000 um^2
+
+========== Evaluation result of iter 331 ==========
+====== UGB             : 29569000.0000 Hz
+====== Phase_Margin : 86.8193 deg
+====== Gain_db      : 59.8366 db
+====== Gain_Margin  : -10.3976 db
+====== I_OPA         : 0.880676 mA
+====== Total_Area   : 3015.0600000000 um^2
+
+========== Evaluation result of iter 332 ==========
+====== UGB             : 29626100.0000 Hz
+====== Phase_Margin : 86.5832 deg
+====== Gain_db      : 59.8343 db
+====== Gain_Margin  : -10.5449 db
+====== I_OPA         : 0.863772 mA
+====== Total_Area   : 3004.6200000000 um^2
+
+========== Evaluation result of iter 333 ==========
+====== UGB             : 29516100.0000 Hz
+====== Phase_Margin : 87.0207 deg
+====== Gain_db      : 59.7215 db
+====== Gain_Margin  : -10.2560 db
+====== I_OPA         : 0.896646 mA
+====== Total_Area   : 3025.6800000000 um^2
